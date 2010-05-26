@@ -27,16 +27,17 @@ Currently the gem uses screen scraping to get the data, but it will switch over 
 
    output
    ~/projects/ruby-fitbit(master) > ruby bin/ruby-fitbit my@email.com MYPASS
-Calories Burned 803
-Steps Taken 552
-Milkes Walked .23
-Activity Levels Durations:
-Sedentary 11hrs 1min
-Lightly 18min
-Fairly 16min
-Very 0min
+   Calories Burned 803
+   Steps Taken 552
+   Milkes Walked .23
+   Activity Levels Durations:
+   Sedentary 11hrs 1min
+   Lightly 18min
+   Fairly 16min
+   Very 0min
+  
+  done
 
-done
 
 == TODOs
 
