@@ -36,7 +36,7 @@ Currently the gem uses screen scraping to get the data, but it will switch over 
    Fairly 16min
    Very 0min
   
-  done
+   done
 
 
 == TODOs
