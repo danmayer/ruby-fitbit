@@ -1,0 +1,16 @@
+#! /usr/bin/env ruby	
+require File.join(File.dirname(__FILE__), '..', 'lib', 'ruby-fitbit')	
+
+fitbit = RubyFitbit.new(ARGV[0],ARGV[1])
+
+puts "Calories Burned #{fitbit.calories}"
+puts "Steps Taken #{fitbit.steps}"
+puts "Milkes Walked #{fitbit.miles_walked}"
+puts "Activity Levels Durations:"
+puts "Sedentary #{fitbit.sedentary_active}"
+puts "Lightly #{fitbit.lightly_active}"
+puts "Fairly #{fitbit.fairly_active}"
+puts "Very #{fitbit.very_active}"
+
+puts ''
+puts "done"

@@ -1,6 +1,50 @@
 = ruby-fitbit
 
-Description goes here.
+This is a Ruby API for the fitbit and the data at fitbit.com 
+
+Currently the gem uses screen scraping to get the data, but it will switch over to use the official API once available. The current set of data it retrieves is pretty limited, but it should grow over time. Originally built just to display a dashboard of my current fitbit stats on my blog.
+
+== Usage
+
+   install
+   `gem install ruby-fitbit`
+
+   run
+   `ruby-fitbit your@email.com YourPassword`
+
+   ruby usage
+   require 'ruby-fitbit'
+   fitbit = RubyFitbit.new(EMAIL,PASSWORD)
+
+   puts "Calories Burned #{fitbit.calories}"
+   puts "Steps Taken #{fitbit.steps}"
+   puts "Milkes Walked #{fitbit.miles_walked}"
+   puts "Activity Levels Durations:"
+   puts "Sedentary #{fitbit.sedentary_active}"
+   puts "Lightly #{fitbit.lightly_active}"
+   puts "Fairly #{fitbit.fairly_active}"
+   puts "Very #{fitbit.very_active}"
+
+   output
+   ~/projects/ruby-fitbit(master) > ruby bin/ruby-fitbit my@email.com MYPASS
+Calories Burned 803
+Steps Taken 552
+Milkes Walked .23
+Activity Levels Durations:
+Sedentary 11hrs 1min
+Lightly 18min
+Fairly 16min
+Very 0min
+
+done
+
+== TODOs
+
+* Get data from any date not just current data
+* get the minute by minute calorie chart breakdowns
+* get food intake tracked etc
+* add ability for gem to write data to fitbit, such as log and food entries
+* build everything needed for a nice fitbit IPhone app to use this API.
 
 == Note on Patches/Pull Requests
  

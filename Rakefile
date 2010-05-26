@@ -5,12 +5,13 @@ begin
   require 'jeweler'
   Jeweler::Tasks.new do |gem|
     gem.name = "ruby-fitbit"
-    gem.summary = %Q{TODO: one-line summary of your gem}
-    gem.description = %Q{TODO: longer description of your gem}
+    gem.summary = %Q{This is a Ruby API for Fitbit.com}
+    gem.description = %Q{This is a Ruby API for Fitbit.com, currently scraping, but soon will use the officail API (when released)}
     gem.email = "Danmayer@gmail.com"
     gem.homepage = "http://github.com/danmayer/ruby-fitbit"
     gem.authors = ["Dan Mayer"]
     gem.add_development_dependency "thoughtbot-shoulda", ">= 0"
+    gem.add_dependency "mechanize", ">= 0.9.3"
     # gem is a Gem::Specification... see http://www.rubygems.org/read/chapter/20 for additional settings
   end
   Jeweler::GemcutterTasks.new
