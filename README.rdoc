@@ -2,7 +2,7 @@
 
 This is a Ruby API for the fitbit and the data at fitbit.com 
 
-Currently the gem uses screen scraping to get the data, but it will switch over to use the official API once available. The current set of data it retrieves is pretty limited, but it should grow over time. Originally built just to display a dashboard of my current fitbit stats on my blog. I started adding additonal data scrapped from the graphs. Which allows me to export the data or do my own charting. 
+Currently the gem uses screen scraping to get the data, but it will switch over to use the official API once available. The current set of data it retrieves is pretty limited, but it should grow over time. Originally built just to display a dashboard of my current fitbit stats on my blog. I started adding additonal data scrapped from the graphs. Which allows me to export the data or do my own charting. This is heavily influenced by the Python fitbit API from @wadey (http://github.com/wadey/python-fitbit), and also has a bit of inspiration from the perl API (http://eric-blue.com/projects/fitbit/). Thanks for their code to help me work out the API.
 
 == Usage
 
