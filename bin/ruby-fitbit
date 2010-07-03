@@ -1,16 +1,40 @@
 #! /usr/bin/env ruby	
-require File.join(File.dirname(__FILE__), '..', 'lib', 'ruby-fitbit')	
+require File.join(File.dirname(__FILE__), '..', 'lib', 'ruby-fitbit')
+require 'hirb'	
 
-fitbit = RubyFitbit.new(ARGV[0],ARGV[1])
+if(ARGV[0]!=nil && ARGV[1]!=nil)
+  fitbit = RubyFitbit.new(ARGV[0],ARGV[1])
+  
+  puts "Calories Burned #{fitbit.calories}"
+  puts "Steps Taken #{fitbit.steps}"
+  puts "Milkes Walked #{fitbit.miles_walked}"
+  puts "Activity Levels Durations:"
+  puts "Sedentary #{fitbit.sedentary_active}"
+  puts "Lightly #{fitbit.lightly_active}"
+  puts "Fairly # => {fitbit.fairly_active}"
+  puts "Very #{fitbit.very_active}"
+end
 
-puts "Calories Burned #{fitbit.calories}"
-puts "Steps Taken #{fitbit.steps}"
-puts "Milkes Walked #{fitbit.miles_walked}"
-puts "Activity Levels Durations:"
-puts "Sedentary #{fitbit.sedentary_active}"
-puts "Lightly #{fitbit.lightly_active}"
-puts "Fairly #{fitbit.fairly_active}"
-puts "Very #{fitbit.very_active}"
+if ARGV[2]!=nil
 
-puts ''
+  begin
+    date = Time.parse(ARGV[3])
+  rescue
+    date = Time.now
+  end
+
+  case ARGV[2]
+  when 'calorie'
+    puts "calorie data for data #{date}"
+    data = fitbit.get_calorie_data(date)
+  when 'activity' 
+    puts "calorie data for data #{date}"
+    data = fitbit.get_activity_score_data(date)
+  else
+    puts "steps data for data #{date}"
+    data = fitbit.get_steps_data(date)
+  end
+  puts Hirb::Helpers::AutoTable.render(data)
+end
+
 puts "done"
