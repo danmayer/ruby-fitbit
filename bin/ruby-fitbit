@@ -4,24 +4,26 @@ require 'hirb'
 
 if(ARGV[0]!=nil && ARGV[1]!=nil)
   fitbit = RubyFitbit.new(ARGV[0],ARGV[1])
-  
-  puts "Calories Burned #{fitbit.calories}"
-  puts "Steps Taken #{fitbit.steps}"
-  puts "Milkes Walked #{fitbit.miles_walked}"
-  puts "Activity Levels Durations:"
-  puts "Sedentary #{fitbit.sedentary_active}"
-  puts "Lightly #{fitbit.lightly_active}"
-  puts "Fairly # => {fitbit.fairly_active}"
-  puts "Very #{fitbit.very_active}"
-end
-
-if ARGV[2]!=nil
 
   begin
     date = Time.parse(ARGV[3])
   rescue
     date = Time.now
   end
+  
+  fitbit.get_data(date)
+  puts "Fitbit Data for #{date}"
+  puts "Calories Burned #{fitbit.calories}"
+  puts "Steps Taken #{fitbit.steps}"
+  puts "Milkes Walked #{fitbit.miles_walked}"
+  puts "Activity Levels Durations:"
+  puts "Sedentary #{fitbit.sedentary_active}"
+  puts "Lightly #{fitbit.lightly_active}"
+  puts "Fairly # => #{fitbit.fairly_active}"
+  puts "Very #{fitbit.very_active}"
+end
+
+if ARGV[2]!=nil
 
   case ARGV[2]
   when 'calorie'
@@ -30,6 +32,8 @@ if ARGV[2]!=nil
   when 'activity' 
     puts "calorie data for data #{date}"
     data = fitbit.get_activity_score_data(date)
+  when 'summary'
+    #do nothing just print the summary above
   else
     puts "steps data for data #{date}"
     data = fitbit.get_steps_data(date)
