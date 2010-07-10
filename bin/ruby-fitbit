@@ -10,6 +10,12 @@ if(ARGV[0]!=nil && ARGV[1]!=nil)
   rescue
     date = Time.now
   end
+
+  begin
+    end_date = Time.parse(ARGV[4])
+  rescue
+    end_date = Time.now
+  end
   
   fitbit.get_data(date)
   puts "Fitbit Data for #{date}"
@@ -38,6 +44,15 @@ if ARGV[2]!=nil
     puts "steps data for data #{date}"
     data = fitbit.get_steps_data(date)
   end
+  puts Hirb::Helpers::AutoTable.render(data)
+end
+
+if ARGV[4]!=nil
+  puts "getting aggregated data"
+  data = fitbit.get_aggregated_data(date, end_date) 
+  puts Hirb::Helpers::AutoTable.render(data)
+  puts "Average Data over that time"
+  data = fitbit.get_avg_data(date, end_date) 
   puts Hirb::Helpers::AutoTable.render(data)
 end
 

@@ -55,13 +55,30 @@ Currently the gem uses screen scraping to get the data, but it will switch over 
    
    done
    
+    Aggregated Data
+    ruby bin/ruby-fitbit dan@email.com pass summary 07/07/2010 07/04/2010
+
+    getting aggregated data
+    | 2010-07-04 | {"miles_walked"=>"2.97", "steps"=>"6976", "lightly_active"=>"3hrs 3min", "sedentary_active"=>"18hrs ... |
+    | 2010-07-05 | {"miles_walked"=>"4.98", "steps"=>"11711", "lightly_active"=>"2hrs 21min", "sedentary_active"=>"2hrs... |
+    | 2010-07-06 | {"miles_walked"=>"4.68", "steps"=>"10014", "lightly_active"=>"1hr 17min", "sedentary_active"=>"20hrs... |
+    ...
+    Average Data over that time
+    +--------------+------------------+
+    | miles_walked | 4.03857142857143 |
+    | steps        | 8953.85714285714 |
+    | calories     | 2247.71428571429 |
+    +--------------+------------------+
 
 
 == TODOs
 
 * get food intake tracked etc
 * add ability for gem to write data to fitbit, such as log and food entries
-* build everything needed for a nice fitbit IPhone app to use this API.
+* build everything needed for a nice fitbit mobile app to use this API.
+* better cmd line output
+* add data caching, currently it refetches every time. especially dumb when it does it twice for aggragate and avg data
+* Support Avgs over all data_point
 
 == Note on Patches/Pull Requests
  

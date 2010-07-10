@@ -46,6 +46,58 @@ class RubyFitbit
     @lightly_active = page.search("//div[@class='lightly caption']/div[@class='number']").text.strip
     @fairly_active = page.search("//div[@class='caption fairly']/div[@class='number']").text.strip
     @very_active = page.search("//div[@class='caption very']/div[@class='number']").text.strip
+    data = {}
+    data['calories'] = @calories
+    data['steps'] = @steps
+    data['miles_walked'] = @miles_walked
+    data['sedentary_active'] = @sedentary_active
+    data['lightly_active'] = @lightly_active
+    data['fairly_active'] = @fairly_active
+    data['very_active'] = @very_active
+    data
+  end
+
+  def get_aggregated_data(start_date = Time.now, end_date = Time.now) 
+    data = {}
+    formatted_date = get_fitbit_date_format(end_date)
+    data[formatted_date] = get_data(end_date)
+    
+    date = end_date + (24 * 60 * 60)
+    while date < start_date
+      formatted_date = get_fitbit_date_format(date)
+      data[formatted_date] = get_data(date)
+      date = date + (24 * 60 * 60)
+    end
+
+    data
+  end
+
+  def get_avg_data(start_date = Time.now, end_date = Time.now) 
+    data = {}
+    data['calories'] = 0
+    data['steps'] = 0
+    data['miles_walked'] = 0
+    # TODO these aren't numbers but times need to convert all to minutes and then back
+    #data['sedentary_active'] = 0
+    #data['lightly_active'] = 0
+    #data['fairly_active'] = 0
+    #data['very_active'] = 0
+    days = 0
+    
+    days_data = get_aggregated_data(start_date, end_date) 
+    days_data.keys.each do |key|
+      days += 1
+      current_data = days_data[key]
+      data.keys.each do |stat|
+        data[stat] += current_data[stat].to_f
+      end
+    end
+
+    data.keys.each do |key|
+      data[key] = (data[key]/days)
+    end
+
+    data
   end
 
   def get_steps_data(date = Time.now)
