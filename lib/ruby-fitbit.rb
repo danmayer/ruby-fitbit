@@ -6,6 +6,9 @@ class RubyFitbit
 
   attr_reader :calories, :steps, :miles_walked, :sedentary_active, :lightly_active, :fairly_active, :very_active
 
+  #TODO change tests so reader isn't needed
+  attr_reader :logged_in
+
   def initialize(email, pass)
     @email = email
     @pass = pass

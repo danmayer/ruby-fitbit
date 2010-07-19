@@ -1,0 +1,327 @@
+HTTP/1.1 200 OK
+Server: Apache-Coyote/1.1
+Expires: Thu, 01 Jan 1970 00:00:00 GMT
+Cache-control: no-store, no-cache, must-revalidate
+Pragma: no-cache
+Content-Type: text/html;charset=UTF-8
+Content-Language: en-US
+Transfer-Encoding: chunked
+Date: Mon, 19 Jul 2010 01:06:57 GMT
+
+
+
+
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+        <title>Login</title>
+        <meta name="keywords" content="keywords" />
+        <meta name="description" content="description" />
+        <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon"/>
+
+         
+            <link rel="stylesheet" type="text/css" href="/pack?h=3f18725800c7f1b86b3af8be68c89e9e&item=%2Fyui%2F2.7.0%2Fbuild%2Ffonts%2Ffonts-min.css&item=%2Fyui%2F2.7.0%2Fbuild%2Freset%2Freset-min.css&item=%2Fyui%2F2.7.0%2Fbuild%2Fcontainer%2Fassets%2Fskins%2Fsam%2Fcontainer.css&item=%2Fyui%2F2.7.0%2Fbuild%2Fcalendar%2Fassets%2Fskins%2Fsam%2Fcalendar.css&item=%2Fyui%2F2.7.0%2Fbuild%2Fautocomplete%2Fassets%2Fskins%2Fsam%2Fautocomplete.css&item=%2Fdesign%2F2009-07%2Fcss%2Fcommon.css&item=%2Fdesign%2F2009-07%2Fcss%2Fapp.css"/>
+         
+
+         
+            <script type="text/javascript">
+                document.documentElement.className += ' js';
+
+                function setTextLimits() {
+                    for (var nodes = document.getElementsByTagName('*'), i = 0, l = nodes.length; i < l; i++) {
+                        var m = nodes[i].className.match(/(?:^|\s)textLimit(?:(\d+)(?:-(\d+))?)?(?=\s|$)/i);
+                        if (!m || !nodes[i].lastChild) {
+                            continue;
+                        }
+
+                        var el = nodes[i];
+                        var lines = m[1] || 1;
+                        var maxWidth = m[2] || Number.MAX_VALUE;
+                        var clone = el.cloneNode(false);
+                        var ellipsis = clone.appendChild(document.createTextNode('\u2026'));
+                        el.parentNode.replaceChild(clone, el);
+                        var maxHeight = (clone.scrollHeight - clone.clientHeight) + ((clone.clientHeight + 3) * lines);
+                        clone.parentNode.replaceChild(el, clone);
+                        if (el.scrollHeight > maxHeight || el.scrollWidth > maxWidth) {
+                            el.title = (el.textContent || el.innerText || '').replace(/^\s+|\s+$/g, '');
+                            for (var root = el, node = root.lastChild;; node = root.lastChild) {
+                                if (node && node.nodeType == 1) {
+                                    root = node;
+                                }   else {
+                                    if (!node) {
+                                        if (root == el) {
+                                            break;
+                                        }
+                                        node = root;
+                                        root = root.parentNode;
+                                       root.removeChild(node);
+                                    } else if (node.nodeType == 3) {
+                                        node.nodeValue = node.nodeValue.slice(0, -1);
+                                        if (!node.nodeValue) {
+                                            root = node.parentNode;
+                                            root.removeChild(node);
+                                        }
+                                    } else {
+                                        root.removeChild(node);
+                                    }
+                                    root.appendChild(ellipsis);
+                                    if (el.scrollHeight <= maxHeight && el.scrollWidth <= maxWidth) {
+                                        break;
+                                    }
+                                    root.removeChild(ellipsis);
+                                }
+                            }
+                        }
+                    }
+                }
+            </script>
+         
+
+        
+    <link rel="stylesheet" type="text/css" href="/pack?h=691d2300ae3a7f208eaab331a1432ef8&item=%2Fdesign%2F2009-07%2Fcss%2Fapp.css&item=%2Fdesign%2F2009-07%2Fcss%2Flogin.css"/>
+
+    </head>
+    
+    <body>
+
+            <div id="main">
+                
+                    
+
+
+
+
+
+
+
+
+<div id="header">
+    <div class="logo"><a href="http://www.fitbit.com/"><img src="/images/layout/logo.gif" alt=""/></a></div>
+    <div class="accountLinks">
+    
+    
+        <ul>
+            <li><a href="http://www.fitbit.com/help" rel="nofollow">Help</a></li>
+            <li><a href="https://www.fitbit.com/login" rel="nofollow">Log In</a></li>
+            <li class="last"><a href="https://www.fitbit.com/signup" rel="nofollow">Sign Up</a></li>
+        </ul>
+    
+    </div>
+
+    <div id="menu">
+        
+        
+            <ul>
+                <li><a href="http://www.fitbit.com/">Home</a></li>
+                <li><a href="http://www.fitbit.com/product" rel="nofollow">Features</a></li>
+                <li><a href="http://blog.fitbit.com" rel="nofollow">Blog</a></li>
+                <li><a href="http://www.fitbit.com/company" rel="nofollow">About</a></li>
+                <li><a href="http://www.fitbit.com/product" rel="nofollow">Store</a></li>
+                <li><a href="https://www.fitbit.com/forums" rel="nofollow">Community</a></li>
+            </ul>
+        
+    </div>
+
+</div>
+
+                
+                
+    <div id="content">
+        <div class="rail clearfix">
+            <div class="header clearfix"><a href="/order/"><img src="/images/login/purchase_fitbit.gif" alt="Purchase Fitbit" border="0" width="255" height="39"/></a></div>
+            <div class="content clearfix">
+                <img class="screenshots" src="/images/login/web_screenshots.png" alt="Fitbit Screens" width="284" height="222"/>
+                <h2>Not just activity, but calories too!</h2>
+                <p>The Fitbit Tracker contains a motion sensor like the ones found in the Nintendo Wii. The Tracker senses your motion in three dimensions and converts this into useful information about your daily activities. The Tracker measures the intensity and duration of your physical activities.</p>
+            </div>
+        </div>
+        <div class="primary clearfix">
+            <div class="header clearfix"><h1>Login &amp; Setup</h1></div>
+            
+            
+                
+            
+                <div style="padding: 20px 30px;"></div>
+            
+            
+            
+            
+            
+            <div class="column1 form clearfix">
+                <h2>Log in</h2>
+                
+                
+                <form name="login" action="https://www.fitbit.com/login" method="post">
+                    <h3>Email:</h3>
+                    <input name="email" class="text" type="text" />
+                    <h3>Password: <span class="formHint">(<a tabindex="-1" href="/login/forgotPassword" onclick="viewForgotPassword(); return false;">Forgot your password?</a>)</span></h3>
+                    <input name="password" class="text" type="password" />
+                    <p><label><input name="rememberMe" value="true" tabindex="-1" type="checkbox" checked="checked" /> Remember Me</label></p>
+                    <input name="login" value="Log In" class="button" type="submit" />
+                    
+                    <input name="redirect" value="" type="hidden" />
+                <div style="display: none;"><input type="hidden" name="_sourcePage" value="xoym83lTc7LGrJMFkFsv6XbX0f6OV1Ndj1zeGcz7OKzA3gkNXMXGnj27D-H9WXS-" /><input type="hidden" name="__fp" value="QVL1QbgbuJVztQ7FkK21Ry2MI7JbqWTf" /></div></form>
+            </div>
+            <div class="column1 form clearfix">
+                <h2>Set up your account</h2>
+                <form name="signup" action="https://www.fitbit.com/setup" method="post">
+                    <h3>Email:</h3>
+                    <input name="email" class="text" type="text" />
+                    <h3>Password:</h3>
+                    <input name="password" class="text" type="password" />
+
+                    <p id="terms">By signing up, I agree to the <a href="/terms" onclick="window.open('http://www.fitbit.com/terms'); return false;" tabindex="-1">Terms and Conditions</a></p>
+                    <input name="signup" value="Create My Account" class="button" type="submit" />
+                    <input name="sessId" value="" type="hidden" />
+                    <input name="timezone" value="" type="hidden" />
+                    
+                    <input name="redirect" value="" type="hidden" />
+                <div style="display: none;"><input type="hidden" name="_sourcePage" value="etZudjc2X5fGrJMFkFsv6XbX0f6OV1Ndj1zeGcz7OKzA3gkNXMXGnj27D-H9WXS-" /><input type="hidden" name="__fp" value="z_rMAQuc79U=" /></div></form>
+                <form name="forgotPassword" action="https://www.fitbit.com/login/forgotPassword" method="post">
+                    <input name="email" value="" type="hidden" />
+                <div style="display: none;"><input type="hidden" name="_sourcePage" value="noMY3z2iN9vGrJMFkFsv6XbX0f6OV1Ndj1zeGcz7OKzA3gkNXMXGnj27D-H9WXS-" /><input type="hidden" name="__fp" value="KLf5fEQNreQ=" /></div></form>
+            </div>
+        </div>
+    </div>
+
+                
+                    
+
+
+
+
+
+
+
+
+    
+    
+       
+    
+
+<div id="footer">
+    <div id="columns">
+        <div class="column">
+            <h4>Help</h4>
+            <ul>
+                
+                <li><a href="http://www.fitbit.com/faq" rel="nofollow">FAQ</a></li>
+                <li><a href="http://www.fitbit.com/manual" rel="nofollow">Product Manual</a></li>
+                <li><a href="http://www.fitbit.com/returns" rel="nofollow">Returns and Warranty</a></li>
+                <li><a href="http://www.fitbit.com/contact" rel="nofollow">Contact</a></li>
+            </ul>
+        </div>
+        <div class="column">
+            <h4>Downloads</h4>
+            <ul>
+                <li><a href="http://www.fitbit.com/start" rel="nofollow">Windows XP, Vista and 7</a></li>
+                <li><a href="http://www.fitbit.com/start" rel="nofollow">Mac OS X</a></li>
+            </ul>
+        </div>
+        <div class="column">
+            <h4>Explore</h4>
+            <ul>
+                <li><a href="http://www.fitbit.com/premium/about" rel="nofollow">Premium Membership</a></li>
+                <li><a href="http://www.fitbit.com/foods/categories" rel="nofollow">Calories in Foods</a></li>
+                <li><a href="http://www.fitbit.com/foods/restaurants" rel="nofollow">Foods by Restaurant</a></li>
+                <li><a href="http://www.fitbit.com/foods/brands" rel="nofollow">Foods By Brand</a></li>
+                <li><a href="http://www.fitbit.com/foods/search" rel="nofollow">Search Foods</a></li>
+                
+                <li><a href="http://www.fitbit.com/users/index" rel="nofollow">All Users</a></li>
+                
+            </ul>
+        </div>
+        <div class="column">
+            <h4>Company</h4>
+            <ul>
+                <li><a href="http://blog.fitbit.com">Fitbit Blog</a></li>
+                <li><a href="http://www.fitbit.com/company" rel="nofollow">About Fitbit</a></li>
+                <li><a href="http://www.fitbit.com/privacy" rel="nofollow">Privacy Policy</a></li>
+                <li><a href="http://www.fitbit.com/terms" rel="nofollow">Terms of Use</a></li>
+            </ul>
+        </div>
+        <div class="column last">
+            <h4>Purchase Fitbit</h4>
+            <p>Includes Fitbit Tracker, Base Station & Software</p>
+            <h5><a href="http://www.fitbit.com/product">Buy Now &raquo;</a></h5>
+        </div>
+        <img src="/images/layout/product.jpg" alt="product" />
+    </div>
+    <div id="copyright">&copy; 2010 Fitbit, Inc. All rights reserved.</div>
+</div>
+                
+            </div>
+
+
+         
+            <script type="text/javascript" src="/pack?h=ace4c3c76cb4305cbad3160322007103&item=%2Fyui%2F2.7.0%2Fbuild%2Fyahoo-dom-event%2Fyahoo-dom-event.js&item=%2Fyui%2F2.7.0%2Fbuild%2Fconnection%2Fconnection-min.js&item=%2Fyui%2F2.7.0%2Fbuild%2Felement%2Felement-min.js&item=%2Fyui%2F2.7.0%2Fbuild%2Fjson%2Fjson-min.js&item=%2Fyui%2F2.7.0%2Fbuild%2Fcontainer%2Fcontainer-min.js&item=%2Fyui%2F2.7.0%2Fbuild%2Fcalendar%2Fcalendar-min.js&item=%2Fyui%2F2.7.0%2Fbuild%2Fanimation%2Fanimation-min.js&item=%2Fyui%2F2.7.0%2Fbuild%2Fdatasource%2Fdatasource-min.js&item=%2Fyui%2F2.7.0%2Fbuild%2Fautocomplete%2Fautocomplete-min.js&item=%2Fyui%2F2.7.0%2Fbuild%2Fcookie%2Fcookie-min.js&item=%2Fjs%2Fantlr3-all-min.js&item=%2Fjs%2Fswfobject-1.5.js&item=%2Fjs%2Ffitbit.js&item=%2Fjs%2Fapp.js&item=%2Fjs%2Futil.js&item=%2Fjs%2Fpremium.js"></script>
+         
+                <!--[if IE 6]>
+        <script type="text/javascript">document.execCommand("BackgroundImageCache", false, true);</script>
+                <![endif]--> 
+                <!--[if lt IE 9]>
+        <script type="text/javascript" src="/pack?h=4db94e3559545453a61eca38533ab82c&item=%2Fjs%2Flib%2Fcurvycorners%2Fcurvycorners.src.js"></script>
+                <![endif]--> 
+        
+    <script type="text/javascript">
+        document.forms['signup'].elements['timezone'].value = (new Date().getTimezoneOffset() / 60) * -1;
+        
+        setTimeout(function(){try{document.forms['login'].elements['email'].focus();}catch(e){}},1);
+
+        function viewForgotPassword() {
+            document.forms['forgotPassword'].elements['email'].value = document.forms['login'].elements['email'].value;
+            document.forms['forgotPassword'].submit();
+        }
+    </script>
+
+        
+
+
+<script type="text/javascript">
+/*
+Inserts GA using DOM insertion of <script> tag and "script onload" method to
+initialize the pageTracker object. Prevents GA insertion from blocking I/O!
+
+As suggested in Steve Souder's talk. See:
+http://google-code-updates.blogspot.com/2009/03/steve-souders-lifes-too-short-write.html
+*/
+
+/* acct is GA account number, i.e. "UA-5555555-1" */
+function gaSSDSLoad (acct) {
+  var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www."),
+      pageTracker,
+      s;
+  s = document.createElement('script');
+  s.src = gaJsHost + 'google-analytics.com/ga.js';
+  s.type = 'text/javascript';
+  s.onloadDone = false;
+  function init () {
+    pageTracker = _gat._getTracker(acct);
+
+    pageTracker._setCustomVar(1, "visitorType", "notloggedin", 1);
+    
+
+    pageTracker._trackPageview();
+  }
+  s.onload = function () {
+    s.onloadDone = true;
+    init();
+  };
+  s.onreadystatechange = function() {
+    if (('loaded' === s.readyState || 'complete' === s.readyState) && !s.onloadDone) {
+      s.onloadDone = true;
+      init();
+    }
+  };
+  document.getElementsByTagName('head')[0].appendChild(s);
+}
+
+/* and run it */
+gaSSDSLoad("UA-2595270-1");
+</script>
+    </body>
+</html>

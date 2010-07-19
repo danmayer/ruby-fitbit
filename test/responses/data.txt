@@ -1,0 +1,3625 @@
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"> 
+    <head> 
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/> 
+        <title>Fitbit Dashboard</title> 
+        <meta name="keywords" content="keywords" /> 
+        <meta name="description" content="description" /> 
+        <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon"/> 
+ 
+         
+            <link rel="stylesheet" type="text/css" href="/pack?h=3f18725800c7f1b86b3af8be68c89e9e&item=%2Fyui%2F2.7.0%2Fbuild%2Ffonts%2Ffonts-min.css&item=%2Fyui%2F2.7.0%2Fbuild%2Freset%2Freset-min.css&item=%2Fyui%2F2.7.0%2Fbuild%2Fcontainer%2Fassets%2Fskins%2Fsam%2Fcontainer.css&item=%2Fyui%2F2.7.0%2Fbuild%2Fcalendar%2Fassets%2Fskins%2Fsam%2Fcalendar.css&item=%2Fyui%2F2.7.0%2Fbuild%2Fautocomplete%2Fassets%2Fskins%2Fsam%2Fautocomplete.css&item=%2Fdesign%2F2009-07%2Fcss%2Fcommon.css&item=%2Fdesign%2F2009-07%2Fcss%2Fapp.css"/> 
+         
+ 
+         
+            <script type="text/javascript"> 
+                document.documentElement.className += ' js';
+ 
+                function setTextLimits() {
+                    for (var nodes = document.getElementsByTagName('*'), i = 0, l = nodes.length; i < l; i++) {
+                        var m = nodes[i].className.match(/(?:^|\s)textLimit(?:(\d+)(?:-(\d+))?)?(?=\s|$)/i);
+                        if (!m || !nodes[i].lastChild) {
+                            continue;
+                        }
+ 
+                        var el = nodes[i];
+                        var lines = m[1] || 1;
+                        var maxWidth = m[2] || Number.MAX_VALUE;
+                        var clone = el.cloneNode(false);
+                        var ellipsis = clone.appendChild(document.createTextNode('\u2026'));
+                        el.parentNode.replaceChild(clone, el);
+                        var maxHeight = (clone.scrollHeight - clone.clientHeight) + ((clone.clientHeight + 3) * lines);
+                        clone.parentNode.replaceChild(el, clone);
+                        if (el.scrollHeight > maxHeight || el.scrollWidth > maxWidth) {
+                            el.title = (el.textContent || el.innerText || '').replace(/^\s+|\s+$/g, '');
+                            for (var root = el, node = root.lastChild;; node = root.lastChild) {
+                                if (node && node.nodeType == 1) {
+                                    root = node;
+                                }   else {
+                                    if (!node) {
+                                        if (root == el) {
+                                            break;
+                                        }
+                                        node = root;
+                                        root = root.parentNode;
+                                       root.removeChild(node);
+                                    } else if (node.nodeType == 3) {
+                                        node.nodeValue = node.nodeValue.slice(0, -1);
+                                        if (!node.nodeValue) {
+                                            root = node.parentNode;
+                                            root.removeChild(node);
+                                        }
+                                    } else {
+                                        root.removeChild(node);
+                                    }
+                                    root.appendChild(ellipsis);
+                                    if (el.scrollHeight <= maxHeight && el.scrollWidth <= maxWidth) {
+                                        break;
+                                    }
+                                    root.removeChild(ellipsis);
+                                }
+                            }
+                        }
+                    }
+                }
+            </script> 
+         
+ 
+        
+    <link rel="stylesheet" type="text/css" href="/pack?h=6c17b35d953b4f6bf8bf899840b45ada&item=%2Fdesign%2F2009-07%2Fcss%2Fdashboard.css&item=%2Fdesign%2F2009-07%2Fcss%2Ffitbit%2Fapp%2Fuser%2Fstats%2Frank.css&item=%2Fdesign%2F2009-07%2Fcss%2Ffitbit%2Fapp%2Fuser%2Fstats%2FweightStats.css&item=%2Fdesign%2F2009-07%2Fcss%2Ffitbit%2Fapp%2Fuser%2Ffriends%2FfriendStats.css&item=%2Fdesign%2F2009-07%2Fcss%2Ffitbit%2Fapp%2Fuser%2Fstats%2FpersonalBests.css&item=%2Fdesign%2F2009-07%2Fcss%2Fjournal.css"/> 
+    <style type="text/css"> 
+        #editplanhelper .button {
+            background: url("/images/controls/pink_button.gif") no-repeat scroll left top transparent;
+            border: 1px solid #AC083A;
+            color: white;
+            font-size: 14px;
+            height: 25px !important;
+            line-height: 24px;
+            margin: 0;
+            padding: 0 5px !important;
+        }
+    </style> 
+ 
+    </head> 
+    
+    <body> 
+ 
+            <div id="main"> 
+                
+                    
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+<div id="header"> 
+    <div class="logo"><a href="http://www.fitbit.com/"><img src="/images/layout/logo.gif" alt=""/></a></div> 
+    <div class="accountLinks"> 
+    
+        <ul> 
+            <li>Hi <a href="/user/22CJ7H" style="border: 0; padding: 0;">dan@fake.com</a></li> 
+            
+            <li><a href="http://www.fitbit.com/help">Help</a></li> 
+            
+              
+              
+                <li><a href="https://www.fitbit.com/logout">Log Out</a></li> 
+                <li class="last"><a href="http://www.fitbit.com/product">Store</a></li> 
+              
+           
+           
+         </ul> 
+    
+    
+    </div> 
+ 
+    <div id="menu"> 
+        
+            <ul> 
+                
+                    
+                    
+                        <li class="current"><a href="http://www.fitbit.com/" class="selected">Home</a></li> 
+                    
+                
+                <li><a href="http://www.fitbit.com/foods/log">Tracker</a></li> 
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <li><a href="http://www.fitbit.com/community" rel="nofollow">Community</a></li> 
+                
+                
+                    <li><a href="http://www.fitbit.com/premium/cb" class="analytics" rel="nofollow">Analytics</a></li> 
+                
+            </ul> 
+        
+        
+    </div> 
+ 
+</div> 
+ 
+                
+                
+    <div id="content"> 
+        
+        
+        
+        
+        <div id="contentHead" class="clearfix"> 
+                    
+                    
+                        <p id="dashPromo" class="noticeMessage placeholder blank"> 
+                            Premium is here. Get fitter faster. 
+                            <a href="/premium/about">Learn more about a Premium membership!</a> 
+                        </p> 
+                    
+            <div id="tasks"> 
+                <h1>My Dashboard</h1> 
+                <ul class="actions"> 
+                    <li id="logFood"><a href="/foods/log">Log Food</a></li> 
+                    <li id="logActivities"><a href="/activities">Log Activity</a></li> 
+                    <li id="trackWeight" class="last"><a href="/weight">Track Weight</a></li> 
+                </ul> 
+            </div> 
+            <div id="goalScene" > 
+                
+                
+                <div id="scene">&nbsp;</div> 
+                
+                <div class="details"> 
+                    <p style="clear: both;"> 
+                        
+                            
+                            
+                            
+                                <span>11%</span> 
+                                of
+                                70,000
+                                weekly steps
+                            
+                        
+                    </p> 
+                    <ul> 
+                        
+                        <li class="first"><a href="#" onclick="return false;" onmousedown="fitbit.app.user.goal.primary.showGoalDialog();">Select another goal</a></li> 
+                    </ul> 
+                </div> 
+            </div> 
+        </div> 
+        <div id="contentBody" class="clearfix"> 
+            <div id="modules" class="clearfix"> 
+ 
+              <div id="smallTabs" class="smallTabs" style="margin: -31px 0 0 -9px; position: absolute;"> 
+                  <ul class="menu"> 
+                      <li ><a  href="#daily"><span>Daily</span></a></li> 
+                      <li class='active'><a class='active' href="#historical"><span>Historical</span></a></li> 
+                  </ul> 
+              </div> 
+ 
+              
+              <div id="daily" class="invisible" style="position: relative;"> 
+ 
+                <div id="calories" class="module firstModule clearfix"> 
+                    <div class="dateHeader"> 
+                        <div class="title"><h2>Calories</h2></div> 
+                        <div class="dateArea"> 
+                            
+ 
+ 
+ 
+ 
+ 
+<ul id="dateNavHeader"> 
+    <li><a href="/2010/07/17"><img src="/images/common/pre_arrow.gif" alt=""/></a></li> 
+    <li class="date"><span>Today</span></li> 
+    
+    <li class="select"><a id="showCalendar" href="#" onclick="return false;" onmousedown="fitbit.app.showCalendar('', 'calendar', 'showCalendar', '2010-07-18', false, '/'); return false;">Select</a></li> 
+</ul> 
+<div class="yui-skin-sam"> 
+    <div id="calendarContainer"> 
+        <div id="calendarHeader" class="hd"></div> 
+        <div class="bd clearfix" style="color: black"> 
+            <div id="calendar"></div> 
+        </div>        
+    </div> 
+&nbsp; 
+</div> 
+ 
+ 
+ 
+                        </div> 
+                    </div> 
+                    
+                    
+                    
+                    
+                        
+                            
+                            
+                        
+                    
+                    <div class="content ttContainer"> 
+                        <!-- CUT INTO CALORIES INCLUDE JSP --> 
+                        
+                        
+                        <div class="dataBlock clearfix"> 
+                            <div class="data"><span class="highlight1">1928</span>&nbsp;calories burned</div> 
+                            
+                                <div class="simpleGraph invisible" onmousedown="fitbit.app.user.goal.showGoalDialog( 'My goal is to burn more than', 'calories every day', 47472, '2184.0', 0, true, 0 );"> 
+                                    
+                                        
+                                        
+                                            
+                                        
+                                    
+                                    <a class="tooltip" title="Click to edit goal" href="#"> 
+                                        <div class="graph"> 
+                                            <strong id="bar.47472" class="bar highlightBg1"
+
+                                                    style="width: 88.27839%;"></strong> 
+                                        </div> 
+                                        <div class="text"> 
+                                            <span id="percentComplete.47472">88</span>%
+                                            of goal of
+                                            <span id="target.47472">2184</span> 
+                                        </div> 
+                                    </a> 
+                                </div> 
+                            
+                        </div> 
+                        
+                        <div class="dataBlock clearfix"> 
+                            <div class="data"><span class="highlight2">0</span> calories eaten</div> 
+                            
+                                <div class="simpleGraph invisible" onmousedown="fitbit.app.user.goal.showGoalDialog( 'My goal is to eat', 'calories every day', 47471, '2184.0', 1, false, 0 );"> 
+                                    <a class="tooltip" title="Click to edit goal" href="#"> 
+                                        <div class="graph"> 
+                                            <strong id="bar.47471" class="bar highlightBg2"
+
+                                                    style="width: 0.0%;"></strong> 
+                                        </div> 
+                                        <div class="text"> 
+                                            <span id="percentComplete.47471">0</span>%
+                                            of goal of
+                                            <span id="target.47471">2184</span> 
+                                        </div> 
+                                    </a> 
+                                </div> 
+                            
+                        </div> 
+                        <div class="dataBlock"> 
+                            
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+    
+    
+    
+        
+            
+ 
+ 
+ 
+ 
+ 
+ 
+    
+    
+        
+    
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+<div id="trainerPremiumModal" class="form modal invisible" style="padding-top: 49px;"> 
+    <div class="hd"> 
+        <div class="header" style="line-height: 49px;">Fitbit Trainer</div> 
+        <div class="closeButton" style="line-height: 49px;"> 
+            <a href="#" onmousedown="fitbit.app.premium.trainer.onClose(); return false;" onclick="return false;">Close</a> 
+        </div> 
+    </div> 
+    <div class="body" style="padding-bottom: 15px; padding-top: 30px;"> 
+        <div style="margin-bottom: 15px; text-align:justify;"> 
+            The Fitbit trainer helps you set and track attainable goals to get more
+            active. It does this by first learning your current activity level and then
+            creating a personalized fitness plan that pushes you to gradually
+            increase your movement over the course of 12 weeks. Like a fitness
+            coach, it adapts the plan to meet your changing needs and help you
+            attain your fitness goals.
+        </div> 
+        
+            
+            
+                <div style="margin-bottom: 15px; text-align:justify;"> 
+                    The trainer comes as part of a premium membership but you are
+                    eligible to try it in a free week-long trial. At the end of the trial you can
+                    choose to sign up for a premium membership, but there is no
+                    commitment whatsoever.
+                </div> 
+            
+        
+        
+            <div style="margin-bottom: 7px;"> 
+                A premium membership unlocks many more site features:
+            </div> 
+            <div style="float: left; clear: both; width: 100%; margin-bottom: 20px;"> 
+                <div style="float: left; margin-left: 40px;"> 
+                    <ul style="list-style:disc inside none;"> 
+                        <li style="list-style:disc inside none; font-size: 12px;">Benchmarking</li> 
+                        <li style="list-style:disc inside none; font-size: 12px;">Personalized reports</li> 
+                    </ul> 
+                </div> 
+                <div style="float: left; margin-left: 40px;"> 
+                    <ul style="list-style:disc inside none;"> 
+    
+                        <li style="list-style:disc inside none; font-size: 12px;">Unlimited custom trackers</li> 
+                        <li style="list-style:disc inside none; font-size: 12px;">Much more!</li> 
+                    </ul> 
+                </div> 
+            </div> 
+            <div style=" margin-top: 4px; font-size:15px;"> 
+                <a href="/premium/about">Learn more about premium</a> 
+            </div> 
+        
+        <div class="clearfix" style="margin: 25px 0 0 0;"> 
+        <div id="buttonsContainer"> 
+            
+                <div id="bGetFreeTrial"> 
+                    <a  href="#" title="Get Free Report. No Credit Card Required."
+                        onmousedown="fitbit.app.premium.addTrialSubscription('TRIAL_ALGORITHMIC_TRAINER', '/trainer/trainerSetup', 'trialTrainer_dashPage_trainerUpsellDialog'); return false;"
+                       onclick="return false;"> 
+                        <span>Start Free Trial</span> 
+                        <br/> 
+                        <span style="font-size:8px;">NO CREDIT CARD REQUIRED</span> 
+                    </a> 
+                </div> 
+            
+            <div id="bBuyPremium"> 
+                <a href="#" title="Buy Premium"
+                   onmousedown="window.location='/order?packName=fitbit_premium&doneUrl=/trainer/trainerSetup&cancelUrl=/&linkId=premiumPack_dashPage_trainerUpsellDialog'; return false;"
+                        onclick="return false;">Buy Premium</a> 
+            </div> 
+            <div class="lOr">or</div> 
+            <div id="bNoThanks"> 
+                <a title="Cancel" href="#" onclick="fitbit.app.premium.trainer.onClose(); return false;">No thanks</a> 
+            </div> 
+        </div> 
+ 
+    </div> 
+    </div> 
+</div> 
+ 
+            <div style="float:left;margin-right:10px;font-size:12px;color:#000000;">Want to challenge yourself to be more active?</div> 
+            <a href="#" onmousedown="fitbit.app.premium.trainer.showDialog();" onclick="return false;"
+               style="display: block; text-decoration: underline;font-size:12px;">Start a free week trial of the Fitbit trainer now!</a> 
+        
+        
+        
+        
+        
+    
+ 
+ 
+ 
+                        </div> 
+                    </div> 
+                    
+                    
+                    
+                    
+                  
+                    
+                  
+ 
+                
+                    <div class="content border"> 
+                        <div id="intradayCaloriesTabs" class="tabs"> 
+                            <h3 style="float: left; padding: 6px 2px;">Intraday calories</h3> 
+                            <ul class="menu"> 
+                                <li class='active'><a class='active' href="#intradayCaloriesBurnedChart"><span>burned every 5 min</span></a></li> 
+                                <li ><a  href="#intradayCaloriesEatenChart"><span>eaten</span></a></li> 
+                            </ul> 
+                        </div> 
+ 
+                        
+                        
+                            
+                            
+                                
+ 
+ 
+ 
+ 
+ 
+ 
+<div id="intradayCaloriesBurnedChart"  > 
+    
+        <p style="margin: 0 10px 10px 0; font-size: 10px;"> 
+            You are seeing this because you don't have Adobe Flash plugin installed. <a href="http://www.adobe.com/go/getflashplayer">Get Adobe Flash</a> to view this graph.
+        </p> 
+    
+</div> 
+ 
+                            
+                        
+ 
+                        
+                        
+                            
+                                
+ 
+ 
+ 
+ 
+ 
+ 
+<div id="intradayCaloriesEatenChart" class="invisible" > 
+    
+        <p style="margin: 0 10px 10px 0; font-size: 10px;"> 
+            You are seeing this because you don't have Adobe Flash plugin installed. <a href="http://www.adobe.com/go/getflashplayer">Get Adobe Flash</a> to view this graph.
+        </p> 
+    
+</div> 
+ 
+                            
+                            
+                        
+ 
+                    </div> 
+                
+ 
+                </div> 
+                <div id="activity" class="module clearfix"> 
+                    <div class="dateHeader"> 
+                        <div class="title"><h2>Activity</h2></div> 
+                        <div class="dateArea"> 
+                            
+ 
+ 
+ 
+ 
+ 
+<ul id="dateNavHeader"> 
+    <li><a href="/2010/07/17"><img src="/images/common/pre_arrow.gif" alt=""/></a></li> 
+    <li class="date"><span>Today</span></li> 
+    
+    <li class="select"><a id="showCalendar2" href="#" onclick="return false;" onmousedown="fitbit.app.showCalendar('', 'calendar2', 'showCalendar2', '2010-07-18', false, '/'); return false;">Select</a></li> 
+</ul> 
+<div class="yui-skin-sam"> 
+    <div id="calendar2Container"> 
+        <div id="calendar2Header" class="hd"></div> 
+        <div class="bd clearfix" style="color: black"> 
+            <div id="calendar2"></div> 
+        </div>        
+    </div> 
+&nbsp; 
+</div> 
+ 
+ 
+ 
+                        </div> 
+                    </div> 
+                    <div class="content firstBlock"> 
+                        <!-- CUT INTO Activities INCLUDE JSP --> 
+                        <div class="dataBlock clearfix"> 
+                            <div class="data"> 
+                                <span class="highlight1">7821
+                                </span> steps taken
+                                 today
+                            </div> 
+                            
+                                <div class="simpleGraph invisible" onmousedown="fitbit.app.user.goal.showGoalDialog( 'My goal is to walk or run more than', 'steps every day', 47474, '10000.0', 0, true, 0 );"> 
+                                    <a class="tooltip" title="Click to edit goal" href="#"> 
+                                        <div class="graph"> 
+                                            <strong id="bar.47474" class="bar highlightBg1"
+
+                                                    style="width: 78.21%;"></strong> 
+                                        </div> 
+                                        <div class="text"> 
+                                            <span id="percentComplete.47474">78</span>%
+                                            of goal of
+                                            <span id="target.47474">10000</span> 
+                                        </div> 
+                                    </a> 
+                                </div> 
+                            
+                        </div> 
+                        <div class="dataBlock clearfix"> 
+                            <div class="data"> 
+                                <span class="highlight2"> 
+                                    3.38
+                                </span> miles traveled
+                                 today
+                            </div> 
+                            
+                                <div class="simpleGraph invisible" onmousedown="fitbit.app.user.goal.showGoalDialog( 'My goal is to walk or run more than', 'miles every day', 47475, '5.0', 0, true, 0, false );"> 
+                                    <a class="tooltip" title="Click to edit goal" href="#"> 
+                                        <div class="graph"> 
+                                            <strong id="bar.47475" class="bar highlightBg2"
+
+                                                    style="width: 67.63514%;"></strong> 
+                                        </div> 
+                                        <div class="text"> 
+                                            <span id="percentComplete.47475">68</span>%
+                                            of goal of
+                                            <span id="target.47475">5.00</span> 
+                                        </div> 
+                                    </a> 
+                                </div> 
+                            
+                        </div> 
+                        <div class="dataBlock clearfix"> 
+                            <div class="data"> 
+                                
+                                <span class="highlight1">606</span> active score<a class="tooltip ttid-active-score-tip" href="#" style="z-index: 9000"><span style="color: gray">*</span> 
+                                    <span id="active-score-tip" class="help tooltip-content"> 
+                                        <div>The Active Score captures how active you were compared to if you were completely sedentary all day. Your score will be 0 if you were sedentary, and
+                                        typically a 3-digit number if you were active.
+                                        <br/> 
+                                        You may prefer the Active Score over Calories Burned, because the Active Score just captures your level of activity and is not dependent on your height and
+                                        weight, as calories burned is.
+                                        <br/> 
+                                        For those who understand what a MET (Metabolic Equivalent) is, the Active Score is a rough translation of the sum of your METs for each minute minus 1 for each minute elapsed in the day.
+                                        </div> 
+                                    </span> 
+                                </a> 
+                            </div> 
+                            
+                                
+                                
+                                <div class="simpleGraph invisible" onmousedown="fitbit.app.user.goal.showGoalDialog( 'My goal is to reach', 'active score every day', 47473, '1000.0', 0, true, 0 );"> 
+                                    <a class="tooltip" title="Click to edit goal" href="#"> 
+                                        <div class="graph"> 
+                                            <strong id="bar.47473" class="bar highlightBg1"
+
+                                                    style="width: 60.6%;"></strong> 
+                                        </div> 
+                                        <div class="text"> 
+                                            <span id="percentComplete.47473">61</span>%
+                                            of goal of
+                                            <span id="target.47473">1000</span> 
+                                        </div> 
+                                    </a> 
+                                </div> 
+                            
+                        </div> 
+    
+                    
+                        <div class="dataBlock clearfix"> 
+                          <div class="recording"> 
+                            You have recorded 
+                            <a class="tooltip ttid-activities-tip" style="z-index: 9000;" href="/activities"> 
+                                0 activities
+                                <span id="activities-tip" class="tooltip-content"> 
+                                    A recording is similar to a trip odometer.<br/><br/> 
+                                    You can record activities using your Fitbit. Press and the hold the Fitbit button for 2+ seconds to start a recording and hold for 2+ seconds to stop a recording.<br/><br/> 
+                                    Recordings are useful, for instance, if you want to know exactly how many steps it takes you to walk from your house to the bus stop or you want to know how many calories you burn during your morning walk or what your pace was during the walk.
+                                </span> 
+                            </a> 
+                          </div> 
+                        </div> 
+                    
+ 
+                    </div> 
+ 
+                
+                    <div id="activityBreakdownChartArea" class="content border"> 
+                        <h3>Today's activity breakdown (excluding sleep)</h3> 
+                        
+                        <div id="activityGraphHorizontal" class="horizontalGraph invisible"> 
+                            <div class="graph"> 
+                                <div class="bar sedentary" style="width: 81.6%;"></div> 
+                                <div class="bar lightly"   style="width: 8.2%;"></div> 
+                                <div class="bar fairly"    style="width: 8.9%;"></div> 
+                                <div class="bar very"      style="width: 1.4%;"></div> 
+                            </div> 
+                            <div class="text"> 
+                                
+                                
+                                
+                                
+ 
+                                <div class="caption"><span class="sedentary">sedentary</span><span class="time">16hrs 58min</span></div> 
+                                <div class="caption"><span class="lightly"  >lightly active</span><span class="time">1hr 42min</span></div> 
+                                <div class="caption"><span class="fairly"   >fairly active</span><span class="time">1hr 51min</span></div> 
+                                <div class="caption"><span class="very"     >very active</span><span class="time">17min</span></div> 
+                            </div> 
+                        </div> 
+ 
+                        <div id="activityGraphBar" class="barGraph invisible"> 
+                            <div class="graph"> 
+                                <div class="bar sedentary" style="height:100px; border-top-width:0px;"></div> 
+                                <div class="bar lightly"   style="height:10px; border-top-width:90px;"></div> 
+                                <div class="bar fairly"    style="height:11px; border-top-width:89px;"></div> 
+                                <div class="bar very"      style="height:2px; border-top-width:98px;"></div> 
+                            </div> 
+                            <div class="text"> 
+                                <div class="caption sedentary">sedentary<div>16hrs 58min</div></div> 
+                                <div class="caption lightly">lightly active<div>1hr 42min</div></div> 
+                                <div class="caption fairly">fairly active<div>1hr 51min</div></div> 
+                                <div class="caption very">very active<div>17min</div></div> 
+                            </div> 
+                        </div> 
+ 
+                        <div id="activityGraphPie" class="pieGraph"> 
+                            
+ 
+ 
+ 
+ 
+ 
+ 
+<div id="activityPieChart" class="graph" style="width: 240px;"> 
+    
+        <p style="margin: 0 10px 10px 0; font-size: 10px;"> 
+            You are seeing this because you don't have Adobe Flash plugin installed. <a href="http://www.adobe.com/go/getflashplayer">Get Adobe Flash</a> to view this graph.
+        </p> 
+    
+</div> 
+ 
+                            <div class="left"> 
+                                <div class="sedentary caption">sedentary<div class="number">16hrs 58min</div></div> 
+                                <div class="lightly caption">lightly active<div class="number">1hr 42min</div></div> 
+                            </div> 
+                            <div class="right"> 
+                                <div class="caption fairly">fairly active<div class="number">1hr 51min</div></div> 
+                                <div class="caption very">very active<div class="number">17min</div></div> 
+                            </div> 
+                        </div> 
+                    </div> 
+ 
+                    <div class="content border"> 
+                        <div id="intradayTabs" class="tabs"> 
+                            <ul class="menu"> 
+                                <li class='active'><a class='active' href="#intradayStepsChart"><span>Steps taken</span></a></li> 
+                                <li ><a  href="#intradayActiveScoreChart"><span>Active score</span></a></li> 
+                            </ul> 
+                            <h3 style="float: left; padding: 6px 10px;">every 5 minutes</h3> 
+                        </div> 
+ 
+                        
+                        <div id="intradayStepsChart" ></div> 
+ 
+                        
+                        <div id="intradayActiveScoreChart" class="invisible"></div> 
+ 
+                        
+                    </div> 
+                
+ 
+                   <!-- CUT INTO Activities INCLUDE JSP --> 
+                </div> 
+                
+                
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+<div id="sleep" class="module clearfix "> 
+    
+        
+        
+    
+        
+        <div id="sleepRecord." class="annotation content firstBlock" onmouseout="fitbit.app.highlightRecord('sleepRecord', '', false);" onmouseover="fitbit.app.highlightRecord('sleepRecord', '', true);"> 
+ 
+            
+            <!-- class: p1, p2 or p3 (poor, average, really restful) --> 
+            <div id="sleepIndicator" class="p1">Your sleep efficiency
+                <span class="text"> 
+                    
+                        ?%
+                        
+                    
+                </span> 
+            </div> 
+            <h3 id="sleepChartLabel">Your main sleep pattern &nbsp; <span class="textLegendHighlight1">asleep</span> &nbsp; <span class="textLegendHighlight2">active</span></h3> 
+            
+                
+                
+                    <h3 id="sleepChartMessage">You did not log sleep data on this day.</h3> 
+                
+            
+            <ul id="sleepSummary"> 
+                <li class="first"> 
+                    <span class="sleepMetricLabel">You went to bed at</span> 
+                    <span class="sleepMetric"> 
+                        
+                            ?
+                            
+                        
+                    </span> 
+                </li> 
+                <li> 
+                    <span class="sleepMetricLabel">Time to fall asleep</span> 
+                    <span class="sleepMetric">0min</span> 
+                </li> 
+                <li> 
+                    <span class="sleepMetricLabel">Times awakened</span> 
+                    <span class="sleepMetric">0</span> 
+                </li> 
+                <li> 
+                    <span class="sleepMetricLabel">You were in bed for</span> 
+                    <span class="sleepMetric">0min</span> 
+                </li> 
+                <li> 
+                    <span class="sleepMetricLabel">Actual sleep time</span> 
+                    <span class="sleepMetric highlight2">0min</span> 
+                </li> 
+            </ul> 
+                    <div class="clearfix" style="height: 0; float: none; clear: both;"></div> 
+ 
+                    <div id="editSleepRecord." class="edit invisible"> 
+                        
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+                    <div id="sleepRecordEntry" > 
+                        
+                            <div class="quantityLabel"> 
+                                <h3 style="float: none; height: auto;"> 
+                                    Create a new sleep record
+                                </h3> 
+                            </div> 
+                        
+                        
+                        <form name="sleepLogForm" action="/activities/sleepAnnotation" class="form" method="post" onsubmit="fitbit.app.sleep.logSleep(); return false;"> 
+                          <div id="sleepRecordEntryInternal"> 
+                            <input name="date" value="2010-07-18" type="hidden" /> 
+                            <input name="clock" value="" type="hidden" /> 
+                            <input name="sleepProcAlgorithm" value="" class="invisible" type="text" /> 
+                            
+                            <div style="width: 200px; float: left;"> 
+                                <h3 style="float: none;">Entered bed</h3> 
+                                <div style="margin-bottom: 10px;"> 
+                                    <input maxlength="2" name="enteredBedHours" value="" type="text" size="2" /> 
+                                    <span style="font-weight: bold;">:</span> 
+                                    <input maxlength="2" name="enteredBedMinutes" value="" type="text" size="2" />&nbsp;
+ 
+                                    
+                                        
+                                        
+                                            <select name="enteredBedAmpm"> 
+                                                <option selected="selected" value="am">am</option> 
+                                                <option value="pm">pm</option> 
+                                            </select> 
+                                        
+                                    
+                                </div> 
+                                on the 
+                                <select name="enteredBedDay"> 
+                                    <option value="prev">Previous day</option> 
+                                    <option selected="selected" value="same">Same day</option> 
+                                </select> 
+                                <div id="startTimeLinks" class="startTimeBlock" style="padding: 12px 0; margin: 0;"> 
+                                    <a id="clock12" href="#"  onclick="return false;" onmousedown="fitbit.app.sleep.setClock('12','');">12 hr</a>&nbsp;
+                                    <a id="clock24" href="#"  onclick="return false;" onmousedown="fitbit.app.sleep.setClock('24','');">24 hr</a> 
+                                </div> 
+                            </div> 
+                            <div style="margin-left: 25px; width: 200px; float: left;"> 
+                                <h3 style="float: none;">Left bed</h3> 
+                                <div> 
+                                    <input maxlength="2" name="leftBedHours" value="" type="text" size="2" /> 
+                                    <span style="font-weight: bold;">:</span> 
+                                    <input maxlength="2" name="leftBedMinutes" value="" type="text" size="2" />&nbsp;
+ 
+                                    
+                                        
+                                        
+                                            <select name="leftBedAmpm"> 
+                                                <option selected="selected" value="am">am</option> 
+                                                <option value="pm">pm</option> 
+                                            </select> 
+                                        
+                                    
+                                </div> 
+                            </div> 
+                        
+                            
+                            
+                                <input id="logSleepButton" style="clear: both; float: left; margin: 0 0 0 0" name="logSleepButton" value="Log Sleep" class="button" type="submit" /> 
+                            
+                          </div> 
+                          <div id="sleepRecordEntryStatus" style="clear: both; padding-top: 10px;"> 
+                                <div id="logSleepProgress" class="recentlyAddedStatus invisible" style="margin: 0;"></div> 
+                                <div id="logSleepErrors" class="error invisible" style="margin: 0;"></div> 
+                          </div> 
+                        <div style="display: none;"><input type="hidden" name="_sourcePage" value="KONJlF7X_WfGrJMFkFsv6XbX0f6OV1Ndj1zeGcz7OKxV2RUoL5W60NfHjCnPkhut" /><input type="hidden" name="__fp" value="VTacRFoN_4doEYlyxrNfYrnIH0RJLtw0N26H55fJomuPoci9bkO-bTduh-eXyaJrLYwjslupZN8=" /></div></form> 
+                        
+                    </div> 
+ 
+                    </div> 
+        </div> 
+    
+    
+        <h3 id="sleepChartMoreLink"><a href="/sleep">View all your sleeps on this day</a></h3> 
+    
+        
+    
+</div> 
+                 <!--
+                <div id="dashboardAdvertisement" class="module clearfix">
+                    <div class="content firstBlock">
+                        <h3 class="advertisement">Headline for Advertisement Goes Here</h3>
+                        <p>Marketing copy for the advertisement talks about additional stats provided, as well as the ease of the syncing software.  Maybe one more line.</p>
+                        <a href="/order/" class="buttonLink"><img src="/images/dashboard/purchaseButton.gif" alt="Purchase" width="154" height="39"/></a>
+                    </div>
+                </div>
+                --> 
+                
+                <div id="journal" class="module clearfix"> 
+                    <div class="dateHeader"> 
+                        <div class="title"><h2>Journal</h2></div> 
+                        <div class="dateArea"> 
+                            
+ 
+ 
+ 
+ 
+ 
+<ul id="dateNavHeader"> 
+    <li><a href="/2010/07/17"><img src="/images/common/pre_arrow.gif" alt=""/></a></li> 
+    <li class="date"><span>Today</span></li> 
+    
+    <li class="select"><a id="showCalendar3" href="#" onclick="return false;" onmousedown="fitbit.app.showCalendar('', 'calendar3', 'showCalendar3', '2010-07-18', false, '/'); return false;">Select</a></li> 
+</ul> 
+<div class="yui-skin-sam"> 
+    <div id="calendar3Container"> 
+        <div id="calendar3Header" class="hd"></div> 
+        <div class="bd clearfix" style="color: black"> 
+            <div id="calendar3"></div> 
+        </div>        
+    </div> 
+&nbsp; 
+</div> 
+ 
+ 
+ 
+                        </div> 
+                    </div> 
+                    <div class="content firstBlock"> 
+                        
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+    
+        
+            
+            
+                <div class="text"> 
+                    
+                        You have not logged your mood.
+                        
+                    
+                </div> 
+            
+        
+    
+    
+ 
+ 
+ 
+                    </div> 
+                    <div class="content"> 
+                        
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+    
+        
+            
+            
+                <div class="text"> 
+                    
+                        You have not logged your allergies.
+                        
+                    
+                </div> 
+            
+        
+    
+    
+ 
+                    </div> 
+                    
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+<div id="journal" class="clearfix"> 
+    
+        
+            <div class="content"> 
+                <div class="text"> 
+                    
+                        You have not written anything in your journal.
+                        
+                    
+                </div> 
+            </div> 
+        
+        
+    
+</div> 
+                </div> 
+ 
+              </div> 
+ 
+              
+              <div id="historical"  style="position: relative;"> 
+                  <div class="module firstModule clearfix"> 
+ 
+                    <div class="dateHeader"> 
+                        <div class="title"><h2>&nbsp;</h2></div> 
+                        <div class="dateArea"> 
+                            
+ 
+ 
+ 
+ 
+ 
+<ul id="dateNavHeader"> 
+    <li><a href="/2010/07/17"><img src="/images/common/pre_arrow.gif" alt=""/></a></li> 
+    <li class="date"><span>Today</span></li> 
+    
+    <li class="select"><a id="showCalendar5" href="#" onclick="return false;" onmousedown="fitbit.app.showCalendar('', 'calendar5', 'showCalendar5', '2010-07-18', false, '/'); return false;">Select</a></li> 
+</ul> 
+<div class="yui-skin-sam"> 
+    <div id="calendar5Container"> 
+        <div id="calendar5Header" class="hd"></div> 
+        <div class="bd clearfix" style="color: black"> 
+            <div id="calendar5"></div> 
+        </div>        
+    </div> 
+&nbsp; 
+</div> 
+ 
+ 
+ 
+                        </div> 
+                    </div> 
+ 
+                    <div class="content firstBlock"> 
+                        <h3>30 day graph of <span class="textLegendHighlight1">intake</span> vs. <span class="textLegendHighlight2">burn</span></h3> 
+                        
+ 
+ 
+ 
+ 
+ 
+ 
+<div id="caloriesInOutChart"  style="margin-top: 0; float: left"> 
+    
+        <p style="margin: 0 10px 10px 0; font-size: 10px;"> 
+            You are seeing this because you don't have Adobe Flash plugin installed. <a href="http://www.adobe.com/go/getflashplayer">Get Adobe Flash</a> to view this graph.
+        </p> 
+    
+</div> 
+ 
+                        <div style="margin-left: 100px;"> 
+                            <h3 style="float: left;"><span class="highlight1">2,313</span> average burn</h3> 
+                            <h3 style="float: left; margin-left: 50px;"><span class="highlight2">0</span> average intake</h3><br/> 
+                        </div> 
+                    </div> 
+ 
+                    <div class="content"> 
+                        <div id="historicalActivitiesTabs" class="tabs"> 
+                            <ul class="menu"> 
+                                <li class='active'><a class='active' href="#stepsTakenHistoricalChart"><span>Steps</span></a></li> 
+                                <li ><a  href="#distanceHistoricalChart"><span>Distance</span></a></li> 
+                                <li ><a  href="#activeScoreHistoricalChart"><span>Active Score</span></a></li> 
+                            </ul> 
+                            <h3 style="float: left; padding: 6px 10px;">30 day graph</h3> 
+                        </div> 
+ 
+                        
+                        <div id="activeScoreHistoricalChart" class="invisible"></div> 
+ 
+                        
+                        <div id="stepsTakenHistoricalChart" ></div> 
+ 
+                        
+                        <div id="distanceHistoricalChart" class="invisible"></div> 
+ 
+                    </div> 
+ 
+                
+                    <div class="content"> 
+                        <h3>30 day graph of minutes active (in hours)</h3> 
+                        
+ 
+ 
+ 
+ 
+ 
+ 
+<div id="minutesActiveChart"  style="margin-top: 8px; float: left"> 
+    
+        <p style="margin: 0 10px 10px 0; font-size: 10px;"> 
+            You are seeing this because you don't have Adobe Flash plugin installed. <a href="http://www.adobe.com/go/getflashplayer">Get Adobe Flash</a> to view this graph.
+        </p> 
+    
+</div> 
+ 
+                        <div style="margin-left: 50px;"> 
+                            
+                            <h3 style="float: left; margin-left: 25px;"><span class="textLegendHighlightLightly">lightly active</span></h3> 
+                            <h3 style="float: left; margin-left: 25px;"><span class="textLegendHighlightFairly">fairly active</span></h3> 
+                            <h3 style="float: left; margin-left: 25px;"><span class="textLegendHighlightVery">very active</span></h3> 
+                            <br/> 
+                        </div> 
+                    </div> 
+                
+ 
+                    <div class="content"> 
+                        <h3>30 day weight graph (in lbs)</h3> 
+                        
+ 
+ 
+ 
+ 
+ 
+ 
+<div id="weightChart"  style="margin-top: 8px; float: left"> 
+    
+        <p style="margin: 0 10px 10px 0; font-size: 10px;"> 
+            You are seeing this because you don't have Adobe Flash plugin installed. <a href="http://www.adobe.com/go/getflashplayer">Get Adobe Flash</a> to view this graph.
+        </p> 
+    
+</div> 
+ 
+                        <div style="margin-left: 130px;"> 
+                            <h3 style="float: left;"><span class="textLegendHighlight1">actual weight</span></h3> 
+                            <h3 style="float: left; margin-left: 35px;"><span class="textLegendHighlight2">target weight</span></h3> 
+                            <br/> 
+                        </div> 
+                    </div> 
+ 
+                
+                    <div class="content"> 
+                        <div id="sleepInfoTabs" class="tabs"> 
+                            <ul class="menu"> 
+                                <li class='active'><a class='active' href="#timeAsleepChart"><span>Hours asleep</span></a></li> 
+                                <li ><a  href="#timesAwakenedChart"><span>Times awakened</span></a></li> 
+                            </ul> 
+                            <h3 style="float: left; padding: 6px 10px;">30 day graph</h3> 
+                        </div> 
+ 
+                        
+                        <div id="timeAsleepChart" ></div> 
+ 
+                        
+                        <div id="timesAwakenedChart" class="invisible"></div> 
+ 
+                    </div> 
+                
+                  </div> 
+              </div> 
+            </div> 
+            <div id="teasers"> 
+                <div id="profile" class="teaser firstTeaser clearfix"> 
+                    <div class="content" style="background: none;"> 
+                        <div class="clearfix"> 
+                            <div class="photo"><a href="/user/22CJ7H"> 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+	
+	
+		
+	
+ 
+<span class="profilePhoto"> 
+	<img class="profileImage" width="100" height="100" alt="" title="" src="http://cache.fitbit.com/FD733464-63AF-92C7-7C1A-DF4037775B11_profile_100_square.jpg"> 
+ 
+</span></a></div> 
+                            <ul class="info"> 
+                                <li class="username">D​a​n</li> 
+                                
+                                
+                                
+                                
+                                    <li>Male, 28</li> 
+                                
+                                
+                                    <li> 
+                                    
+                                    5' 5''
+                                    
+                                    </li> 
+                                
+                                
+                                <li>W​a​s​h​i​n​g​t​o​n​, D​C​, U​S</li> 
+                                <li>Joined May 14, 2010</li> 
+                                <li>&nbsp;</li><li>Synced 16 minutes ago</li> 
+                                <li>&nbsp;</li><li>Battery level: Low</li><!-- Battery Level: 14% --> 
+                            </ul> 
+                        </div> 
+                    </div> 
+ 
+                    <div class="content clearfix"> 
+                        <div class="actions"> 
+                            <ul> 
+                                <li><a href="/user/22CJ7H">View profile</a></li> 
+                                <li><a href="/user/profile/edit">Edit profile</a></li> 
+                                <li><a href="/user/profile/uploadProfilePhoto">Change profile pic</a></li> 
+                                <li class="padding"></li> 
+                            </ul> 
+                            <ul> 
+                                <li> 
+                                    <a href="/user/profile/share"><span class="tooltip ttid-share-stats-tooltip">Share stats</span></a> 
+                                    <div id="share-stats-tooltip" class="tooltip-content"> 
+                                        Share your daily or weekly average activity stats on your Twitter or Facebook account.
+                                    </div> 
+                                </li> 
+                                    
+                            </ul> 
+                            
+                        </div> 
+                    </div> 
+                </div> 
+ 
+                <div class="teaser clearfix"> 
+                    <div class="header">My Stats</div> 
+ 
+                    
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+	
+	
+		<div id="bodyScales" class="content"> 
+			<div id="bodyScalesHeader"> 
+				<h3>My Body's</h3> 
+				<ul id="bodyScalesNav"> 
+					<li><a href="#weightScale" class="active">Weight</a></li> 
+					<li><a href="#bmiScale">BMI</a></li> 
+				</ul> 
+                
+                    
+                    
+                    
+    				<a id="toggleBodyScales" href="/setUIState?index=5&amp;state=hidden&amp;targetLabel=Show+my+weight+and+BMI">Hide</a> 
+                
+			</div> 
+ 
+			<div id="weightScale" class="pane active"> 
+				
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+<div class="scaleChart scaleChartWide" style="clear: both;"> 
+		<div class="markerContainer"> 
+			<!-- left: (weight - minWeight) / (maxWeight - minWeight), as a percentage --> 
+			<div id="curWeight" class="marker normal" style="left: 27.862646%;"> 
+					132
+			</div> 
+		</div> 
+		<div class="bar"> 
+				<span class="a">90</span> 
+				<span class="b">111</span> 
+				<span class="c">150</span> 
+				<span class="d">180</span> 
+				<span class="e">240+</span> 
+		</div> 
+</div> 
+ 
+			</div> 
+			<div id="bmiScale" class="pane"> 
+				
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+<div class="scaleChart scaleChartWide" style="clear: both;"> 
+		<div class="markerContainer"> 
+			<!-- left: (BMI - 15) / 25, as a percentage --> 
+			<div id="curBmi" class="marker normal" style="left: 27.862617%;"> 
+					22
+			</div> 
+		</div> 
+		<div class="bar"> 
+				<span class="a">15</span> 
+				<span class="b">18.5</span> 
+				<span class="c">25</span> 
+				<span class="d">30</span> 
+				<span class="e">40</span> 
+		</div> 
+</div> 
+ 
+ 
+				<div style="margin: 15px 0 0 25px;"> 
+					<span class="textLegendHighlightUnder">under</span> <span class="textLegendHighlightNormal">normal</span> <span class="textLegendHighlightOver">over</span> <span class="textLegendHighlightObese">obese</span> 
+				</div> 
+			</div> 
+		</div> 
+	
+ 
+ 
+ 
+                  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  
+  
+    
+  
+ 
+ 
+ 
+ 
+ 
+  
+    
+  
+  
+ 
+ 
+ 
+ 
+ 
+  
+  
+    
+      
+    
+    
+  
+ 
+  
+                 
+  <div id="personalBests" class="content"> 
+									
+    <ul id="bestRankNav"> 
+		  <li>My best stats</li> 
+			<li><a id="bestAllTime" class="selected" href="/user/22CJ7H/stats/getPersonalBests?period=alltime&amp;updateRate=DAILY">All-time</a></li> 
+			<li><a id="best30days" href="/user/22CJ7H/stats/getPersonalBests?period=30_days&amp;updateRate=DAILY">30 days</a></li> 
+			<li><a id="best7days" href="/user/22CJ7H/stats/getPersonalBests?period=7_days&amp;updateRate=DAILY">7 days</a></li> 
+		</ul> 
+ 
+    <div id="bestStatsContainer"> 
+      
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  
+  
+    
+  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  
+  
+    
+  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  
+  
+    
+  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  
+  
+    
+  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  
+  
+    
+  
+ 
+ 
+                                     
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+                                       
+ 
+<ul id="bestStats"> 
+  
+    <li> <span class="statValue">25,794 steps</span> on <span class="statDate">May 27, 2010</span> </li> 
+  
+  
+      <li> <span class="statValue">3,482 calories burned</span> on <span class="statDate">May 27, 2010</span> </li> 
+    
+    
+      <li> <span class="statValue">12.73 miles</span> on <span class="statDate">May 27, 2010</span> </li> 
+    
+    
+      <li> <span class="statValue">1,908 active score</span> on <span class="statDate">May 27, 2010</span> </li> 
+    
+    
+      <li> <span class="statValue">176 very active min</span> on <span class="statDate">May 27, 2010</span> </li> 
+    
+</ul> 
+ 
+ 
+		</div> 
+									   
+	</div> 
+ 
+ 
+ 
+                  
+ 
+ 
+ 
+ 
+  
+  
+    
+      
+    
+    
+  
+ 
+  
+    
+      
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+      
+    
+    
+  
+ 
+  
+                                       
+  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  
+  
+    
+  
+ 
+ 
+ 
+  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  
+  
+    
+  
+ 
+ 
+ 
+  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  
+  
+    
+  
+ 
+ 
+ 
+  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  
+  
+    
+  
+ 
+ 
+ 
+ 
+  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  
+  
+     
+  
+ 
+ 
+ 
+  <form id="stats" class="content" action="/user/22CJ7H/stats/getConstrainedStats" method="get"> 
+    <fieldset id="rankingCategories"> 
+      
+      
+      
+      
+      
+        <legend><span>Rank by</span></legend> 
+      
+      
+      <ul> 
+        
+          <li> 
+            
+            <input type="checkbox" id="fitbitConstraint" name="constraints" value="tracker" checked="checked" > 
+            <label for="fitbitConstraint" class="checked">Fitbit</label> 
+          </li> 
+        
+        
+        
+          <li> 
+            <input type="checkbox" id="genderConstraint" name="constraints" value="gender"> 
+            <label for="genderConstraint">Gender</label> 
+          </li> 
+        
+        
+        
+          <li> 
+            <input type="checkbox" id="ageConstraint" name="constraints" value="age"> 
+            <label for="ageConstraint">Age</label> 
+          </li> 
+        
+        
+        
+          <li> 
+            <input type="checkbox" id="bmiConstraint" name="constraints" value="bmi"> 
+            <label for="bmiConstraint">BMI</label> 
+          </li> 
+        
+        
+      </ul> 
+      
+      
+      <div id="rankingActions"> 
+        <input type="hidden" name="values" value="percentile,value"> 
+        <input type="hidden" name="statistics" value="avg_activity_7_days,avg_steps_7_days,avg_mins_very_active_7_days,avg_distance_miles_7_days"> 
+        <input type="hidden" name="aggregates" value="average"> 
+        <input type="hidden" name="displayContext" value="faceted"> 
+        <input type="hidden" name="valueWhenUnavailable" value="--" /> 
+        <input type="hidden" name="defaultConstraints" value="global" /> 
+        <input type="hidden" name="updateRate" value="WEEKLY" /> 
+        <button type="submit">Go</button> 
+      </div> 
+    </fieldset> 
+ 
+    <table> 
+      <caption id="networkCaption"> 
+        My rank among <span id="network.name">members who <strong>use a Fitbit</strong></span>.
+      </caption> 
+      
+      <thead> 
+        <tr> 
+          <th class="avg">7 day <abbr title="average">avg.</abbr></th> 
+          <th>Me</th> 
+          <th>All</th> 
+          <th>%Rank</th> 
+        </tr> 
+      </thead> 
+      
+      <tfoot> 
+        <tr> 
+          
+          <td colspan="4">stats updated weekly</td> 
+        </tr> 
+      </tfoot> 
+      
+      <tbody> 
+        <tr> 
+          <th>Steps</th> 
+          <td id="values.avg_steps_7_days.user.value">9,744</td> 
+          <td id="values.avg_steps_7_days.network.average">7,144</td> 
+          <td id="values.avg_steps_7_days.user.percentile">77.0</td> 
+        </tr> 
+        <tr> 
+          <th>Active score</th> 
+          <td id="values.avg_activity_7_days.user.value">780</td> 
+          <td id="values.avg_activity_7_days.network.average">348</td> 
+          <td id="values.avg_activity_7_days.user.percentile">85.9</td> 
+        </tr> 
+        <tr> 
+          <th>Distance (miles)</th> 
+          <td id="values.avg_distance_miles_7_days.user.value">4.37</td> 
+          <td id="values.avg_distance_miles_7_days.network.average">3.50</td> 
+          <td id="values.avg_distance_miles_7_days.user.percentile">73.0</td> 
+        </tr> 
+        
+          <tr> 
+            <th>Very active <abbr title="minutes">min.</abbr></th> 
+            <td id="values.avg_mins_very_active_7_days.user.value">46</td> 
+            <td id="values.avg_mins_very_active_7_days.network.average">18</td> 
+            <td id="values.avg_mins_very_active_7_days.user.percentile">91.4</td> 
+          </tr> 
+        
+      </tbody> 
+    </table> 
+  </form> 
+ 
+ 
+ 
+                    <div class="content firstContent"> 
+                      
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+    
+    
+        
+            
+ 
+ 
+ 
+ 
+ 
+ 
+    
+    
+        
+    
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+<div id="benchmarkingPremiumModal" class="form modal invisible" style="padding-top: 49px;"> 
+    <div class="hd"> 
+        <div class="header" style="line-height: 49px;">Benchmarking</div> 
+        <div class="closeButton" style="line-height: 49px;"> 
+            <a href="#" onmousedown="fitbit.app.premium.benchmarking.onClose(); return false;" onclick="return false;">Close</a> 
+        </div> 
+    </div> 
+    <div class="body" style="padding-bottom: 15px; padding-top: 30px;"> 
+        <div style="margin-bottom: 15px; text-align:justify;"> 
+            How do I compare to others in activity, sleep, and weight? Find out with
+            premium benchmarking - an interactive tool that lets you explore the
+            entire Fitbit database to see how you stand up against your peers.
+        </div> 
+        
+            
+            
+                <div style="margin-bottom: 15px; text-align:justify;"> 
+                    You are eligible to try a free one day trial of benchmarking. At the end of
+                    the trial you can choose to sign up for a premium membership, but
+                    there is no commitment whatsoever.
+                </div> 
+            
+        
+        
+            <div style="margin-bottom: 7px;"> 
+                A premium membership unlocks many more site features:
+            </div> 
+            <div style="float: left; clear: both; width: 100%; margin-bottom: 20px;"> 
+                <div style="float: left; margin-left: 40px;"> 
+                    <ul style="list-style:disc inside none;"> 
+                        <li style="list-style:disc inside none; font-size: 12px;">Fitbit trainer</li> 
+                        <li style="list-style:disc inside none; font-size: 12px;">Personalized reports</li> 
+                    </ul> 
+                </div> 
+                <div style="float: left; margin-left: 40px;"> 
+                    <ul style="list-style:disc inside none;"> 
+    
+                        <li style="list-style:disc inside none; font-size: 12px;">Unlimited custom trackers</li> 
+                        <li style="list-style:disc inside none; font-size: 12px;">Much more!</li> 
+                    </ul> 
+                </div> 
+            </div> 
+            <div style=" margin-top: 4px; font-size:15px;"> 
+                <a href="/premium/about">Learn more about premium</a> 
+            </div> 
+        
+        <div class="clearfix" style="margin: 25px 0 0 0;"> 
+        <div id="buttonsContainer"> 
+            
+                <div id="bGetFreeTrial"> 
+                    <a  href="#" title="Get Free Report. No Credit Card Required."
+                        onmousedown="fitbit.app.premium.addTrialSubscription('TRIAL_COMMUNITY_BENCHMARKING', '/premium/cb', 'trialBenchmark_dashPage_benchmarkUpsellDialog'); return false;"
+                       onclick="return false;"> 
+                        <span>Start Free Trial</span> 
+                        <br/> 
+                        <span style="font-size:8px;">NO CREDIT CARD REQUIRED</span> 
+                    </a> 
+                </div> 
+            
+            <div id="bBuyPremium"> 
+                <a href="#" title="Buy Premium"
+                   onmousedown="window.location='/order?packName=fitbit_premium&doneUrl=/premium/cb&cancelUrl=/&linkId=premiumPack_dashPage_benchmarkUpsellDialog'; return false;"
+                        onclick="return false;">Buy Premium</a> 
+            </div> 
+            <div class="lOr">or</div> 
+            <div id="bNoThanks"> 
+                <a title="Cancel" href="#" onclick="fitbit.app.premium.benchmarking.onClose(); return false;">No thanks</a> 
+            </div> 
+        </div> 
+ 
+    </div> 
+    </div> 
+</div> 
+ 
+            <div>Are you addicted to data?</div> 
+            <a href="#" onmousedown="fitbit.app.premium.benchmarking.showDialog();" onclick="return false;" style="display: block; text-decoration: underline;">Try
+                out premium benchmarking with a free trial</a> 
+        
+        
+        
+        
+        
+    
+ 
+ 
+ 
+                    </div> 
+                </div> 
+ 
+                
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  
+    
+  
+  
+ 
+ 
+ 
+ 
+ 
+<div id="friends" class="teaser"> 
+  <h3 class="header">Friends</h3> 
+  
+  <div class="content"> 
+ 
+    
+      
+ 
+      
+        <div class="blank placeholder clearfix"> 
+          <div style="margin-top: 5px; font-weight: bold;">Are you more active than your friends?</div> 
+          <div style="margin-top: 7px;">Invite them to join Fitbit and find out.</div> 
+          <div style="margin-top: 7px; margin-bottom: 7px;">You will get ranked nightly on categories such as who walks the most steps, etc.</div> 
+          
+          
+ 
+ 
+ 
+ 
+ 
+ 
+	
+		
+		
+			
+			
+			
+		
+	
+    <a href="#" onclick="return false;" onmousedown="fitbit.app.user.friends.showFriendInvitationDialog('Dan', 'dan@fake.com', '', '');">Invite friends!</a> 
+ 
+        </div> 
+     
+      
+    
+ 
+    <ul class="friendActions"> 
+      
+      <li> 
+ 
+ 
+ 
+ 
+ 
+ 
+	
+		
+		
+			
+			
+			
+		
+	
+    <a href="#" onclick="return false;" onmousedown="fitbit.app.user.friends.showFriendInvitationDialog('Dan', 'dan@fake.com', '', '');">Invite friends!</a> 
+</li> 
+      
+    </ul> 
+  
+  </div> 
+ 
+</div> 
+ 
+                
+                
+ 
+ 
+ 
+ 
+ 
+  
+ 
+  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  
+ 
+  <div id="myGroups" class="teaser"> 
+    <h3 class="header">My Groups</h3> 
+ 
+    <div class="content"> 
+    
+    
+    
+    	<p>You do not belong to any groups, yet.</p> 
+    
+	  
+    </div> 
+ 
+  </div> 
+ 
+ 
+            </div> 
+        </div> 
+    </div> 
+    
+ 
+ 
+ 
+<div id="friendInvitationModal" class="modal invisible" style="padding-top: 49px;"> 
+    <div class="hd"> 
+        <div class="header" style="line-height: 49px;">Invite friends!</div> 
+        <div class="closeButton" style="line-height: 49px;"><a href="#friendInvitationDialogCloseButton" onmousedown="fitbit.app.user.friends.onClose(); return false;" onclick="return false;">Close</a></div> 
+    </div> 
+    <div class="body" style="padding-bottom: 15px; padding-top: 15px;"> 
+        <form id="friendInvitation" style="margin-bottom: 5px" name="friendInvitation" action="/friends/friendInvitation" method="post"> 
+            <div id="friendInvitationModalErrors" class="error"></div> 
+            <div class="formline"> 
+                <h3>From:</h3> 
+                <div id="from" class="text" style="font-weight: bold; width: 486px; padding: 3px; margin-top: 5px; margin-bottom: 5px; word-wrap: break-word;"></div> 
+            </div> 
+            <div id="nameTo" class="invisible"> 
+                <div class="formline"> 
+                    <h3>To:</h3> 
+                    <div id="displayName" class="text" style="font-weight: bold; width: 486px; padding: 3px; margin-top: 5px; margin-bottom: 5px; word-wrap: break-word;">Dan</div> 
+                </div> 
+            </div> 
+            <div id="emailsTo" class="invisible" style="margin-top: 10px; margin-bottom: 10px"> 
+                <div class="formline"> 
+                    <h3 style="width: 100%;">To: <span style="font-size: smaller; font-weight: normal;">(Separate emails with commas.)</span><a href="#" onclick="showPlaxoABChooser('emails', '/tools/emailChooser'); return false;" style="float: right;">import from my address book</a></h3> 
+                    <textarea id="emails" style="overflow: auto; width: 486px; padding: 3px;" name="emails" class="text" rows="5"></textarea> 
+                </div> 
+            </div> 
+            <div class="formline"> 
+                <h3>Message:</h3> 
+                
+                <textarea id="message" style="overflow: auto; width: 486px; padding: 3px; margin-top: 5px" onblur="return fitbit.app.user.friends.isMaxLength(this)" name="message" onkeyup="return fitbit.app.user.friends.isMaxLength(this)" class="text" rows="8"> 
+Hi,
+ 
+Help me become more fit.
+ 
+Become friends with me on Fitbit.com and see who can walk the most steps per day, run the farthest, or be the most active.</textarea> 
+            </div> 
+            <input id="inviteeId" name="inviteeId" value="" type="hidden" /> 
+            <input name="apiFormat" value="htmljson" type="hidden" /> 
+            <input name="_eventName" value="send" type="hidden" /> 
+        <div style="display: none;"><input type="hidden" name="_sourcePage" value="XFPX8J_bZgLGrJMFkFsv6XbX0f6OV1Ndj1zeGcz7OKxV2RUoL5W60NfHjCnPkhut" /><input type="hidden" name="__fp" value="HO8JnqvsRg8=" /></div></form> 
+    </div> 
+</div> 
+ 
+    
+ 
+ 
+<div id="messageBoxDialog" class="modal invisible smallModal"> 
+    <div class="hd"> 
+        <div id="messageBoxHeader" class="header">Message</div> 
+    </div> 
+    <div class="body"> 
+        <div id="messageBoxBody"></div> 
+    </div> 
+</div> 
+ 
+ 
+    
+ 
+ 
+ 
+ 
+ 
+ 
+<div id="selectNewGoalModal" class="modal invisible"> 
+    <div class="hd"> 
+        <div class="header">Select Another Goal</div> 
+        <div class="closeButton"><a href="#primaryGoalCloseButton" onmousedown="fitbit.app.user.goal.primary.onClose(); return false;" onclick="return false;">Close</a></div> 
+    </div> 
+    <div class="body"> 
+        <div id="fitnessGoals" class="section section1"> 
+            <h2>Fitness Goals</h2> 
+            
+            
+    
+ 
+            <div class="goal"> 
+                <h3>Weekly Steps Goal of
+                    <span id="target.47476">70000</span> 
+                    steps
+                </h3> 
+                <div class="progressIndicator"> 
+                    <div class="bar"> 
+                        <div class="base"></div> 
+                        <div class="marker" id="bar.47476" style="width: 11%;"></div> 
+                    </div> 
+                    <div class="label"> 
+                        <span id="percentComplete.47476"> 
+                            11
+                        </span>% Complete
+                    </div> 
+                </div> 
+                <div class="actions"> 
+                    <span><a href="#" onclick="return false;" onmousedown="fitbit.app.user.goal.primary.onEdit( 'My goal is to walk or run more than', 'steps every week', 47476, 70000.0, 0, 0 );">Edit</a></span> 
+                    <span> 
+                        
+                            &nbsp;Primary
+                            
+                        
+                    </span> 
+                </div> 
+            </div> 
+ 
+            <div class="goal"> 
+                <h3> 
+                    Weekly Distance Goal of
+                    <span id="target.47477"> 
+                        35
+                    </span> 
+                    miles
+                </h3> 
+                <div class="progressIndicator"> 
+                    <div class="bar"> 
+                        <div class="base"></div> 
+                        <div class="marker" id="bar.47477" style="width: 10%;"></div> 
+                    </div> 
+                    <div class="label"><span id="percentComplete.47477">10</span>% Complete</div> 
+                </div> 
+                <div class="actions"> 
+                    <span><a href="#" onclick="return false;" onmousedown="fitbit.app.user.goal.primary.onEdit( 'My goal is to walk or run more than', 'miles every week', 47477, 35, 0, 0, false );"> 
+                            Edit
+                        </a></span> 
+                    <span> 
+                        
+                            
+                            
+                                <a href="#" onclick="return false;" onmousedown="fitbit.app.user.goal.primary.onSelect( 47477 );">Select</a> 
+                            
+                        
+                    </span> 
+                </div> 
+            </div> 
+ 
+            
+              <div id="weightGoals" class="section section3"> 
+                <h2>Weight Goals</h2> 
+                <div class="goal"> 
+                    <h3> 
+                        My weight goal is to be <span id="target.47493">129 lbs</span> 
+                    </h3> 
+                    <div class="progressIndicator"> 
+                        <div class="bar"> 
+                            <div class="base"></div> 
+                            <div class="marker" id="bar.47493" style="width: 40%;"></div> 
+                        </div> 
+                        <div class="label"> 
+                            <span id="percentComplete.47493">40</span>% Complete
+                        </div> 
+                    </div> 
+                    <div class="actions"> 
+                        <span><a href="#" onclick="return false;" onmousedown="fitbit.app.goal.weight.showGoalDialog( false, fitbit.app.user.goal.primary );"> 
+                                Edit
+                            </a></span> 
+                        <span> 
+                            
+                                
+                                
+                                    <a href="#" onclick="return false;" onmousedown="fitbit.app.user.goal.primary.onSelect( 47493 );">Select</a> 
+                                
+                            
+                        </span> 
+                    </div> 
+                </div> 
+              </div> 
+            
+       
+            <div class="form clearfix invisible"> 
+                <span class="cancel"><a href="#pgCancel" onmousedown="fitbit.app.user.goal.primary.onClose(); return false;" onclick="return false;">Cancel</a></span> 
+            </div> 
+            <div style="margin-top: 15px;"> 
+            
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+    
+    
+    
+        
+            
+ 
+ 
+ 
+ 
+ 
+ 
+    
+    
+        
+    
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+<div id="trainerPremiumModal" class="form modal invisible" style="padding-top: 49px;"> 
+    <div class="hd"> 
+        <div class="header" style="line-height: 49px;">Fitbit Trainer</div> 
+        <div class="closeButton" style="line-height: 49px;"> 
+            <a href="#" onmousedown="fitbit.app.premium.trainer.onClose(); return false;" onclick="return false;">Close</a> 
+        </div> 
+    </div> 
+    <div class="body" style="padding-bottom: 15px; padding-top: 30px;"> 
+        <div style="margin-bottom: 15px; text-align:justify;"> 
+            The Fitbit trainer helps you set and track attainable goals to get more
+            active. It does this by first learning your current activity level and then
+            creating a personalized fitness plan that pushes you to gradually
+            increase your movement over the course of 12 weeks. Like a fitness
+            coach, it adapts the plan to meet your changing needs and help you
+            attain your fitness goals.
+        </div> 
+        
+            
+            
+                <div style="margin-bottom: 15px; text-align:justify;"> 
+                    The trainer comes as part of a premium membership but you are
+                    eligible to try it in a free week-long trial. At the end of the trial you can
+                    choose to sign up for a premium membership, but there is no
+                    commitment whatsoever.
+                </div> 
+            
+        
+        
+            <div style="margin-bottom: 7px;"> 
+                A premium membership unlocks many more site features:
+            </div> 
+            <div style="float: left; clear: both; width: 100%; margin-bottom: 20px;"> 
+                <div style="float: left; margin-left: 40px;"> 
+                    <ul style="list-style:disc inside none;"> 
+                        <li style="list-style:disc inside none; font-size: 12px;">Benchmarking</li> 
+                        <li style="list-style:disc inside none; font-size: 12px;">Personalized reports</li> 
+                    </ul> 
+                </div> 
+                <div style="float: left; margin-left: 40px;"> 
+                    <ul style="list-style:disc inside none;"> 
+    
+                        <li style="list-style:disc inside none; font-size: 12px;">Unlimited custom trackers</li> 
+                        <li style="list-style:disc inside none; font-size: 12px;">Much more!</li> 
+                    </ul> 
+                </div> 
+            </div> 
+            <div style=" margin-top: 4px; font-size:15px;"> 
+                <a href="/premium/about">Learn more about premium</a> 
+            </div> 
+        
+        <div class="clearfix" style="margin: 25px 0 0 0;"> 
+        <div id="buttonsContainer"> 
+            
+                <div id="bGetFreeTrial"> 
+                    <a  href="#" title="Get Free Report. No Credit Card Required."
+                        onmousedown="fitbit.app.premium.addTrialSubscription('TRIAL_ALGORITHMIC_TRAINER', '/trainer/trainerSetup', 'trialTrainer_dashPage_trainerUpsellDialog'); return false;"
+                       onclick="return false;"> 
+                        <span>Start Free Trial</span> 
+                        <br/> 
+                        <span style="font-size:8px;">NO CREDIT CARD REQUIRED</span> 
+                    </a> 
+                </div> 
+            
+            <div id="bBuyPremium"> 
+                <a href="#" title="Buy Premium"
+                   onmousedown="window.location='/order?packName=fitbit_premium&doneUrl=/trainer/trainerSetup&cancelUrl=/&linkId=premiumPack_dashPage_trainerUpsellDialog'; return false;"
+                        onclick="return false;">Buy Premium</a> 
+            </div> 
+            <div class="lOr">or</div> 
+            <div id="bNoThanks"> 
+                <a title="Cancel" href="#" onclick="fitbit.app.premium.trainer.onClose(); return false;">No thanks</a> 
+            </div> 
+        </div> 
+ 
+    </div> 
+    </div> 
+</div> 
+ 
+            <div style="float:left;margin-right:10px;font-size:12px;color:#000000;">Want to challenge yourself to be more active?</div> 
+            <a href="#" onmousedown="fitbit.app.premium.trainer.showDialog();" onclick="return false;"
+               style="display: block; text-decoration: underline;font-size:12px;">Start a free week trial of the Fitbit trainer now!</a> 
+        
+        
+        
+        
+        
+    
+ 
+ 
+ 
+            </div> 
+        </div> 
+ 
+    </div> 
+</div> 
+ 
+    
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+<div id="weightGoalDialog" class="invisible modal smallModal"> 
+    <div class="hd"> 
+        <div class="header" style="width: 450px;">Set Weight Goal</div> 
+        <div class="closeButton"><a href="#" onmousedown="fitbit.app.goal.weight.onCancel(); return false;" onclick="return false;">Close</a></div> 
+    </div> 
+    <div class="body"> 
+        <form id="weightGoalForm" name="weightGoalForm" action="/goal/edit" class="form" method="post"> 
+            <div id="weightGoalDialogErrors" class="error"></div> 
+            <div class="formline" style="text-align: left;"> 
+                I would like to 
+                <select id="weightObjectiveId" name="weightObjectiveId"> 
+                    <option selected="selected" value="1">lose weight</option><option value="2">gain weight</option><option value="0">maintain my weight</option> 
+                </select> 
+            </div> 
+            <div class="formline" style="margin-top: 5px; text-align: left;"> 
+                <span>My target weight is</span> 
+ 
+                <span style="position: relative;"  id="usWeightBlock"> 
+                    <input id="goalTargetLbs" maxlength="6" style="width: 50px; padding-left:2px; padding-right:2px;" name="goalTargetLbs" value="129" class="erasable" type="text" onchange="fitbit.app.goal.weight.clearInputBoxes(['goalTargetStone', 'goalTargetStoneLbs', 'goalTargetKg']);" size="1" />&nbsp;lbs
+                </span> 
+ 
+                <span style="position: relative;" id="ukWeightBlock" class="invisible"> 
+                    <input id="goalTargetStone" maxlength="3" style="width: 25px; padding-left:2px; padding-right:2px;" name="goalTargetStone" value="9" class="erasable" type="text" onchange="fitbit.app.goal.weight.clearInputBoxes(['goalTargetLbs', 'goalTargetKg']);" size="1" />&nbsp;st
+                    <input id="goalTargetStoneLbs" maxlength="5" style="width: 40px; padding-left:2px; padding-right:2px;" name="goalTargetStoneLbs" value="3" class="erasable" type="text" onchange="fitbit.app.goal.weight.clearInputBoxes(['goalTargetLbs', 'goalTargetKg']);" size="1" />&nbsp;lbs
+                </span> 
+ 
+                <span style="position: relative;" id="metricWeightBlock" class="invisible"> 
+                    <input id="goalTargetKg" maxlength="6" style="width: 50px; padding-left:2px; padding-right:2px;" name="goalTargetKg" value="58.5" class="erasable" type="text" onchange="fitbit.app.goal.weight.clearInputBoxes(['goalTargetLbs', 'goalTargetStone', 'goalTargetStoneLbs']);" size="1" />&nbsp;kg
+                </span> 
+ 
+                <span class="unitSwitcher"> 
+                    <br/>Use
+                    <select id="weightSystem" name="weightSystem" onchange="fitbit.app.goal.weight.switchWeightSystem();"> 
+                        <option selected="selected" value="US">lbs.</option> 
+                        <option value="UK">stone</option> 
+                        <option value="METRIC">kg.</option> 
+                    </select> 
+                </span> 
+ 
+            </div> 
+            <div class="formline invisible" style="display: none;"> 
+                <select id="weightGoalAccessLevelId" name="goalAccessLevelId"> 
+                    <option selected="selected" value="0">Private</option><option value="1">Public</option><option value="2">Friends</option> 
+                </select> 
+            </div> 
+            
+            <input name="goalId" value="47493" type="hidden" /> 
+        <div style="display: none;"><input type="hidden" name="_sourcePage" value="rRiKCtaksRXGrJMFkFsv6XbX0f6OV1Ndj1zeGcz7OKxV2RUoL5W60NfHjCnPkhut" /><input type="hidden" name="__fp" value="UjyGCIyQ6xvZSzk-BywpH6uz6d7GQgXeWokk34e_H-v4dpOCfXDsjnxKbRHu3kSr_CW75C6BPXAtjCOyW6lk3w==" /></div></form> 
+    </div> 
+ 
+    <div class="ft" style="border:none;"> 
+        <span class="button-group"> 
+            <button class="default" type="button" onclick="fitbit.app.goal.weight.handleSubmit(); return false;">Set</button> 
+        </span> 
+    </div> 
+    <div style="margin: 15px;"> 
+        
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+    
+    
+    
+        
+            
+ 
+ 
+ 
+ 
+ 
+ 
+    
+    
+        
+    
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+<div id="trainerPremiumModal" class="form modal invisible" style="padding-top: 49px;"> 
+    <div class="hd"> 
+        <div class="header" style="line-height: 49px;">Fitbit Trainer</div> 
+        <div class="closeButton" style="line-height: 49px;"> 
+            <a href="#" onmousedown="fitbit.app.premium.trainer.onClose(); return false;" onclick="return false;">Close</a> 
+        </div> 
+    </div> 
+    <div class="body" style="padding-bottom: 15px; padding-top: 30px;"> 
+        <div style="margin-bottom: 15px; text-align:justify;"> 
+            The Fitbit trainer helps you set and track attainable goals to get more
+            active. It does this by first learning your current activity level and then
+            creating a personalized fitness plan that pushes you to gradually
+            increase your movement over the course of 12 weeks. Like a fitness
+            coach, it adapts the plan to meet your changing needs and help you
+            attain your fitness goals.
+        </div> 
+        
+            
+            
+                <div style="margin-bottom: 15px; text-align:justify;"> 
+                    The trainer comes as part of a premium membership but you are
+                    eligible to try it in a free week-long trial. At the end of the trial you can
+                    choose to sign up for a premium membership, but there is no
+                    commitment whatsoever.
+                </div> 
+            
+        
+        
+            <div style="margin-bottom: 7px;"> 
+                A premium membership unlocks many more site features:
+            </div> 
+            <div style="float: left; clear: both; width: 100%; margin-bottom: 20px;"> 
+                <div style="float: left; margin-left: 40px;"> 
+                    <ul style="list-style:disc inside none;"> 
+                        <li style="list-style:disc inside none; font-size: 12px;">Benchmarking</li> 
+                        <li style="list-style:disc inside none; font-size: 12px;">Personalized reports</li> 
+                    </ul> 
+                </div> 
+                <div style="float: left; margin-left: 40px;"> 
+                    <ul style="list-style:disc inside none;"> 
+    
+                        <li style="list-style:disc inside none; font-size: 12px;">Unlimited custom trackers</li> 
+                        <li style="list-style:disc inside none; font-size: 12px;">Much more!</li> 
+                    </ul> 
+                </div> 
+            </div> 
+            <div style=" margin-top: 4px; font-size:15px;"> 
+                <a href="/premium/about">Learn more about premium</a> 
+            </div> 
+        
+        <div class="clearfix" style="margin: 25px 0 0 0;"> 
+        <div id="buttonsContainer"> 
+            
+                <div id="bGetFreeTrial"> 
+                    <a  href="#" title="Get Free Report. No Credit Card Required."
+                        onmousedown="fitbit.app.premium.addTrialSubscription('TRIAL_ALGORITHMIC_TRAINER', '/trainer/trainerSetup', 'trialTrainer_dashPage_trainerUpsellDialog'); return false;"
+                       onclick="return false;"> 
+                        <span>Start Free Trial</span> 
+                        <br/> 
+                        <span style="font-size:8px;">NO CREDIT CARD REQUIRED</span> 
+                    </a> 
+                </div> 
+            
+            <div id="bBuyPremium"> 
+                <a href="#" title="Buy Premium"
+                   onmousedown="window.location='/order?packName=fitbit_premium&doneUrl=/trainer/trainerSetup&cancelUrl=/&linkId=premiumPack_dashPage_trainerUpsellDialog'; return false;"
+                        onclick="return false;">Buy Premium</a> 
+            </div> 
+            <div class="lOr">or</div> 
+            <div id="bNoThanks"> 
+                <a title="Cancel" href="#" onclick="fitbit.app.premium.trainer.onClose(); return false;">No thanks</a> 
+            </div> 
+        </div> 
+ 
+    </div> 
+    </div> 
+</div> 
+ 
+            <div style="float:left;margin-right:10px;font-size:12px;color:#000000;">Want to challenge yourself to be more active?</div> 
+            <a href="#" onmousedown="fitbit.app.premium.trainer.showDialog();" onclick="return false;"
+               style="display: block; text-decoration: underline;font-size:12px;">Start a free week trial of the Fitbit trainer now!</a> 
+        
+        
+        
+        
+        
+    
+ 
+ 
+ 
+    </div> 
+</div> 
+ 
+    
+ 
+ 
+ 
+<div id="goalDialog" class="modal invisible smallModal"> 
+    <div class="hd"> 
+        <div class="header">Set Goal</div> 
+        <div class="closeButton"><a href="#" onmousedown="fitbit.app.user.goal.onCancel(); return false;" onclick="return false;">Close</a></div> 
+    </div> 
+    <div class="body"> 
+        <form id="goalForm" name="goalForm" action="/goal/edit" class="form" method="post"> 
+            <div id="goalDialogErrors" class="error"></div> 
+            <div class="formline"> 
+                <span id="predicateSpan"></span> 
+                <select id="goalEvaluationOperatorId" name="goalEvaluationOperatorId" class="field"> 
+                    <option value="0">more than</option><option value="1">less than</option> 
+                </select> 
+            </div> 
+            <div class="formline"> 
+                <span id="prefix"></span> 
+                <input id="goalTarget" maxlength="6" style="width: 50px; margin-top: 5px;" name="goalTarget" value="129" class="field" type="text" /> 
+                <span id="subject"></span> 
+            </div> 
+            <div class="formline invisible" style="display: none;"> 
+                <select id="goalAccessLevelId" name="goalAccessLevelId"> 
+                    <option selected="selected" value="0">Private</option><option value="1">Public</option><option value="2">Friends</option> 
+                </select> 
+            </div> 
+            <div class="formline invisible" id="descriptionContainer"> 
+                <br /> 
+                <span id="descriptionSpan"></span> 
+            </div> 
+            <input id="goalId" name="goalId" value="47493" type="hidden" /> 
+        <div style="display: none;"><input type="hidden" name="_sourcePage" value="3SYv03zTJDjGrJMFkFsv6XbX0f6OV1Ndj1zeGcz7OKxV2RUoL5W60NfHjCnPkhut" /><input type="hidden" name="__fp" value="7v2Zp_bRrrPZSzk-BywpH2PLYydv5fjWv6NNHK0I9EvtE2syIYzAC0EnBXPLV-hFevPFgJer4hI=" /></div></form> 
+    </div> 
+</div> 
+ 
+ 
+                
+                    
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+    
+        
+    
+    
+ 
+<div id="footer"> 
+    <div id="columns"> 
+        <div class="column"> 
+            <h4>Help</h4> 
+            <ul> 
+                
+                    <li><a href="http://www.fitbit.com/forums">Forums</a></li> 
+                
+                <li><a href="http://www.fitbit.com/faq">FAQ</a></li> 
+                <li><a href="http://www.fitbit.com/manual">Product Manual</a></li> 
+                <li><a href="http://www.fitbit.com/returns">Returns and Warranty</a></li> 
+                <li><a href="http://www.fitbit.com/contact">Contact</a></li> 
+            </ul> 
+        </div> 
+        <div class="column"> 
+            <h4>Downloads</h4> 
+            <ul> 
+                <li><a href="http://www.fitbit.com/start">Windows XP, Vista and 7</a></li> 
+                <li><a href="http://www.fitbit.com/start">Mac OS X</a></li> 
+            </ul> 
+        </div> 
+        <div class="column"> 
+            <h4>Explore</h4> 
+            <ul> 
+                <li><a href="http://www.fitbit.com/premium/about">Premium Membership</a></li> 
+                <li><a href="http://www.fitbit.com/foods/categories">Calories in Foods</a></li> 
+                <li><a href="http://www.fitbit.com/foods/restaurants">Foods by Restaurant</a></li> 
+                <li><a href="http://www.fitbit.com/foods/brands">Foods By Brand</a></li> 
+                <li><a href="http://www.fitbit.com/foods/search">Search Foods</a></li> 
+                
+                    <li><a href="http://www.fitbit.com/foods/private">My Foods</a></li> 
+                
+                <li><a href="http://www.fitbit.com/users/index">All Users</a></li> 
+                
+            </ul> 
+        </div> 
+        <div class="column"> 
+            <h4>Company</h4> 
+            <ul> 
+                <li><a href="http://blog.fitbit.com">Fitbit Blog</a></li> 
+                <li><a href="http://www.fitbit.com/company">About Fitbit</a></li> 
+                <li><a href="http://www.fitbit.com/privacy">Privacy Policy</a></li> 
+                <li><a href="http://www.fitbit.com/terms">Terms of Use</a></li> 
+            </ul> 
+        </div> 
+        <div class="column last"> 
+            <h4>Purchase Fitbit</h4> 
+            <p>Includes Fitbit Tracker, Base Station & Software</p> 
+            <h5><a href="http://www.fitbit.com/product">Buy Now &raquo;</a></h5> 
+        </div> 
+        <img src="/images/layout/product.jpg" alt="product" /> 
+    </div> 
+    <div id="copyright">&copy; 2010 Fitbit, Inc. All rights reserved.</div> 
+</div> 
+                
+            </div> 
+ 
+ 
+         
+            <script type="text/javascript" src="/pack?h=ace4c3c76cb4305cbad3160322007103&item=%2Fyui%2F2.7.0%2Fbuild%2Fyahoo-dom-event%2Fyahoo-dom-event.js&item=%2Fyui%2F2.7.0%2Fbuild%2Fconnection%2Fconnection-min.js&item=%2Fyui%2F2.7.0%2Fbuild%2Felement%2Felement-min.js&item=%2Fyui%2F2.7.0%2Fbuild%2Fjson%2Fjson-min.js&item=%2Fyui%2F2.7.0%2Fbuild%2Fcontainer%2Fcontainer-min.js&item=%2Fyui%2F2.7.0%2Fbuild%2Fcalendar%2Fcalendar-min.js&item=%2Fyui%2F2.7.0%2Fbuild%2Fanimation%2Fanimation-min.js&item=%2Fyui%2F2.7.0%2Fbuild%2Fdatasource%2Fdatasource-min.js&item=%2Fyui%2F2.7.0%2Fbuild%2Fautocomplete%2Fautocomplete-min.js&item=%2Fyui%2F2.7.0%2Fbuild%2Fcookie%2Fcookie-min.js&item=%2Fjs%2Fantlr3-all-min.js&item=%2Fjs%2Fswfobject-1.5.js&item=%2Fjs%2Ffitbit.js&item=%2Fjs%2Fapp.js&item=%2Fjs%2Futil.js&item=%2Fjs%2Fpremium.js"></script> 
+         
+                <!--[if IE 6]>
+        <script type="text/javascript">document.execCommand("BackgroundImageCache", false, true);</script>
+                <![endif]--> 
+                <!--[if lt IE 9]>
+        <script type="text/javascript" src="/pack?h=4db94e3559545453a61eca38533ab82c&item=%2Fjs%2Flib%2Fcurvycorners%2Fcurvycorners.src.js"></script>
+                <![endif]--> 
+        
+    <script type="text/javascript" src="/pack?h=6c05a49f4c67752e0dc7c79b612cc403&item=%2Fjs%2Ffitbit%2Fapp%2FmessageBox.js&item=%2Fjs%2Ffitbit%2Fapp%2Fforums%2FmessageList.js&item=%2Fjs%2Ffitbit%2Fapp%2Fgoal%2Fuser%2FuserGoals.js&item=%2Fjs%2Ffitbit%2Fapp%2Fgoal%2Fuser%2FprimaryGoal.js&item=%2Fjs%2Ffitbit%2Fapp%2Fgoal%2Fweight%2FweightGoal.js&item=%2Fjs%2Ffitbit%2Fapp%2Fuser%2Ffriends%2FfriendInvitation.js&item=%2Fjs%2Ffitbit%2Fapp%2Fuser%2Fstats%2Frank.js&item=%2Fjs%2Ffitbit%2Fapp%2Fuser%2Fstats%2FweightStats.js&item=%2Fjs%2Ffitbit%2Fapp%2Fuser%2Fstats%2FpersonalBests.js&item=%2Fjs%2Ffitbit%2Fapp%2Fuser%2Ffriends%2FfriendStats.js&item=%2Fjs%2Ffitbit%2Fapp%2Fjournal%2Fjournal.js&item=%2Fjs%2Ffitbit%2Fapp%2Ftrainer%2Ftrainer.js"></script> 
+    <script type="text/javascript"> 
+        function onABCommComplete() {
+            // OPTIONAL: do something here after the new data has been populated in your text area
+        }
+    </script> 
+    <script type="text/javascript"> 
+ 
+        var smallTabs = new fitbit.app.TabSet("smallTabs", "active");
+        smallTabs.tabChangeEvent.subscribe(function(type, args) {
+            if ( args == "historical" ) {
+                new fitbit.app.UIState().set( 11 );
+            }
+            else {
+                new fitbit.app.UIState().clear( 11 );
+            }
+        });
+ 
+ 
+        var fitnessPlanTabs = new fitbit.app.TabSet("fitnessPlanTabs", "active");
+        fitnessPlanTabs.tabChangeEvent.subscribe(function(type, args) {
+            if ( args == "fitnessPlanOverviewChart" ) {
+                new fitbit.app.UIState().set( 15 );
+ 
+                var toActivate = Y.Dom.get("fitnessPlanOverviewCaption");
+                var toDeactivate = Y.Dom.get("fitnessPlanWeekCaption");
+                Y.Dom.addClass(toDeactivate, "invisible");
+                Y.Dom.removeClass(toActivate, "invisible");
+ 
+                toActivate = Y.Dom.get("fitnessPlanOverviewDates");
+                toDeactivate = Y.Dom.get("currentWeekText");
+                Y.Dom.addClass(toDeactivate, "invisible");
+                Y.Dom.removeClass(toActivate, "invisible");
+ 
+                toDeactivate = Y.Dom.get("fitnessPlanWeekNumber");
+                Y.Dom.addClass(toDeactivate, "invisible");
+            } else {
+                new fitbit.app.UIState().clear( 15 );
+ 
+                var toActivate = Y.Dom.get("fitnessPlanWeekCaption");
+                var toDeactivate = Y.Dom.get("fitnessPlanOverviewCaption");
+                Y.Dom.addClass(toDeactivate, "invisible");
+                Y.Dom.removeClass(toActivate, "invisible");
+ 
+                toActivate = Y.Dom.get("currentWeekText");
+                toDeactivate = Y.Dom.get("fitnessPlanOverviewDates");
+                Y.Dom.addClass(toDeactivate, "invisible");
+                Y.Dom.removeClass(toActivate, "invisible");
+ 
+                toActivate = Y.Dom.get("fitnessPlanWeekNumber");
+                Y.Dom.removeClass(toActivate, "invisible");
+            }
+        });
+ 
+        var intradayCaloriesTabs = new fitbit.app.TabSet("intradayCaloriesTabs", "active");
+        intradayCaloriesTabs.tabChangeEvent.subscribe(function(type, args) {
+            if ( args == "intradayCaloriesEatenChart" ) {
+                new fitbit.app.UIState().set( 6 );
+            }
+            else {
+                new fitbit.app.UIState().clear( 6 );
+            }
+        });
+ 
+        var historicalActivitiesTabs = new fitbit.app.TabSet("historicalActivitiesTabs", "active");
+        historicalActivitiesTabs.tabChangeEvent.subscribe(function(type, args) {
+              if ( args == "activeScoreHistoricalChart" ) {
+                  new fitbit.app.UIState().clearAndSet( 13, 12 );
+              }
+              else if ( args == "distanceHistoricalChart" ) {
+                  new fitbit.app.UIState().clearAndSet( 12, 13 );
+              }
+              else {
+                  new fitbit.app.UIState().clearAndSet( [12,13], null );
+              }
+        });
+ 
+    
+        var sleepInfoTabs = new fitbit.app.TabSet("sleepInfoTabs", "active");
+        sleepInfoTabs.tabChangeEvent.subscribe(function(type, args) {
+            if ( args == "timesAwakenedChart" ) {
+                new fitbit.app.UIState().set( 14 );
+            }
+            else {
+                new fitbit.app.UIState().clear( 14 );
+            }
+        });
+    
+ 
+        
+ 
+        var sceneMeter = new SWFObject("/pack?h=9f6fc030d4dd99a18ee72a2502121ab6&item=%2Fflash%2Fgoal_scene%2Fgoal_scene.swf", "goal_scene", "336", "41", "8");
+        sceneMeter.addParam("quality", "high");
+        sceneMeter.addParam("wmode", "transparent");
+        sceneMeter.addVariable("percentage", "11");
+        sceneMeter.write("scene");
+ 
+        var dateTo = "";
+        
+            dateTo = "&dateTo=" + "2010-07-18";
+        
+ 
+ 
+ 
+        new fitbit.app.AmChart( "caloriesInOutObject", "caloriesInOutChart", "line",
+            "/graph/getGraphData?userId=22CJ7H&type=caloriesInOut" +
+            "&period=1m&dataVersion=905&version=amchart" + dateTo + "&ts=" + (new Date()).getTime(),
+            530, 150, true
+        );
+ 
+    
+        new fitbit.app.AmChart( "minutesActiveObject", "minutesActiveChart", "line",
+            "/graph/getGraphData?userId=22CJ7H&type=minutesActive" +
+            "&period=1m&dataVersion=905&version=amchart" + dateTo + "&ts=" + (new Date()).getTime(),
+            530, 150, true
+        );
+    
+ 
+        new fitbit.app.AmChart( "activeScoreHistoricalObject", "activeScoreHistoricalChart", "column2d",
+            "/graph/getGraphData?userId=22CJ7H&type=activeScore" +
+            "&period=1m&dataVersion=905&version=amchart" + dateTo + "&ts=" + (new Date()).getTime(),
+            530, 150, true
+        );
+ 
+        new fitbit.app.AmChart( "stepsTakenHistoricalObject", "stepsTakenHistoricalChart", "column2d",
+            "/graph/getGraphData?userId=22CJ7H&type=stepsTaken" +
+            "&period=1m&dataVersion=905&version=amchart" + dateTo,
+            530, 150, true
+        );
+ 
+        new fitbit.app.AmChart( "distanceHistoricalObject", "distanceHistoricalChart", "column2d",
+            "/graph/getGraphData?userId=22CJ7H&type=distanceFromSteps" +
+            "&period=1m&dataVersion=905&version=amchart" + dateTo,
+            530, 150, true
+        );
+ 
+    
+        new fitbit.app.AmChart( "timeAsleepObject", "timeAsleepChart", "column2d",
+            "/graph/getGraphData?userId=22CJ7H&type=timeAsleep" +
+            "&period=1m&dataVersion=905&version=amchart" + dateTo,
+            530, 150, true
+        );
+ 
+        new fitbit.app.AmChart( "timesAwakenedObject", "timesAwakenedChart", "column2d",
+            "/graph/getGraphData?userId=22CJ7H&type=timesWokenUp" +
+            "&period=1m&dataVersion=905&version=amchart" + dateTo,
+            530, 150, true
+        );
+    
+ 
+        new fitbit.app.AmChart( "weightObject", "weightChart", "line",
+            "/graph/getGraphData?userId=22CJ7H&type=weight" +
+            "&period=1m&dataVersion=905&version=amchart" + dateTo,
+            530, 150, true
+        );
+ 
+    
+        new fitbit.app.AmChart( "intradayCaloriesBurnedObject", "intradayCaloriesBurnedChart", "column2d",
+            "/graph/getGraphData?userId=22CJ7H&type=intradayCaloriesBurned" +
+            "&period=1d&dataVersion=905&version=amchart" + dateTo + "&ts=" + (new Date()).getTime(),
+            530, 150, true
+        );
+ 
+        new fitbit.app.AmChart( "intradayCaloriesEatenObject", "intradayCaloriesEatenChart", "column2d",
+            "/graph/getGraphData?userId=22CJ7H&type=intradayCaloriesEaten" +
+            "&period=1d&dataVersion=905&version=amchart" + dateTo + "&ts=" + (new Date()).getTime(),
+            530, 150, true
+        );
+ 
+        new fitbit.app.AmChart( "intradayActiveScoreChartObject", "intradayActiveScoreChart", "column2d",
+            "/graph/getGraphData?userId=22CJ7H&type=intradayActiveScore" +
+            "&period=1d&dataVersion=905&version=amchart" + dateTo + "&ts=" + (new Date()).getTime(),
+            530, 150, true
+        );
+ 
+        new fitbit.app.AmChart( "intradayStepsObject", "intradayStepsChart", "column2d",
+            "/graph/getGraphData?userId=22CJ7H&type=intradaySteps" +
+            "&period=1d&dataVersion=905&version=amchart" + dateTo,
+            530, 150, true
+        );
+ 
+        new fitbit.app.AmChart( "activityPieObject", "activityPieChart", "pie",
+            "/graph/getGraphData?userId=22CJ7H&type=activitiesBreakdown" +
+            "&period=1d&dataVersion=905&version=amchart" + dateTo,
+            240, 200, true
+        );
+ 
+        var tabs = new fitbit.app.TabSet("intradayTabs", "active");
+        tabs.tabChangeEvent.subscribe(function(type, args) {
+            if ( args == "intradayActiveScoreChart" ) {
+                new fitbit.app.UIState().set( 10 );
+            }
+            else {
+                new fitbit.app.UIState().clear( 10 );
+            }
+        });
+ 
+        // Uncomment this when activityBreakdownChartSelector is enabled
+        //new fitbit.app.TabSet("activityBreakdownChartArea", "active");
+    
+ 
+        if ( Y.Dom.get("sleepPatternChart") ) {
+            new fitbit.app.AmChart("sleepPatternObject", "sleepPatternChart", "column2d",
+                "/graph/getGraphData?userId=22CJ7H&type=intradaySleep" +
+                "&period=1d&dataVersion=905&version=amchart" + dateTo,
+                370, 110, true
+            );
+        }
+ 
+        function swapVisible(el1Name, el2Name) {
+            Y.Dom.addClass(Y.Dom.get(el1Name), "invisible");
+            Y.Dom.removeClass(Y.Dom.get(el2Name), "invisible");
+        }
+    </script> 
+    <script type="text/javascript" src="http://www.plaxo.com/css/m/js/util.js"></script> 
+    <script type="text/javascript" src="http://www.plaxo.com/css/m/js/basic.js"></script> 
+    <script type="text/javascript" src="http://www.plaxo.com/css/m/js/abc_launcher.js"></script>    
+ 
+        
+ 
+ 
+<script type="text/javascript"> 
+/*
+Inserts GA using DOM insertion of <script> tag and "script onload" method to
+initialize the pageTracker object. Prevents GA insertion from blocking I/O!
+ 
+As suggested in Steve Souder's talk. See:
+http://google-code-updates.blogspot.com/2009/03/steve-souders-lifes-too-short-write.html
+*/
+ 
+/* acct is GA account number, i.e. "UA-5555555-1" */
+function gaSSDSLoad (acct) {
+  var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www."),
+      pageTracker,
+      s;
+  s = document.createElement('script');
+  s.src = gaJsHost + 'google-analytics.com/ga.js';
+  s.type = 'text/javascript';
+  s.onloadDone = false;
+  function init () {
+    pageTracker = _gat._getTracker(acct);
+ 
+    pageTracker._setCustomVar(1, "visitorType", "trackerUser", 1);
+    
+        pageTracker._setCustomVar(2, "gender", "male", 1); 
+        pageTracker._setCustomVar(3, "age", "25-34", 1);
+        pageTracker._setCustomVar(4, "premium", "false", 1);
+    
+ 
+    pageTracker._trackPageview();
+  }
+  s.onload = function () {
+    s.onloadDone = true;
+    init();
+  };
+  s.onreadystatechange = function() {
+    if (('loaded' === s.readyState || 'complete' === s.readyState) && !s.onloadDone) {
+      s.onloadDone = true;
+      init();
+    }
+  };
+  document.getElementsByTagName('head')[0].appendChild(s);
+}
+ 
+/* and run it */
+gaSSDSLoad("UA-2595270-1");
+</script> 
+    </body> 
+</html> 
