@@ -14,6 +14,7 @@ class RubyFitbit
     @pass = pass
     @agent = WWW::Mechanize.new #{|a| a.log = Logger.new(STDERR) } #turn on if debugging
     @logged_in = false 
+    @cached_data = {}
     get_data
   end
 
@@ -40,6 +41,8 @@ class RubyFitbit
     login
 
     date = get_fitbit_date_format(date).gsub('-','/')
+    return @cached_data[date] if @cached_data[date]
+
     page = @agent.get "https://www.fitbit.com/#{date}"
 
     @calories = page.search("//div[@class='data']").search("span").children[0].text
@@ -57,6 +60,7 @@ class RubyFitbit
     data['lightly_active'] = @lightly_active
     data['fairly_active'] = @fairly_active
     data['very_active'] = @very_active
+    @cached_data[date] = data
     data
   end
 
