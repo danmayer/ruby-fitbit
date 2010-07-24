@@ -53,9 +53,9 @@ class RubyFitbit
     @fairly_active = page.search("//div[@class='caption fairly']/div[@class='number']").text.strip
     @very_active = page.search("//div[@class='caption very']/div[@class='number']").text.strip
     data = {}
-    data['calories'] = @calories
-    data['steps'] = @steps
-    data['miles_walked'] = @miles_walked
+    data['calories'] = @calories.to_i
+    data['steps'] = @steps.to_i
+    data['miles_walked'] = @miles_walked.to_f
     data['sedentary_active'] = @sedentary_active
     data['lightly_active'] = @lightly_active
     data['fairly_active'] = @fairly_active
