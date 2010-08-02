@@ -1,16 +1,16 @@
 require File.expand_path('./helper', File.dirname(__FILE__))
 require 'webmock/test_unit'
-#require 'vcr'
+require 'vcr'
 require 'ruby-fitbit'
 require 'mocha'
 
 class TestRubyFitbit < Test::Unit::TestCase
   include WebMock
 
-#VCR.config do |c|
-#  c.cassette_library_dir = 'fixtures/vcr_cassettes'
-#  c.http_stubbing_library = :webmock
-#end
+VCR.config do |c|
+  c.cassette_library_dir = 'fixtures/vcr_cassettes'
+  c.http_stubbing_library = :webmock
+end
 
 #TODO this is a mess it took awhile to figure out a way to make the tests work at all clean this up
 
@@ -62,7 +62,9 @@ END
     data = File.read("./test/responses/data.txt")
     response = "#{HEADERS} #{data}"
 
-    stub_request(:get, "https://www.fitbit.com/2010/07/18").to_return(response)
+    date = Time.now()
+    date = date.strftime("%Y/%m/%d")
+    stub_request(:get, "https://www.fitbit.com/#{date}").to_return(response)
 
     RubyFitbit.any_instance.stubs(:login)
     fitbit = RubyFitbit.new("fake@fake.com","pass")
@@ -78,7 +80,15 @@ END
     assert_equal "1hr 42min", fitbit.lightly_active, "wrong lightly"
     assert_equal "1hr 51min", fitbit.fairly_active, "wrong fairly"
     assert_equal "17min", fitbit.very_active, "wrong very"
+  end
 
+  should "use VCR successfully" do
+    fitbit = nil
+    VCR.use_cassette('fitbit_get_data', :record => :new_episodes) do
+      fitbit = RubyFitbit.new("fake@fake.com","fake")
+    end
+   
+    assert_equal "0",fitbit.steps
   end
 
 end

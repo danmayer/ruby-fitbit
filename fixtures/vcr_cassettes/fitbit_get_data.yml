@@ -1,0 +1,2244 @@
+--- 
+- !ruby/struct:VCR::HTTPInteraction 
+  request: !ruby/struct:VCR::Request 
+    method: :get
+    uri: https://www.fitbit.com:443/login
+    body: 
+    headers: 
+      accept-language: 
+      - en-us,en;q=0.5
+      accept: 
+      - "*/*"
+      user-agent: 
+      - WWW-Mechanize/0.9.3 (http://rubyforge.org/projects/mechanize/)
+      connection: 
+      - keep-alive
+      accept-encoding: 
+      - gzip,identity
+      host: 
+      - www.fitbit.com
+      accept-charset: 
+      - ISO-8859-1,utf-8;q=0.7,*;q=0.7
+      keep-alive: 
+      - "300"
+  response: !ruby/struct:VCR::Response 
+    status: !ruby/struct:VCR::ResponseStatus 
+      code: 200
+      message: OK
+    headers: 
+      expires: 
+      - Thu, 01 Jan 1970 00:00:00 GMT
+      content-language: 
+      - en-US
+      content-type: 
+      - text/html;charset=UTF-8
+      date: 
+      - Mon, 02 Aug 2010 02:18:12 GMT
+      server: 
+      - Apache-Coyote/1.1
+      cache-control: 
+      - no-store, no-cache, must-revalidate
+      transfer-encoding: 
+      - chunked
+      pragma: 
+      - no-cache
+    body: |
+      
+      
+      
+      
+      
+      
+      <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+      <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+          <head>
+              <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+              <title>Login</title>
+              <meta name="keywords" content="keywords" />
+              <meta name="description" content="description" />
+              <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon"/>
+      
+               
+                  <link rel="stylesheet" type="text/css" href="/pack?h=d45db2bc0b72b8aa757b6ec0b4e1ea94&item=%2Fyui%2F2.7.0%2Fbuild%2Ffonts%2Ffonts-min.css&item=%2Fyui%2F2.7.0%2Fbuild%2Freset%2Freset-min.css&item=%2Fyui%2F2.7.0%2Fbuild%2Fcontainer%2Fassets%2Fskins%2Fsam%2Fcontainer.css&item=%2Fyui%2F2.7.0%2Fbuild%2Fcalendar%2Fassets%2Fskins%2Fsam%2Fcalendar.css&item=%2Fyui%2F2.7.0%2Fbuild%2Fautocomplete%2Fassets%2Fskins%2Fsam%2Fautocomplete.css&item=%2Fdesign%2F2009-07%2Fcss%2Fcommon.css&item=%2Fdesign%2F2009-07%2Fcss%2Fapp.css"/>
+               
+      
+               
+                  <script type="text/javascript">
+                      document.documentElement.className += ' js';
+      
+                      function setTextLimits() {
+                          var re = /(?:^|\s)textLimit(?:(\d+)(?:-(\d+))?)?(?=\s|$)/i;
+                          for (var nodes = document.getElementsByTagName('*'), i = 0, l = nodes.length; i < l; i++) {
+                              var m = nodes[i].className.match(re);
+                              if (!m || !nodes[i].lastChild) {
+                                  continue;
+                              }
+      
+                              var el = nodes[i];
+                              var lines = m[1] || 1;
+                              var maxWidth = m[2] || Number.MAX_VALUE;
+                              var clone = el.cloneNode(false);
+                              var ellipsis = clone.appendChild(document.createTextNode('\u2026'));
+                              el.parentNode.replaceChild(clone, el);
+                              var maxHeight = (clone.scrollHeight - clone.clientHeight) + ((clone.clientHeight + 3) * lines);
+                              clone.parentNode.replaceChild(el, clone);
+                              if (el.scrollHeight > maxHeight || el.scrollWidth > maxWidth) {
+                                  el.title = (el.textContent || el.innerText || '').replace(/^\s+|\s+$/g, '');
+                                  for (var root = el, node = root.lastChild;; node = root.lastChild) {
+                                      if (node && node.nodeType == 1) {
+                                          root = node;
+                                      }   else {
+                                          if (!node) {
+                                              if (root == el) {
+                                                  break;
+                                              }
+                                              node = root;
+                                              root = root.parentNode;
+                                             root.removeChild(node);
+                                          } else if (node.nodeType == 3) {
+                                              node.nodeValue = node.nodeValue.slice(0, -1);
+                                              if (!node.nodeValue) {
+                                                  root = node.parentNode;
+                                                  root.removeChild(node);
+                                              }
+                                          } else {
+                                              root.removeChild(node);
+                                          }
+                                          root.appendChild(ellipsis);
+                                          if (el.scrollHeight <= maxHeight && el.scrollWidth <= maxWidth) {
+                                              break;
+                                          }
+                                          root.removeChild(ellipsis);
+                                      }
+                                  }
+                              }
+                          }
+                      }
+                  </script>
+               
+      
+              
+          <link rel="stylesheet" type="text/css" href="/pack?h=14aeca68d43065bf8a44c04eff401f9a&item=%2Fdesign%2F2009-07%2Fcss%2Fapp.css&item=%2Fdesign%2F2009-07%2Fcss%2Flogin.css"/>
+      
+          </head>
+          
+          <body>
+      
+                  <div id="main">
+                      
+                          
+      
+      
+      
+      
+      
+      
+      
+      
+      <div id="header">
+          <div class="logo"><a href="http://www.fitbit.com/"><img src="/images/layout/logo.gif" alt=""/></a></div>
+          <div class="accountLinks">
+          
+          
+              <ul>
+                  <li><a href="http://www.fitbit.com/help" rel="nofollow">Help</a></li>
+                  <li><a href="https://www.fitbit.com/login" rel="nofollow">Log In</a></li>
+                  <li class="last"><a href="https://www.fitbit.com/signup" rel="nofollow">Sign Up</a></li>
+              </ul>
+          
+          </div>
+      
+          <div id="menu">
+              
+              
+                  <ul>
+                      <li><a href="http://www.fitbit.com/">Home</a></li>
+                      <li><a href="http://www.fitbit.com/product" rel="nofollow">Features</a></li>
+                      <li><a href="http://blog.fitbit.com" rel="nofollow">Blog</a></li>
+                      <li><a href="http://www.fitbit.com/company" rel="nofollow">About</a></li>
+                      <li><a href="http://www.fitbit.com/product" rel="nofollow">Store</a></li>
+                      <li><a href="https://www.fitbit.com/forums" rel="nofollow">Community</a></li>
+                  </ul>
+              
+          </div>
+      
+      </div>
+      
+                      
+                      
+          <div id="content">
+              <div class="rail clearfix">
+                  <div class="header clearfix"><a href="/order/"><img src="/images/login/purchase_fitbit.gif" alt="Purchase Fitbit" border="0" width="255" height="39"/></a></div>
+                  <div class="content clearfix">
+                      <img class="screenshots" src="/images/login/web_screenshots.png" alt="Fitbit Screens" width="284" height="222"/>
+                      <h2>Not just activity, but calories too!</h2>
+                      <p>The Fitbit Tracker contains a motion sensor like the ones found in the Nintendo Wii. The Tracker senses your motion in three dimensions and converts this into useful information about your daily activities. The Tracker measures the intensity and duration of your physical activities.</p>
+                  </div>
+              </div>
+              <div class="primary clearfix">
+                  <div class="header clearfix"><h1>Login &amp; Setup</h1></div>
+                  
+                  
+                      
+                  
+                      <div style="padding: 20px 30px;"></div>
+                  
+                  
+                  
+                  
+                  
+                  <div class="column1 form clearfix">
+                      <h2>Log in</h2>
+                      
+                      
+                      <form name="login" action="https://www.fitbit.com/login" method="post">
+                          <h3>Email:</h3>
+                          <input name="email" class="text" type="text" />
+                          <h3>Password: <span class="formHint">(<a tabindex="-1" href="/login/forgotPassword" onclick="viewForgotPassword(); return false;">Forgot your password?</a>)</span></h3>
+                          <input name="password" class="text" type="password" />
+                          <p><label><input name="rememberMe" value="true" tabindex="-1" type="checkbox" checked="checked" /> Remember Me</label></p>
+                          <input name="login" value="Log In" class="button" type="submit" />
+                          
+                          <input name="redirect" value="" type="hidden" />
+                      <div style="display: none;"><input type="hidden" name="_sourcePage" value="y4qk003F03LGrJMFkFsv6XbX0f6OV1Ndj1zeGcz7OKzA3gkNXMXGnj27D-H9WXS-" /><input type="hidden" name="__fp" value="GH1WRkG-1XFztQ7FkK21Ry2MI7JbqWTf" /></div></form>
+                  </div>
+                  <div class="column1 form clearfix">
+                      <h2>Set up your account</h2>
+                      <form name="signup" action="https://www.fitbit.com/setup" method="post">
+                          <h3>Email:</h3>
+                          <input name="email" class="text" type="text" />
+                          <h3>Password:</h3>
+                          <input name="password" class="text" type="password" />
+      
+                          <p id="terms">By signing up, I agree to the <a href="/terms" onclick="window.open('http://www.fitbit.com/terms'); return false;" tabindex="-1">Terms and Conditions</a></p>
+                          <input name="signup" value="Create My Account" class="button" type="submit" />
+                          <input name="sessId" value="" type="hidden" />
+                          <input name="timezone" value="" type="hidden" />
+                          
+                          <input name="redirect" value="" type="hidden" />
+                      <div style="display: none;"><input type="hidden" name="_sourcePage" value="OL91SqWs_U3GrJMFkFsv6XbX0f6OV1Ndj1zeGcz7OKzA3gkNXMXGnj27D-H9WXS-" /><input type="hidden" name="__fp" value="5ZopRz6IkxY=" /></div></form>
+                      <form name="forgotPassword" action="https://www.fitbit.com/login/forgotPassword" method="post">
+                          <input name="email" value="" type="hidden" />
+                      <div style="display: none;"><input type="hidden" name="_sourcePage" value="vYiSW9GB3WDGrJMFkFsv6XbX0f6OV1Ndj1zeGcz7OKzA3gkNXMXGnj27D-H9WXS-" /><input type="hidden" name="__fp" value="ezg1eAPSOyU=" /></div></form>
+                  </div>
+              </div>
+          </div>
+      
+                      
+                          
+      
+      
+      
+      
+      
+      
+      
+      
+          
+          
+             
+          
+      
+      <div id="footer">
+          <div id="columns">
+              <div class="column">
+                  <h4>Help</h4>
+                  <ul>
+                      
+                      <li><a href="http://www.fitbit.com/faq" rel="nofollow">FAQ</a></li>
+                      <li><a href="http://www.fitbit.com/manual" rel="nofollow">Product Manual</a></li>
+                      <li><a href="http://www.fitbit.com/returns" rel="nofollow">Returns and Warranty</a></li>
+                      <li><a href="http://www.fitbit.com/contact" rel="nofollow">Contact</a></li>
+                  </ul>
+              </div>
+              <div class="column">
+                  <h4>Downloads</h4>
+                  <ul>
+                      <li><a href="http://www.fitbit.com/start" rel="nofollow">Windows XP, Vista and 7</a></li>
+                      <li><a href="http://www.fitbit.com/start" rel="nofollow">Mac OS X</a></li>
+                  </ul>
+              </div>
+              <div class="column">
+                  <h4>Explore</h4>
+                  <ul>
+                      <li><a href="http://www.fitbit.com/premium/about" rel="nofollow">Premium Membership</a></li>
+                      <li><a href="http://www.fitbit.com/foods/categories" rel="nofollow">Calories in Foods</a></li>
+                      <li><a href="http://www.fitbit.com/foods/restaurants" rel="nofollow">Foods by Restaurant</a></li>
+                      <li><a href="http://www.fitbit.com/foods/brands" rel="nofollow">Foods by Brand</a></li>
+                      <li><a href="http://www.fitbit.com/foods/search" rel="nofollow">Search Foods</a></li>
+                      
+                      <li><a href="http://www.fitbit.com/users/index" rel="nofollow">All Users</a></li>
+                      
+                  </ul>
+              </div>
+              <div class="column">
+                  <h4>Company</h4>
+                  <ul>
+                      <li><a href="http://blog.fitbit.com">Fitbit Blog</a></li>
+                      <li><a href="http://www.fitbit.com/company" rel="nofollow">About Fitbit</a></li>
+                      <li><a href="http://www.fitbit.com/privacy" rel="nofollow">Privacy Policy</a></li>
+                      <li><a href="http://www.fitbit.com/terms" rel="nofollow">Terms of Use</a></li>
+                  </ul>
+              </div>
+              <div class="column last">
+                  <h4>Purchase Fitbit</h4>
+                  <p>Includes Fitbit Tracker, Base Station & Software</p>
+                  <h5><a href="http://www.fitbit.com/product">Buy Now &raquo;</a></h5>
+              </div>
+              <img src="/images/layout/product.jpg" alt="product" />
+          </div>
+          <div id="copyright">&copy; 2010 Fitbit, Inc. All rights reserved.</div>
+      </div>
+                      
+                  </div>
+      
+               
+                  <script type="text/javascript" src="/pack?h=ace4c3c76cb4305cbad3160322007103&item=%2Fyui%2F2.7.0%2Fbuild%2Fyahoo-dom-event%2Fyahoo-dom-event.js&item=%2Fyui%2F2.7.0%2Fbuild%2Fconnection%2Fconnection-min.js&item=%2Fyui%2F2.7.0%2Fbuild%2Felement%2Felement-min.js&item=%2Fyui%2F2.7.0%2Fbuild%2Fjson%2Fjson-min.js&item=%2Fyui%2F2.7.0%2Fbuild%2Fcontainer%2Fcontainer-min.js&item=%2Fyui%2F2.7.0%2Fbuild%2Fcalendar%2Fcalendar-min.js&item=%2Fyui%2F2.7.0%2Fbuild%2Fanimation%2Fanimation-min.js&item=%2Fyui%2F2.7.0%2Fbuild%2Fdatasource%2Fdatasource-min.js&item=%2Fyui%2F2.7.0%2Fbuild%2Fautocomplete%2Fautocomplete-min.js&item=%2Fyui%2F2.7.0%2Fbuild%2Fcookie%2Fcookie-min.js&item=%2Fjs%2Fantlr3-all-min.js&item=%2Fjs%2Fswfobject-1.5.js&item=%2Fjs%2Ffitbit.js&item=%2Fjs%2Fapp.js&item=%2Fjs%2Futil.js&item=%2Fjs%2Fpremium.js"></script>
+               
+      				<script type="text/javascript">setTextLimits();</script>
+      
+                      <!--[if IE 6]>
+              <script type="text/javascript">document.execCommand("BackgroundImageCache", false, true);</script>
+                      <![endif]--> 
+                      <!--[if lt IE 9]>
+              <script type="text/javascript" src="/pack?h=4db94e3559545453a61eca38533ab82c&item=%2Fjs%2Flib%2Fcurvycorners%2Fcurvycorners.src.js"></script>
+                      <![endif]-->
+              
+          <script type="text/javascript">
+              document.forms['signup'].elements['timezone'].value = (new Date().getTimezoneOffset() / 60) * -1;
+              
+              setTimeout(function(){try{document.forms['login'].elements['email'].focus();}catch(e){}},1);
+      
+              function viewForgotPassword() {
+                  document.forms['forgotPassword'].elements['email'].value = document.forms['login'].elements['email'].value;
+                  document.forms['forgotPassword'].submit();
+              }
+          </script>
+      
+              
+      
+      
+      <script type="text/javascript">
+      /*
+      Inserts GA using DOM insertion of <script> tag and "script onload" method to
+      initialize the pageTracker object. Prevents GA insertion from blocking I/O!
+      
+      As suggested in Steve Souder's talk. See:
+      http://google-code-updates.blogspot.com/2009/03/steve-souders-lifes-too-short-write.html
+      */
+      
+      /* acct is GA account number, i.e. "UA-5555555-1" */
+      function gaSSDSLoad (acct) {
+        var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www."),
+            pageTracker,
+            s;
+        s = document.createElement('script');
+        s.src = gaJsHost + 'google-analytics.com/ga.js';
+        s.type = 'text/javascript';
+        s.onloadDone = false;
+        function init () {
+          pageTracker = _gat._getTracker(acct);
+      
+          pageTracker._setCustomVar(1, "visitorType", "notloggedin", 1);
+          
+      
+          pageTracker._trackPageview();
+        }
+        s.onload = function () {
+          s.onloadDone = true;
+          init();
+        };
+        s.onreadystatechange = function() {
+          if (('loaded' === s.readyState || 'complete' === s.readyState) && !s.onloadDone) {
+            s.onloadDone = true;
+            init();
+          }
+        };
+        document.getElementsByTagName('head')[0].appendChild(s);
+      }
+      
+      /* and run it */
+      gaSSDSLoad("UA-2595270-1");
+      </script>
+          </body>
+      </html>
+
+    http_version: "1.1"
+- !ruby/struct:VCR::HTTPInteraction 
+  request: !ruby/struct:VCR::Request 
+    method: :post
+    uri: https://www.fitbit.com:443/login
+    body: email=fake@fake.com&password=fake&redirect=&_sourcePage=y4qk003F03LGrJMFkFsv6XbX0f6OV1Ndj1zeGcz7OKzA3gkNXMXGnj27D-H9WXS-&__fp=GH1WRkG-1XFztQ7FkK21Ry2MI7JbqWTf&rememberMe=true&login=Log+In
+    headers: 
+      accept-language: 
+      - en-us,en;q=0.5
+      accept: 
+      - "*/*"
+      content-type: 
+      - application/x-www-form-urlencoded
+      user-agent: 
+      - WWW-Mechanize/0.9.3 (http://rubyforge.org/projects/mechanize/)
+      connection: 
+      - keep-alive
+      accept-encoding: 
+      - gzip,identity
+      content-length: 
+      - "195"
+      referer: 
+      - https://www.fitbit.com/login
+      host: 
+      - www.fitbit.com
+      accept-charset: 
+      - ISO-8859-1,utf-8;q=0.7,*;q=0.7
+      keep-alive: 
+      - "300"
+  response: !ruby/struct:VCR::Response 
+    status: !ruby/struct:VCR::ResponseStatus 
+      code: 302
+      message: Moved Temporarily
+    headers: 
+      location: 
+      - http://www.fitbit.com/
+      expires: 
+      - Thu, 01 Jan 1970 00:00:00 GMT
+      content-language: 
+      - en-US
+      date: 
+      - Mon, 02 Aug 2010 02:18:13 GMT
+      server: 
+      - Apache-Coyote/1.1
+      content-length: 
+      - "0"
+      set-cookie: 
+      - sid=25C8E1A2-33B6-433F-3DF8-02B508D726F8; Expires=Tue, 02-Aug-2011 02:18:13 GMT; Path=/
+      - uid=65915; Expires=Tue, 02-Aug-2011 02:18:13 GMT; Path=/
+      cache-control: 
+      - no-store, no-cache, must-revalidate
+      pragma: 
+      - no-cache
+    body: ""
+    http_version: "1.1"
+- !ruby/struct:VCR::HTTPInteraction 
+  request: !ruby/struct:VCR::Request 
+    method: :get
+    uri: http://www.fitbit.com:80/
+    body: 
+    headers: 
+      accept-language: 
+      - en-us,en;q=0.5
+      accept: 
+      - "*/*"
+      user-agent: 
+      - WWW-Mechanize/0.9.3 (http://rubyforge.org/projects/mechanize/)
+      connection: 
+      - keep-alive
+      accept-encoding: 
+      - gzip,identity
+      referer: 
+      - https://www.fitbit.com/login
+      cookie: 
+      - sid=25C8E1A2-33B6-433F-3DF8-02B508D726F8; uid=65915
+      host: 
+      - www.fitbit.com
+      accept-charset: 
+      - ISO-8859-1,utf-8;q=0.7,*;q=0.7
+      keep-alive: 
+      - "300"
+  response: !ruby/struct:VCR::Response 
+    status: !ruby/struct:VCR::ResponseStatus 
+      code: 200
+      message: OK
+    headers: 
+      expires: 
+      - Thu, 01 Jan 1970 00:00:00 GMT
+      content-language: 
+      - en-US
+      content-type: 
+      - text/html;charset=UTF-8
+      date: 
+      - Mon, 02 Aug 2010 02:18:14 GMT
+      server: 
+      - Apache-Coyote/1.1
+      content-encoding: 
+      - gzip
+      vary: 
+      - Accept-Encoding
+      cache-control: 
+      - no-store, no-cache, must-revalidate
+      transfer-encoding: 
+      - chunked
+      pragma: 
+      - no-cache
+    body: !binary |
+      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
+      yAk2Yt/8zOzyP9eCoq6BAzGUp2OvoArRtz8N1/6NMxTOIUiNpCYP2NX7qSYx
+      D+ga3jN34Z4p5HaT2Ve8QZHeSmzCNtvL95YEL/vrUXureK/YGfuP2QiKU3Q7
+      uVH9QByFybr1baDpcYgX5jdLU1ZHwD8NH4/XIGzZJ+3tavuLdkse80nvr7vh
+      Et0lW+QamnM91RxllAzc7mdA3fydnWXdmpj0r2e2w2KCkPduLq5sXpkPoUzl
+      fPOCAmLCu2uQE/p2NWc2j0Pzcv6EUYUB+4tnPTu6uTo5KHXvhvPKzZAk5Ke0
+      biwqZKTsysbdX4pIcShv9hSF2TY/CD6Q5YaJD8vLciB/XVraPXVYloQG0t6l
+      29fxNPJMQc8P6rEKuS2WIuyEhC0POUJJI6YcN6YVuiCpH0+PhuqNedK/f3QX
+      pLvBzlVr/I99vdH5x/Wvd5X92XRyvOX+uqV23v59+DP7YN7dtTbZ7XHlflOd
+      XBwMfj60Pxmff+pfHbutu2vr9uBDp32wtX/5c8/5dHAx+7Cl37Wme/PcmZL6
+      1yBw6e3zBbHdBAFHz/nkemSFhzdIqFMyYLx3pKcIWO91X9/3skkuFIU5FfAx
+      VWfXPNx8ykoRKL6JAPQxS5uErplyIGikhalWIf7NsyBJ7F0kWQxYRqonq5An
+      q5Anq5Anq5DQVWCv7ckq5Mkq5Mkq5Mkq5Mkq5MkqJLtST1YhT1YhT1YhT1Yh
+      T1YhK7AKWZ0ZyDloDyCxjrie5Klh96hXIIsvYPjxZAcSa/i8G98OJN/Cwyfu
+      YdKK48EhfBKRax7BUCPwuPp6ZhrDmIFG8Lwa04ygbx4hkGTgl4piBoZJvoY3
+      pWxvyfAiPtbsCNdzOeFfTJiFTsHRVfz0717V8KTMeUv7ITMKz5c/ZyFfx7WH
+      SJrVW1jMQyQPyJ2NwbRNxyJbjnGDjuT2Yqodg0ByZGMxHk4t2gLb5TY0GU34
+      YltEyT2gP8fm0Dxk8uikzBfeQ9pJSrF9a05nhyDljPw5Ef28Tauvv4V1UX/3
+      bp+9P9pWf370Laz63U+du/6wrk8vgy2s5uXpx5l63x58+nC/dX5+/FP9ZOfo
+      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
+
+    http_version: "1.1"
+- !ruby/struct:VCR::HTTPInteraction 
+  request: !ruby/struct:VCR::Request 
+    method: :get
+    uri: https://www.fitbit.com:443/2010/08/01
+    body: 
+    headers: 
+      accept-language: 
+      - en-us,en;q=0.5
+      accept: 
+      - "*/*"
+      user-agent: 
+      - WWW-Mechanize/0.9.3 (http://rubyforge.org/projects/mechanize/)
+      connection: 
+      - keep-alive
+      accept-encoding: 
+      - gzip,identity
+      cookie: 
+      - sid=25C8E1A2-33B6-433F-3DF8-02B508D726F8; uid=65915
+      host: 
+      - www.fitbit.com
+      accept-charset: 
+      - ISO-8859-1,utf-8;q=0.7,*;q=0.7
+      keep-alive: 
+      - "300"
+  response: !ruby/struct:VCR::Response 
+    status: !ruby/struct:VCR::ResponseStatus 
+      code: 200
+      message: OK
+    headers: 
+      expires: 
+      - Thu, 01 Jan 1970 00:00:00 GMT
+      content-language: 
+      - en-US
+      content-type: 
+      - text/html;charset=UTF-8
+      date: 
+      - Mon, 02 Aug 2010 02:18:15 GMT
+      server: 
+      - Apache-Coyote/1.1
+      cache-control: 
+      - no-store, no-cache, must-revalidate
+      transfer-encoding: 
+      - chunked
+      pragma: 
+      - no-cache
+    body: "\r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      <!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Strict//EN\" \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd\">\r\n\
+      <html xmlns=\"http://www.w3.org/1999/xhtml\" xml:lang=\"en\" lang=\"en\">\r\n    <head>\r\n        <meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\"/>\r\n        <title>Fitbit Dashboard</title>\r\n        <meta name=\"keywords\" content=\"keywords\" />\r\n        <meta name=\"description\" content=\"description\" />\r\n        <link rel=\"shortcut icon\" href=\"/favicon.ico\" type=\"image/x-icon\"/>\r\n\
+      \r\n         \r\n            <link rel=\"stylesheet\" type=\"text/css\" href=\"/pack?h=d45db2bc0b72b8aa757b6ec0b4e1ea94&item=%2Fyui%2F2.7.0%2Fbuild%2Ffonts%2Ffonts-min.css&item=%2Fyui%2F2.7.0%2Fbuild%2Freset%2Freset-min.css&item=%2Fyui%2F2.7.0%2Fbuild%2Fcontainer%2Fassets%2Fskins%2Fsam%2Fcontainer.css&item=%2Fyui%2F2.7.0%2Fbuild%2Fcalendar%2Fassets%2Fskins%2Fsam%2Fcalendar.css&item=%2Fyui%2F2.7.0%2Fbuild%2Fautocomplete%2Fassets%2Fskins%2Fsam%2Fautocomplete.css&item=%2Fdesign%2F2009-07%2Fcss%2Fcommon.css&item=%2Fdesign%2F2009-07%2Fcss%2Fapp.css\"/>\r\n         \r\n\
+      \r\n         \r\n            <script type=\"text/javascript\">\r\n                document.documentElement.className += ' js';\r\n\
+      \r\n                function setTextLimits() {\r\n                    var re = /(?:^|\\s)textLimit(?:(\\d+)(?:-(\\d+))?)?(?=\\s|$)/i;\r\n                    for (var nodes = document.getElementsByTagName('*'), i = 0, l = nodes.length; i < l; i++) {\r\n                        var m = nodes[i].className.match(re);\r\n                        if (!m || !nodes[i].lastChild) {\r\n                            continue;\r\n                        }\r\n\
+      \r\n                        var el = nodes[i];\r\n                        var lines = m[1] || 1;\r\n                        var maxWidth = m[2] || Number.MAX_VALUE;\r\n                        var clone = el.cloneNode(false);\r\n                        var ellipsis = clone.appendChild(document.createTextNode('\\u2026'));\r\n                        el.parentNode.replaceChild(clone, el);\r\n                        var maxHeight = (clone.scrollHeight - clone.clientHeight) + ((clone.clientHeight + 3) * lines);\r\n                        clone.parentNode.replaceChild(el, clone);\r\n                        if (el.scrollHeight > maxHeight || el.scrollWidth > maxWidth) {\r\n                            el.title = (el.textContent || el.innerText || '').replace(/^\\s+|\\s+$/g, '');\r\n                            for (var root = el, node = root.lastChild;; node = root.lastChild) {\r\n                                if (node && node.nodeType == 1) {\r\n                                    root = node;\r\n                                }   else {\r\n                                    if (!node) {\r\n                                        if (root == el) {\r\n                                            break;\r\n                                        }\r\n                                        node = root;\r\n                                        root = root.parentNode;\r\n                                       root.removeChild(node);\r\n                                    } else if (node.nodeType == 3) {\r\n                                        node.nodeValue = node.nodeValue.slice(0, -1);\r\n                                        if (!node.nodeValue) {\r\n                                            root = node.parentNode;\r\n                                            root.removeChild(node);\r\n                                        }\r\n                                    } else {\r\n                                        root.removeChild(node);\r\n                                    }\r\n                                    root.appendChild(ellipsis);\r\n                                    if (el.scrollHeight <= maxHeight && el.scrollWidth <= maxWidth) {\r\n                                        break;\r\n                                    }\r\n                                    root.removeChild(ellipsis);\r\n                                }\r\n                            }\r\n                        }\r\n                    }\r\n                }\r\n            </script>\r\n         \r\n\
+      \r\n        \r\n    <link rel=\"stylesheet\" type=\"text/css\" href=\"/pack?h=6c17b35d953b4f6bf8bf899840b45ada&item=%2Fdesign%2F2009-07%2Fcss%2Fdashboard.css&item=%2Fdesign%2F2009-07%2Fcss%2Ffitbit%2Fapp%2Fuser%2Fstats%2Frank.css&item=%2Fdesign%2F2009-07%2Fcss%2Ffitbit%2Fapp%2Fuser%2Fstats%2FweightStats.css&item=%2Fdesign%2F2009-07%2Fcss%2Ffitbit%2Fapp%2Fuser%2Ffriends%2FfriendStats.css&item=%2Fdesign%2F2009-07%2Fcss%2Ffitbit%2Fapp%2Fuser%2Fstats%2FpersonalBests.css&item=%2Fdesign%2F2009-07%2Fcss%2Fjournal.css\"/>\r\n    <style type=\"text/css\">\r\n        #editplanhelper .button {\r\n            background: url(\"/images/controls/pink_button.gif\") no-repeat scroll left top transparent;\r\n            border: 1px solid #AC083A;\r\n            color: white;\r\n            font-size: 14px;\r\n            height: 25px !important;\r\n            line-height: 24px;\r\n            margin: 0;\r\n            padding: 0 5px !important;\r\n        }\r\n    </style>\r\n\
+      \r\n    </head>\r\n    \r\n    <body>\r\n\
+      \r\n            <div id=\"main\">\r\n                \r\n                    \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      <div id=\"header\">\r\n    <div class=\"logo\"><a href=\"http://www.fitbit.com/\"><img src=\"/images/layout/logo.gif\" alt=\"\"/></a></div>\r\n    <div class=\"accountLinks\">\r\n    \r\n        <ul>\r\n            <li>Hi <a href=\"/user/22CJ7H\" style=\"border: 0; padding: 0;\">dan@mayerdan.com</a></li>\r\n            \r\n            <li><a href=\"http://www.fitbit.com/help\">Help</a></li>\r\n            \r\n              \r\n              \r\n                <li><a href=\"https://www.fitbit.com/logout\">Log Out</a></li>\r\n                <li class=\"last\"><a href=\"http://www.fitbit.com/product\">Store</a></li>\r\n              \r\n           \r\n           \r\n         </ul>\r\n    \r\n    \r\n    </div>\r\n\
+      \r\n    <div id=\"menu\">\r\n        \r\n            <ul>\r\n                \r\n                    \r\n                    \r\n                        <li class=\"current\"><a href=\"http://www.fitbit.com/\" class=\"selected\">Home</a></li>\r\n                    \r\n                \r\n                <li><a href=\"http://www.fitbit.com/foods/log\">Tracker</a></li>\r\n                \r\n                \r\n                \r\n                \r\n                \r\n                \r\n                \r\n                \r\n                \r\n                \r\n                <li><a href=\"http://www.fitbit.com/community\" rel=\"nofollow\">Community</a></li>\r\n                \r\n                \r\n                    <li><a href=\"http://www.fitbit.com/premium/cb\" class=\"analytics\" rel=\"nofollow\">Analytics</a></li>\r\n                \r\n            </ul>\r\n        \r\n        \r\n    </div>\r\n\
+      \r\n\
+      </div>\r\n\
+      \r\n                \r\n                \r\n    <div id=\"content\">\r\n        \r\n        \r\n        \r\n        \r\n        <div id=\"contentHead\" class=\"clearfix\">\r\n                    \r\n                    \r\n            <div id=\"tasks\">\r\n                <h1>My Dashboard</h1>\r\n                <ul class=\"actions\">\r\n                    <li id=\"logFood\"><a href=\"/foods/log\">Log Food</a></li>\r\n                    <li id=\"logActivities\"><a href=\"/activities\">Log Activity</a></li>\r\n                    <li id=\"trackWeight\" class=\"last\"><a href=\"/weight\">Track Weight</a></li>\r\n                </ul>\r\n            </div>\r\n            <div id=\"goalScene\" >\r\n                \r\n                \r\n                <div id=\"scene\">&nbsp;</div>\r\n                \r\n                <div class=\"details\">\r\n                    <p style=\"clear: both;\">\r\n                        \r\n                            \r\n                            \r\n                            \r\n                                <span>0%</span>\r\n                                of\r\n                                70,000\r\n                                weekly steps\r\n                            \r\n                        \r\n                    </p>\r\n                    <ul>\r\n                        \r\n                        <li class=\"first\"><a href=\"#\" onclick=\"return false;\" onmousedown=\"fitbit.app.user.goal.primary.showGoalDialog();\">Select another goal</a></li>\r\n                    </ul>\r\n                </div>\r\n            </div>\r\n        </div>\r\n        <div id=\"contentBody\" class=\"clearfix\">\r\n            <div id=\"modules\" class=\"clearfix\">\r\n\
+      \r\n              <div id=\"smallTabs\" class=\"smallTabs\" style=\"margin: -31px 0 0 -9px; position: absolute;\">\r\n                  <ul class=\"menu\">\r\n                      <li class='active'><a class='active' href=\"#daily\"><span>Daily</span></a></li>\r\n                      <li ><a  href=\"#historical\"><span>Historical</span></a></li>\r\n                  </ul>\r\n              </div>\r\n\
+      \r\n              \r\n              <div id=\"daily\"  style=\"position: relative;\">\r\n\
+      \r\n                <div id=\"calories\" class=\"module firstModule clearfix\">\r\n                    <div class=\"dateHeader\">\r\n                        <div class=\"title\"><h2>Calories</h2></div>\r\n                        <div class=\"dateArea\">\r\n                            \n\n\n\n\n\n\
+      <ul id=\"dateNavHeader\">\n    <li><a href=\"/2010/07/31\"><img src=\"/images/common/pre_arrow.gif\" alt=\"\"/></a></li>\n    <li class=\"date\"><span>Today</span></li>\n    \n    <li class=\"select\"><a id=\"showCalendar\" href=\"#\" onclick=\"return false;\" onmousedown=\"fitbit.app.showCalendar('', 'calendar', 'showCalendar', '2010-08-01', false, '/'); return false;\">Select</a></li>\n\
+      </ul>\n\
+      <div class=\"yui-skin-sam\">\n    <div id=\"calendarContainer\">\n        <div id=\"calendarHeader\" class=\"hd\"></div>\n        <div class=\"bd clearfix\" style=\"color: black\">\n            <div id=\"calendar\"></div>\n        </div>        \n    </div>\n\
+      &nbsp; \n\
+      </div>\n\n\n\
+      \r\n                        </div>\r\n                    </div>\r\n                    \r\n                    \r\n                    \r\n                    \r\n                        \r\n                            \r\n                            \r\n                        \r\n                    \r\n                    <div class=\"content ttContainer\">\r\n                        <!-- CUT INTO CALORIES INCLUDE JSP -->\r\n                        \r\n                        \r\n                        <div class=\"dataBlock clearfix\">\r\n                            <div class=\"data\"><span class=\"highlight1\">1391</span>&nbsp;calories burned</div>\r\n                            \r\n                                \r\n                                    \r\n                                <div class=\"simpleGraph invisible\" onmousedown=\"fitbit.app.user.goal.showGoalDialog( 'My goal is to burn more than', 'calories every day', 47472, '2184.0', 0, true, 0 );\">\r\n                                    \r\n                                        \r\n                                        \r\n                                            \r\n                                        \r\n                                    \r\n                                    <a class=\"tooltip\" title=\"Click to edit goal\" href=\"#\">\r\n                                        <div class=\"graph\">\r\n                                            <strong id=\"bar.47472\" class=\"bar highlightBg1\"\r\n                                                    style=\"width: 63.690475%;\"></strong>\r\n                                        </div>\r\n                                        <div class=\"text\">\r\n                                            <span id=\"percentComplete.47472\">64</span>%\r\n                                            of goal of\r\n                                            <span id=\"target.47472\">2184</span>\r\n                                        </div>\r\n                                    </a>\r\n                                </div>\r\n                                \r\n                            \r\n                        </div>\r\n                        \r\n                        <div class=\"dataBlock clearfix\">\r\n                            <div class=\"data\"><span class=\"highlight2\">0</span> calories eaten</div>\r\n                            \r\n                                <div class=\"simpleGraph invisible\" onmousedown=\"fitbit.app.user.goal.showGoalDialog( 'My goal is to eat', 'calories every day', 47471, '2184.0', 1, false, 0 );\">\r\n                                    <a class=\"tooltip\" title=\"Click to edit goal\" href=\"#\">\r\n                                        <div class=\"graph\">\r\n                                            <strong id=\"bar.47471\" class=\"bar highlightBg2\"\r\n                                                    style=\"width: 0.0%;\"></strong>\r\n                                        </div>\r\n                                        <div class=\"text\">\r\n                                            <span id=\"percentComplete.47471\">0</span>%\r\n                                            of goal of\r\n                                            <span id=\"target.47471\">2184</span>\r\n                                        </div>\r\n                                    </a>\r\n                                </div>\r\n                            \r\n                        </div>\r\n                        <div class=\"dataBlock\">\r\n                            \n\n\n\n\n\n\n\n\n\n\n\n    \n    \n        \n    \n\n\n\n\n\n    \n    \n    \n        \n            \n\n\n\n\n\n\n    \n    \n        \n    \n\n\n\n\n\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      <div id=\"trainerPremiumModal\" class=\"form modal invisible\" style=\"padding-top: 49px;\">\r\n    <div class=\"hd\">\r\n        <div class=\"header\" style=\"line-height: 49px;\">Fitbit Trainer</div>\r\n        <div class=\"closeButton\" style=\"line-height: 49px;\">\r\n            <a href=\"#\" onmousedown=\"fitbit.app.premium.trainer.onClose(); return false;\" onclick=\"return false;\">Close</a>\r\n        </div>\r\n    </div>\r\n    <div class=\"body\" style=\"padding-bottom: 15px; padding-top: 30px;\">\r\n        <div style=\"margin-bottom: 15px; text-align:justify;\">\n            The Fitbit trainer helps you set and track attainable goals to get more\n            active. It does this by first learning your current activity level and then\n            creating a personalized fitness plan that pushes you to gradually\n            increase your movement over the course of 12 weeks. Like a fitness\n            coach, it adapts the plan to meet your changing needs and help you\n            attain your fitness goals.\n        </div>\n        \n            \n            \n                <div style=\"margin-bottom: 15px; text-align:justify;\">\n                    The trainer comes as part of a premium membership but you are\n                    eligible to try it in a free week-long trial. At the end of the trial you can\n                    choose to sign up for a premium membership, but there is no\n                    commitment whatsoever.\n                </div>\n            \n        \n        \n            <div style=\"margin-bottom: 7px;\">\n                A premium membership unlocks many more site features:\n            </div>\n            <div style=\"float: left; clear: both; width: 100%; margin-bottom: 20px;\">\n                <div style=\"float: left; margin-left: 40px;\">\n                    <ul style=\"list-style:disc inside none;\">\n                        <li style=\"list-style:disc inside none; font-size: 12px;\">Benchmarking</li>\n                        <li style=\"list-style:disc inside none; font-size: 12px;\">Personalized reports</li>\n                    </ul>\n                </div>\n                <div style=\"float: left; margin-left: 40px;\">\n                    <ul style=\"list-style:disc inside none;\">\n    \n                        <li style=\"list-style:disc inside none; font-size: 12px;\">Unlimited custom trackers</li>\n                        <li style=\"list-style:disc inside none; font-size: 12px;\">Much more!</li>\n                    </ul>\n                </div>\n            </div>\n            <div style=\" margin-top: 4px; font-size:15px;\">\n                <a href=\"/premium/about\">Learn more about premium</a>\n            </div>\n        \r\n        <div class=\"clearfix\" style=\"margin: 25px 0 0 0;\">\r\n        <div id=\"buttonsContainer\">\n            \n                <div id=\"bGetFreeTrial\">\n                    <a  href=\"#\" title=\"Get Free Report. No Credit Card Required.\"\n                        onmousedown=\"fitbit.app.premium.addTrialSubscription('TRIAL_ALGORITHMIC_TRAINER', '/trainer/trainerSetup', 'trialTrainer_dashPage_trainerUpsellDialog'); return false;\"\n                       onclick=\"return false;\">\n                        <span>Start Free Trial</span>\n                        <br/>\n                        <span style=\"font-size:8px;\">NO CREDIT CARD REQUIRED</span>\n                    </a>\n                </div>\n            \n            <div id=\"bBuyPremium\">\n                <a href=\"#\" title=\"Buy Premium\"\n                   onmousedown=\"window.location='/order?packName=fitbit_premium&doneUrl=/trainer/trainerSetup&cancelUrl=/&linkId=premiumPack_dashPage_trainerUpsellDialog'; return false;\"\n                        onclick=\"return false;\">Buy Premium</a>\n            </div>\n            <div class=\"lOr\">or</div>\n            <div id=\"bNoThanks\">\n                <a title=\"Cancel\" href=\"#\" onclick=\"fitbit.app.premium.trainer.onClose(); return false;\">No thanks</a>\n            </div>\n        </div>\n\
+      \r\n    </div>\r\n    </div>\r\n\
+      </div>\n\n            \n              \n              \n                <div style=\"float:left;margin-right:10px;font-size:12px;color:#000000;\">Want to challenge yourself to be more active?</div>\n              \n            \n            <a href=\"#\" onmousedown=\"fitbit.app.premium.trainer.showDialog();\" onclick=\"return false;\"\n               style=\"display: block; text-decoration: underline;font-size:12px;\">Start a free week trial of the Fitbit trainer now!</a>\n        \n        \n        \n        \n        \n    \n\n\n\
+      \r\n                        </div>\r\n                    </div>\r\n                    \r\n                    \r\n                    \r\n                    \r\n                  \r\n                    \r\n                  \r\n\
+      \r\n                \r\n                    <div class=\"content border\">\r\n                        <div id=\"intradayCaloriesTabs\" class=\"tabs\">\r\n                            <h3 style=\"float: left; padding: 6px 2px;\">Intraday calories</h3>\r\n                            <ul class=\"menu\">\r\n                                <li class='active'><a class='active' href=\"#intradayCaloriesBurnedChart\"><span>burned every 5 min</span></a></li>\r\n                                <li ><a  href=\"#intradayCaloriesEatenChart\"><span>eaten</span></a></li>\r\n                            </ul>\r\n                        </div>\r\n\
+      \r\n                        \r\n                        \r\n                            \r\n                            \r\n                                \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      <div id=\"intradayCaloriesBurnedChart\"  >\r\n    \r\n        <p style=\"margin: 0 10px 10px 0; font-size: 10px;\">\r\n            You are seeing this because you don't have Adobe Flash plugin installed. <a href=\"http://www.adobe.com/go/getflashplayer\">Get Adobe Flash</a> to view this graph.\r\n        </p>\r\n    \r\n\
+      </div>\r\n\
+      \r\n                            \r\n                        \r\n\
+      \r\n                        \r\n                        \r\n                            \r\n                                \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      <div id=\"intradayCaloriesEatenChart\" class=\"invisible\" >\r\n    \r\n        <p style=\"margin: 0 10px 10px 0; font-size: 10px;\">\r\n            You are seeing this because you don't have Adobe Flash plugin installed. <a href=\"http://www.adobe.com/go/getflashplayer\">Get Adobe Flash</a> to view this graph.\r\n        </p>\r\n    \r\n\
+      </div>\r\n\
+      \r\n                            \r\n                            \r\n                        \r\n\
+      \r\n                    </div>\r\n                \r\n\
+      \r\n                </div>\r\n                <div id=\"activity\" class=\"module clearfix\">\r\n                    <div class=\"dateHeader\">\r\n                        <div class=\"title\"><h2>Activity</h2></div>\r\n                        <div class=\"dateArea\">\r\n                            \n\n\n\n\n\n\
+      <ul id=\"dateNavHeader\">\n    <li><a href=\"/2010/07/31\"><img src=\"/images/common/pre_arrow.gif\" alt=\"\"/></a></li>\n    <li class=\"date\"><span>Today</span></li>\n    \n    <li class=\"select\"><a id=\"showCalendar2\" href=\"#\" onclick=\"return false;\" onmousedown=\"fitbit.app.showCalendar('', 'calendar2', 'showCalendar2', '2010-08-01', false, '/'); return false;\">Select</a></li>\n\
+      </ul>\n\
+      <div class=\"yui-skin-sam\">\n    <div id=\"calendar2Container\">\n        <div id=\"calendar2Header\" class=\"hd\"></div>\n        <div class=\"bd clearfix\" style=\"color: black\">\n            <div id=\"calendar2\"></div>\n        </div>        \n    </div>\n\
+      &nbsp; \n\
+      </div>\n\n\n\
+      \r\n                        </div>\r\n                    </div>\r\n                    <div class=\"content firstBlock\">\r\n                        <!-- CUT INTO Activities INCLUDE JSP -->\r\n                        <div class=\"dataBlock clearfix\">\r\n                            <div class=\"data\">\r\n                                <span class=\"highlight1\">0\r\n                                </span> steps taken\r\n                                 today\r\n                            </div>\r\n                            \r\n                                <div class=\"simpleGraph invisible\" onmousedown=\"fitbit.app.user.goal.showGoalDialog( 'My goal is to walk or run more than', 'steps every day', 47474, '10000.0', 0, true, 0 );\">\r\n                                    <a class=\"tooltip\" title=\"Click to edit goal\" href=\"#\">\r\n                                        <div class=\"graph\">\r\n                                            <strong id=\"bar.47474\" class=\"bar highlightBg1\"\r\n                                                    style=\"width: 0.0%;\"></strong>\r\n                                        </div>\r\n                                        <div class=\"text\">\r\n                                            <span id=\"percentComplete.47474\">0</span>%\r\n                                            of goal of\r\n                                            <span id=\"target.47474\">10000</span>\r\n                                        </div>\r\n                                    </a>\r\n                                </div>\r\n                            \r\n                        </div>\r\n                        <div class=\"dataBlock clearfix\">\r\n                            <div class=\"data\">\r\n                                <span class=\"highlight2\">\r\n                                    .00\r\n                                </span> miles traveled\r\n                                 today\r\n                            </div>\r\n                            \r\n                                <div class=\"simpleGraph invisible\" onmousedown=\"fitbit.app.user.goal.showGoalDialog( 'My goal is to walk or run more than', 'miles every day', 47475, '5.0', 0, true, 0, false );\">\r\n                                    <a class=\"tooltip\" title=\"Click to edit goal\" href=\"#\">\r\n                                        <div class=\"graph\">\r\n                                            <strong id=\"bar.47475\" class=\"bar highlightBg2\"\r\n                                                    style=\"width: 0.0%;\"></strong>\r\n                                        </div>\r\n                                        <div class=\"text\">\r\n                                            <span id=\"percentComplete.47475\">0</span>%\r\n                                            of goal of\r\n                                            <span id=\"target.47475\">5.00</span>\r\n                                        </div>\r\n                                    </a>\r\n                                </div>\r\n                            \r\n                        </div>\r\n                        <div class=\"dataBlock clearfix\">\r\n                            <div class=\"data\">\r\n                                \r\n                                <span class=\"highlight1\">0</span> active score<a class=\"tooltip ttid-active-score-tip\" href=\"#\" style=\"z-index: 9000\"><span style=\"color: gray\">*</span>\r\n                                    <span id=\"active-score-tip\" class=\"help tooltip-content\">\r\n                                        <div>The Active Score captures how active you were compared to if you were completely sedentary all day. Your score will be 0 if you were sedentary, and\r\n                                        typically a 3-digit number if you were active.\r\n                                        <br/>\r\n                                        You may prefer the Active Score over Calories Burned, because the Active Score just captures your level of activity and is not dependent on your height and\r\n                                        weight, as calories burned is.\r\n                                        <br/>\r\n                                        For those who understand what a MET (Metabolic Equivalent) is, the Active Score is a rough translation of the sum of your METs for each minute minus 1 for each minute elapsed in the day.\r\n                                        </div>\r\n                                    </span>\r\n                                </a>\r\n                            </div>\r\n                            \r\n                                \r\n                                \r\n                                <div class=\"simpleGraph invisible\" onmousedown=\"fitbit.app.user.goal.showGoalDialog( 'My goal is to reach', 'active score every day', 47473, '1000.0', 0, true, 0 );\">\r\n                                    <a class=\"tooltip\" title=\"Click to edit goal\" href=\"#\">\r\n                                        <div class=\"graph\">\r\n                                            <strong id=\"bar.47473\" class=\"bar highlightBg1\"\r\n                                                    style=\"width: 0.0%;\"></strong>\r\n                                        </div>\r\n                                        <div class=\"text\">\r\n                                            <span id=\"percentComplete.47473\">0</span>%\r\n                                            of goal of\r\n                                            <span id=\"target.47473\">1000</span>\r\n                                        </div>\r\n                                    </a>\r\n                                </div>\r\n                            \r\n                        </div>\r\n    \r\n                    \r\n                        <div class=\"dataBlock clearfix\">\r\n                          <div class=\"recording\">\r\n                            You have recorded \r\n                            <a class=\"tooltip ttid-activities-tip\" style=\"z-index: 9000;\" href=\"/activities\">\r\n                                0 activities\r\n                                <span id=\"activities-tip\" class=\"tooltip-content\">\r\n                                    A recording is similar to a trip odometer.<br/><br/>\r\n                                    You can record activities using your Fitbit. Press and the hold the Fitbit button for 2+ seconds to start a recording and hold for 2+ seconds to stop a recording.<br/><br/>\r\n                                    Recordings are useful, for instance, if you want to know exactly how many steps it takes you to walk from your house to the bus stop or you want to know how many calories you burn during your morning walk or what your pace was during the walk.\r\n                                </span>\r\n                            </a>\r\n                          </div>\r\n                        </div>\r\n                    \r\n\
+      \r\n                    </div>\r\n\
+      \r\n                \r\n                    <div id=\"activityBreakdownChartArea\" class=\"content border\">\r\n                        <h3>Today's activity breakdown (excluding sleep)</h3>\r\n                        \r\n                        <div id=\"activityGraphHorizontal\" class=\"horizontalGraph invisible\">\r\n                            <div class=\"graph\">\r\n                                <div class=\"bar sedentary\" style=\"width: 100%;\"></div>\r\n                                <div class=\"bar lightly\"   style=\"width: 0%;\"></div>\r\n                                <div class=\"bar fairly\"    style=\"width: 0%;\"></div>\r\n                                <div class=\"bar very\"      style=\"width: 0%;\"></div>\r\n                            </div>\r\n                            <div class=\"text\">\r\n                                \r\n                                \r\n                                \r\n                                \r\n\
+      \r\n                                <div class=\"caption\"><span class=\"sedentary\">sedentary</span><span class=\"time\">22hrs 18min</span></div>\r\n                                <div class=\"caption\"><span class=\"lightly\"  >lightly active</span><span class=\"time\">0min</span></div>\r\n                                <div class=\"caption\"><span class=\"fairly\"   >fairly active</span><span class=\"time\">0min</span></div>\r\n                                <div class=\"caption\"><span class=\"very\"     >very active</span><span class=\"time\">0min</span></div>\r\n                            </div>\r\n                        </div>\r\n\
+      \r\n                        <div id=\"activityGraphBar\" class=\"barGraph invisible\">\r\n                            <div class=\"graph\">\r\n                                <div class=\"bar sedentary\" style=\"height:100px; border-top-width:0px;\"></div>\r\n                                <div class=\"bar lightly\"   style=\"height:0px; border-top-width:100px;\"></div>\r\n                                <div class=\"bar fairly\"    style=\"height:0px; border-top-width:100px;\"></div>\r\n                                <div class=\"bar very\"      style=\"height:0px; border-top-width:100px;\"></div>\r\n                            </div>\r\n                            <div class=\"text\">\r\n                                <div class=\"caption sedentary\">sedentary<div>22hrs 18min</div></div>\r\n                                <div class=\"caption lightly\">lightly active<div>0min</div></div>\r\n                                <div class=\"caption fairly\">fairly active<div>0min</div></div>\r\n                                <div class=\"caption very\">very active<div>0min</div></div>\r\n                            </div>\r\n                        </div>\r\n\
+      \r\n                        <div id=\"activityGraphPie\" class=\"pieGraph\">\r\n                            \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      <div id=\"activityPieChart\" class=\"graph\" style=\"width: 240px;\">\r\n    \r\n        <p style=\"margin: 0 10px 10px 0; font-size: 10px;\">\r\n            You are seeing this because you don't have Adobe Flash plugin installed. <a href=\"http://www.adobe.com/go/getflashplayer\">Get Adobe Flash</a> to view this graph.\r\n        </p>\r\n    \r\n\
+      </div>\r\n\
+      \r\n                            <div class=\"left\">\r\n                                <div class=\"sedentary caption\">sedentary<div class=\"number\">22hrs 18min</div></div>\r\n                                <div class=\"lightly caption\">lightly active<div class=\"number\">0min</div></div>\r\n                            </div>\r\n                            <div class=\"right\">\r\n                                <div class=\"caption fairly\">fairly active<div class=\"number\">0min</div></div>\r\n                                <div class=\"caption very\">very active<div class=\"number\">0min</div></div>\r\n                            </div>\r\n                        </div>\r\n                    </div>\r\n\
+      \r\n                    <div class=\"content border\">\r\n                        <div id=\"intradayTabs\" class=\"tabs\">\r\n                            <ul class=\"menu\">\r\n                                <li class='active'><a class='active' href=\"#intradayStepsChart\"><span>Steps taken</span></a></li>\r\n                                <li ><a  href=\"#intradayActiveScoreChart\"><span>Active score</span></a></li>\r\n                            </ul>\r\n                            <h3 style=\"float: left; padding: 6px 10px;\">every 5 minutes</h3>\r\n                        </div>\r\n\
+      \r\n                        \r\n                        <div id=\"intradayStepsChart\" ></div>\r\n\
+      \r\n                        \r\n                        <div id=\"intradayActiveScoreChart\" class=\"invisible\"></div>\r\n\
+      \r\n                        \r\n                    </div>\r\n                \r\n\
+      \r\n                   <!-- CUT INTO Activities INCLUDE JSP -->\r\n                </div>\r\n                \r\n                \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      <div id=\"sleep\" class=\"module clearfix \">\r\n    \r\n        \r\n        \r\n    \r\n        \r\n        <div id=\"sleepRecord.\" class=\"annotation content firstBlock\" onmouseout=\"fitbit.app.highlightRecord('sleepRecord', '', false);\" onmouseover=\"fitbit.app.highlightRecord('sleepRecord', '', true);\">\r\n\
+      \r\n            \r\n            <!-- class: p1, p2 or p3 (poor, average, really restful) -->\r\n            <div id=\"sleepIndicator\" class=\"p1\">Your sleep efficiency\r\n                <span class=\"text\">\r\n                    \r\n                        ?%\r\n                        \r\n                    \r\n                </span>\r\n            </div>\r\n            <h3 id=\"sleepChartLabel\">Your main sleep pattern &nbsp; <span class=\"textLegendHighlight1\">asleep</span> &nbsp; <span class=\"textLegendHighlight2\">active</span></h3>\r\n            \r\n                \r\n                \r\n                    <h3 id=\"sleepChartMessage\">You did not log sleep data on this day.</h3>\r\n                \r\n            \r\n            <ul id=\"sleepSummary\">\r\n                <li class=\"first\">\r\n                    <span class=\"sleepMetricLabel\">You went to bed at</span>\r\n                    <span class=\"sleepMetric\">\r\n                        \r\n                            ?\r\n                            \r\n                        \r\n                    </span>\r\n                </li>\r\n                <li>\r\n                    <span class=\"sleepMetricLabel\">Time to fall asleep</span>\r\n                    <span class=\"sleepMetric\">0min</span>\r\n                </li>\r\n                <li>\r\n                    <span class=\"sleepMetricLabel\">Times awakened</span>\r\n                    <span class=\"sleepMetric\">0</span>\r\n                </li>\r\n                <li>\r\n                    <span class=\"sleepMetricLabel\">You were in bed for</span>\r\n                    <span class=\"sleepMetric\">0min</span>\r\n                </li>\r\n                <li>\r\n                    <span class=\"sleepMetricLabel\">Actual sleep time</span>\r\n                    <span class=\"sleepMetric highlight2\">0min</span>\r\n                </li>\r\n            </ul>\r\n                    <div class=\"clearfix\" style=\"height: 0; float: none; clear: both;\"></div>\r\n\
+      \r\n                    <div id=\"editSleepRecord.\" class=\"edit invisible\">\r\n                        \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n                    <div id=\"sleepRecordEntry\" >\r\n                        \r\n                            <div class=\"quantityLabel\">\r\n                                <h3 style=\"float: none; height: auto;\">\r\n                                    Create a new sleep record\r\n                                </h3>\r\n                            </div>\r\n                        \r\n                        \r\n                        <form name=\"sleepLogForm\" action=\"/activities/sleepAnnotation\" class=\"form\" method=\"post\" onsubmit=\"fitbit.app.sleep.logSleep(); return false;\">\r\n                          <div id=\"sleepRecordEntryInternal\">\r\n                            <input name=\"date\" value=\"2010-08-01\" type=\"hidden\" />\r\n                            <input name=\"clock\" value=\"\" type=\"hidden\" />\r\n                            <input name=\"sleepProcAlgorithm\" value=\"\" class=\"invisible\" type=\"text\" />\r\n                            \r\n                            <div style=\"width: 200px; float: left;\">\r\n                                <h3 style=\"float: none;\">Entered bed</h3>\r\n                                <div style=\"margin-bottom: 10px;\">\r\n                                    <input maxlength=\"2\" name=\"enteredBedHours\" value=\"\" type=\"text\" size=\"2\" />\r\n                                    <span style=\"font-weight: bold;\">:</span>\r\n                                    <input maxlength=\"2\" name=\"enteredBedMinutes\" value=\"\" type=\"text\" size=\"2\" />&nbsp;\r\n\
+      \r\n                                    \r\n                                        \r\n                                        \r\n                                            <select name=\"enteredBedAmpm\">\r\n                                                <option selected=\"selected\" value=\"am\">am</option>\r\n                                                <option value=\"pm\">pm</option>\r\n                                            </select>\r\n                                        \r\n                                    \r\n                                </div>\r\n                                on the \r\n                                <select name=\"enteredBedDay\">\r\n                                    <option value=\"prev\">Previous day</option>\r\n                                    <option selected=\"selected\" value=\"same\">Same day</option>\r\n                                </select>\r\n                                <div id=\"startTimeLinks\" class=\"startTimeBlock\" style=\"padding: 12px 0; margin: 0;\">\r\n                                    <a id=\"clock12\" href=\"#\"  onclick=\"return false;\" onmousedown=\"fitbit.app.sleep.setClock('12','');\">12 hr</a>&nbsp;\r\n                                    <a id=\"clock24\" href=\"#\"  onclick=\"return false;\" onmousedown=\"fitbit.app.sleep.setClock('24','');\">24 hr</a>\r\n                                </div>\r\n                            </div>\r\n                            <div style=\"margin-left: 25px; width: 200px; float: left;\">\r\n                                <h3 style=\"float: none;\">Left bed</h3>\r\n                                <div>\r\n                                    <input maxlength=\"2\" name=\"leftBedHours\" value=\"\" type=\"text\" size=\"2\" />\r\n                                    <span style=\"font-weight: bold;\">:</span>\r\n                                    <input maxlength=\"2\" name=\"leftBedMinutes\" value=\"\" type=\"text\" size=\"2\" />&nbsp;\r\n\
+      \r\n                                    \r\n                                        \r\n                                        \r\n                                            <select name=\"leftBedAmpm\">\r\n                                                <option selected=\"selected\" value=\"am\">am</option>\r\n                                                <option value=\"pm\">pm</option>\r\n                                            </select>\r\n                                        \r\n                                    \r\n                                </div>\r\n                            </div>\r\n                        \r\n                            \r\n                            \r\n                                <input id=\"logSleepButton\" style=\"clear: both; float: left; margin: 0 0 0 0\" name=\"logSleepButton\" value=\"Log Sleep\" class=\"button\" type=\"submit\" />\r\n                            \r\n                          </div>\r\n                          <div id=\"sleepRecordEntryStatus\" style=\"clear: both; padding-top: 10px;\">\r\n                                <div id=\"logSleepProgress\" class=\"recentlyAddedStatus invisible\" style=\"margin: 0;\"></div>\r\n                                <div id=\"logSleepErrors\" class=\"error invisible\" style=\"margin: 0;\"></div>\r\n                          </div>\r\n                        <div style=\"display: none;\"><input type=\"hidden\" name=\"_sourcePage\" value=\"5HjUTssb5gjGrJMFkFsv6XbX0f6OV1Ndj1zeGcz7OKxV2RUoL5W60NfHjCnPkhut\" /><input type=\"hidden\" name=\"__fp\" value=\"MQ4D0iGXzF9oEYlyxrNfYrnIH0RJLtw0N26H55fJomuPoci9bkO-bTduh-eXyaJrLYwjslupZN8=\" /></div></form>\r\n                        \r\n                    </div>\r\n\
+      \r\n                    </div>\r\n        </div>\r\n    \r\n    \r\n        <h3 id=\"sleepChartMoreLink\"><a href=\"/sleep\">View all your sleeps on this day</a></h3>\r\n    \r\n        \r\n    \r\n\
+      </div>\r\n                 <!--\r\n                <div id=\"dashboardAdvertisement\" class=\"module clearfix\">\r\n                    <div class=\"content firstBlock\">\r\n                        <h3 class=\"advertisement\">Headline for Advertisement Goes Here</h3>\r\n                        <p>Marketing copy for the advertisement talks about additional stats provided, as well as the ease of the syncing software.  Maybe one more line.</p>\r\n                        <a href=\"/order/\" class=\"buttonLink\"><img src=\"/images/dashboard/purchaseButton.gif\" alt=\"Purchase\" width=\"154\" height=\"39\"/></a>\r\n                    </div>\r\n                </div>\r\n                -->\r\n                \r\n                <div id=\"journal\" class=\"module clearfix\">\r\n                    <div class=\"dateHeader\">\r\n                        <div class=\"title\"><h2>Journal</h2></div>\r\n                        <div class=\"dateArea\">\r\n                            \n\n\n\n\n\n\
+      <ul id=\"dateNavHeader\">\n    <li><a href=\"/2010/07/31\"><img src=\"/images/common/pre_arrow.gif\" alt=\"\"/></a></li>\n    <li class=\"date\"><span>Today</span></li>\n    \n    <li class=\"select\"><a id=\"showCalendar3\" href=\"#\" onclick=\"return false;\" onmousedown=\"fitbit.app.showCalendar('', 'calendar3', 'showCalendar3', '2010-08-01', false, '/'); return false;\">Select</a></li>\n\
+      </ul>\n\
+      <div class=\"yui-skin-sam\">\n    <div id=\"calendar3Container\">\n        <div id=\"calendar3Header\" class=\"hd\"></div>\n        <div class=\"bd clearfix\" style=\"color: black\">\n            <div id=\"calendar3\"></div>\n        </div>        \n    </div>\n\
+      &nbsp; \n\
+      </div>\n\n\n\
+      \r\n                        </div>\r\n                    </div>\r\n                    <div class=\"content firstBlock\">\r\n                        \n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n    \n        \n            \n            \n                <div class=\"text\">\n                    \n                        You have not logged your mood.\n                        \n                    \n                </div>\n            \n        \n    \n    \n\n\n\
+      \r\n                    </div>\r\n                    <div class=\"content\">\r\n                        \n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n    \n        \n            \n            \n                <div class=\"text\">\n                    \n                        You have not logged your allergies.\n                        \n                    \n                </div>\n            \n        \n    \n    \n\
+      \r\n                    </div>\r\n                    \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      <div id=\"journal\" class=\"clearfix\">\r\n    \r\n        \r\n            <div class=\"content\">\r\n                <div class=\"text\">\r\n                    \r\n                        You have not written anything in your journal.\r\n                        \r\n                    \r\n                </div>\r\n            </div>\r\n        \r\n        \r\n    \r\n\
+      </div>\r\n                </div>\r\n\
+      \r\n              </div>\r\n\
+      \r\n              \r\n              <div id=\"historical\" class=\"invisible\" style=\"position: relative;\">\r\n                  <div class=\"module firstModule clearfix\">\r\n\
+      \r\n                    <div class=\"dateHeader\">\r\n                        <div class=\"title\"><h2>&nbsp;</h2></div>\r\n                        <div class=\"dateArea\">\r\n                            \n\n\n\n\n\n\
+      <ul id=\"dateNavHeader\">\n    <li><a href=\"/2010/07/31\"><img src=\"/images/common/pre_arrow.gif\" alt=\"\"/></a></li>\n    <li class=\"date\"><span>Today</span></li>\n    \n    <li class=\"select\"><a id=\"showCalendar5\" href=\"#\" onclick=\"return false;\" onmousedown=\"fitbit.app.showCalendar('', 'calendar5', 'showCalendar5', '2010-08-01', false, '/'); return false;\">Select</a></li>\n\
+      </ul>\n\
+      <div class=\"yui-skin-sam\">\n    <div id=\"calendar5Container\">\n        <div id=\"calendar5Header\" class=\"hd\"></div>\n        <div class=\"bd clearfix\" style=\"color: black\">\n            <div id=\"calendar5\"></div>\n        </div>        \n    </div>\n\
+      &nbsp; \n\
+      </div>\n\n\n\
+      \r\n                        </div>\r\n                    </div>\r\n\
+      \r\n                    <div class=\"content firstBlock\">\r\n                        <h3>30 day graph of <span class=\"textLegendHighlight1\">intake</span> vs. <span class=\"textLegendHighlight2\">burn</span></h3>\r\n                        \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      <div id=\"caloriesInOutChart\"  style=\"margin-top: 0; float: left\">\r\n    \r\n        <p style=\"margin: 0 10px 10px 0; font-size: 10px;\">\r\n            You are seeing this because you don't have Adobe Flash plugin installed. <a href=\"http://www.adobe.com/go/getflashplayer\">Get Adobe Flash</a> to view this graph.\r\n        </p>\r\n    \r\n\
+      </div>\r\n\
+      \r\n                        <div style=\"margin-left: 100px;\">\r\n                            <h3 style=\"float: left;\"><span class=\"highlight1\">2,307</span> average burn</h3>\r\n                            <h3 style=\"float: left; margin-left: 50px;\"><span class=\"highlight2\">0</span> average intake</h3><br/>\r\n                        </div>\r\n                    </div>\r\n\
+      \r\n                    <div class=\"content\">\r\n                        <div id=\"historicalActivitiesTabs\" class=\"tabs\">\r\n                            <ul class=\"menu\">\r\n                                <li class='active'><a class='active' href=\"#stepsTakenHistoricalChart\"><span>Steps</span></a></li>\r\n                                <li ><a  href=\"#distanceHistoricalChart\"><span>Distance</span></a></li>\r\n                                <li ><a  href=\"#activeScoreHistoricalChart\"><span>Active Score</span></a></li>\r\n                            </ul>\r\n                            <h3 style=\"float: left; padding: 6px 10px;\">30 day graph</h3>\r\n                        </div>\r\n\
+      \r\n                        \r\n                        <div id=\"activeScoreHistoricalChart\" class=\"invisible\"></div>\r\n\
+      \r\n                        \r\n                        <div id=\"stepsTakenHistoricalChart\" ></div>\r\n\
+      \r\n                        \r\n                        <div id=\"distanceHistoricalChart\" class=\"invisible\"></div>\r\n\
+      \r\n                    </div>\r\n\
+      \r\n                \r\n                    <div class=\"content\">\r\n                        <h3>30 day graph of minutes active (in hours)</h3>\r\n                        \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      <div id=\"minutesActiveChart\"  style=\"margin-top: 8px; float: left\">\r\n    \r\n        <p style=\"margin: 0 10px 10px 0; font-size: 10px;\">\r\n            You are seeing this because you don't have Adobe Flash plugin installed. <a href=\"http://www.adobe.com/go/getflashplayer\">Get Adobe Flash</a> to view this graph.\r\n        </p>\r\n    \r\n\
+      </div>\r\n\
+      \r\n                        <div style=\"margin-left: 50px;\">\r\n                            \r\n                            <h3 style=\"float: left; margin-left: 25px;\"><span class=\"textLegendHighlightLightly\">lightly active</span></h3>\r\n                            <h3 style=\"float: left; margin-left: 25px;\"><span class=\"textLegendHighlightFairly\">fairly active</span></h3>\r\n                            <h3 style=\"float: left; margin-left: 25px;\"><span class=\"textLegendHighlightVery\">very active</span></h3>\r\n                            <br/>\r\n                        </div>\r\n                    </div>\r\n                \r\n\
+      \r\n                    <div class=\"content\">\r\n                        <h3>30 day weight graph (in lbs)</h3>\r\n                        \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      <div id=\"weightChart\"  style=\"margin-top: 8px; float: left\">\r\n    \r\n        <p style=\"margin: 0 10px 10px 0; font-size: 10px;\">\r\n            You are seeing this because you don't have Adobe Flash plugin installed. <a href=\"http://www.adobe.com/go/getflashplayer\">Get Adobe Flash</a> to view this graph.\r\n        </p>\r\n    \r\n\
+      </div>\r\n\
+      \r\n                        <div style=\"margin-left: 130px;\">\r\n                            <h3 style=\"float: left;\"><span class=\"textLegendHighlight1\">actual weight</span></h3>\r\n                            <h3 style=\"float: left; margin-left: 35px;\"><span class=\"textLegendHighlight2\">target weight</span></h3>\r\n                            <br/>\r\n                        </div>\r\n                    </div>\r\n\
+      \r\n                \r\n                    <div class=\"content\">\r\n                        <div id=\"sleepInfoTabs\" class=\"tabs\">\r\n                            <ul class=\"menu\">\r\n                                <li class='active'><a class='active' href=\"#timeAsleepChart\"><span>Hours asleep</span></a></li>\r\n                                <li ><a  href=\"#timesAwakenedChart\"><span>Times awakened</span></a></li>\r\n                            </ul>\r\n                            <h3 style=\"float: left; padding: 6px 10px;\">30 day graph</h3>\r\n                        </div>\r\n\
+      \r\n                        \r\n                        <div id=\"timeAsleepChart\" ></div>\r\n\
+      \r\n                        \r\n                        <div id=\"timesAwakenedChart\" class=\"invisible\"></div>\r\n\
+      \r\n                    </div>\r\n                \r\n                  </div>\r\n              </div>\r\n            </div>\r\n            <div id=\"teasers\">\r\n                <div id=\"profile\" class=\"teaser firstTeaser clearfix\">\r\n                    <div class=\"content\" style=\"background: none;\">\r\n                        <div class=\"clearfix\">\r\n                            <div class=\"photo\"><a href=\"/user/22CJ7H\">\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\
+      \t\n\
+      \t\n\
+      \t\t\n\
+      \t\n\n\
+      <span class=\"profilePhoto\">\n\
+      \t<img class=\"profileImage\" width=\"100\" height=\"100\" alt=\"\" title=\"\" src=\"http://cache.fitbit.com/FD733464-63AF-92C7-7C1A-DF4037775B11_profile_100_square.jpg\">\n\n\
+      </span></a></div>\r\n                            <ul class=\"info\">\r\n                                <li class=\"username\">D\xE2\x80\x8Ba\xE2\x80\x8Bn</li>\r\n                                \r\n                                \r\n                                \r\n                                \r\n                                    <li>Male, 28</li>\r\n                                \r\n                                \r\n                                    <li>\r\n                                    \r\n                                    5' 5''\r\n                                    \r\n                                    </li>\r\n                                \r\n                                \r\n                                <li>W\xE2\x80\x8Ba\xE2\x80\x8Bs\xE2\x80\x8Bh\xE2\x80\x8Bi\xE2\x80\x8Bn\xE2\x80\x8Bg\xE2\x80\x8Bt\xE2\x80\x8Bo\xE2\x80\x8Bn\xE2\x80\x8B, D\xE2\x80\x8BC\xE2\x80\x8B, U\xE2\x80\x8BS</li>\r\n                                <li>Joined May 14, 2010</li>\r\n                                <li>&nbsp;</li><li>Synced 3 days ago</li>\r\n                                <li>&nbsp;</li><li>Battery level: Medium</li><!-- Battery Level: 43% -->\r\n                            </ul>\r\n                        </div>\r\n                    </div>\r\n\
+      \r\n                    <div class=\"content clearfix\">\r\n                        <div class=\"actions\">\r\n                            <ul>\r\n                                <li><a href=\"/user/22CJ7H\">View profile</a></li>\r\n                                <li><a href=\"/user/profile/edit\">Edit profile</a></li>\r\n                                <li><a href=\"/user/profile/uploadProfilePhoto\">Change profile pic</a></li>\r\n                                <li class=\"padding\"></li>\r\n                            </ul>\r\n                            <ul>\r\n                                <li>\r\n                                    <a href=\"/user/profile/share\"><span class=\"tooltip ttid-share-stats-tooltip\">Share stats</span></a>\r\n                                    <div id=\"share-stats-tooltip\" class=\"tooltip-content\">                                      \r\n                                        Share your daily or weekly average activity stats on your \r\n                                        \r\n                                          \r\n                                            Twitter, Facebook, or Wordpress\r\n                                          \r\n                                          \r\n                                         \r\n                                        account.\r\n                                    </div>\r\n                                </li>\r\n                                    \r\n                            </ul>\r\n                            \r\n                        </div>\r\n                    </div>\r\n                </div>\r\n\
+      \r\n                <div class=\"teaser clearfix\">\r\n                    <div class=\"header\">My Stats</div>\r\n\
+      \r\n                    \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \t\r\n\
+      \t\r\n\
+      \t\t<div id=\"bodyScales\" class=\"content\">\r\n\
+      \t\t\t<div id=\"bodyScalesHeader\">\r\n\
+      \t\t\t\t<h3>My Body's</h3>\r\n\
+      \t\t\t\t<ul id=\"bodyScalesNav\">\r\n\
+      \t\t\t\t\t<li><a href=\"#weightScale\" class=\"active\">Weight</a></li>\r\n\
+      \t\t\t\t\t<li><a href=\"#bmiScale\">BMI</a></li>\r\n\
+      \t\t\t\t</ul>\r\n                \r\n                    \r\n                    \r\n                    \r\n    \t\t\t\t<a id=\"toggleBodyScales\" href=\"/setUIState?index=5&amp;state=hidden&amp;targetLabel=Show+my+weight+and+BMI\">Hide</a>\r\n                \r\n\
+      \t\t\t</div>\r\n\
+      \r\n\
+      \t\t\t<div id=\"weightScale\" class=\"pane active\">\r\n\
+      \t\t\t\t\r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      <div class=\"scaleChart scaleChartWide\" style=\"clear: both;\">\r\n\
+      \t\t<div class=\"markerContainer\">\r\n\
+      \t\t\t<!-- left: (weight - minWeight) / (maxWeight - minWeight), as a percentage -->\r\n\
+      \t\t\t<div id=\"curWeight\" class=\"marker normal\" style=\"left: 27.862646%;\">\r\n\
+      \t\t\t\t\t132\r\n\
+      \t\t\t</div>\r\n\
+      \t\t</div>\r\n\
+      \t\t<div class=\"bar\">\r\n\
+      \t\t\t\t<span class=\"a\">90</span>\r\n\
+      \t\t\t\t<span class=\"b\">111</span>\r\n\
+      \t\t\t\t<span class=\"c\">150</span>\r\n\
+      \t\t\t\t<span class=\"d\">180</span>\r\n\
+      \t\t\t\t<span class=\"e\">240+</span>\r\n\
+      \t\t</div>\r\n\
+      </div>\r\n\
+      \r\n\
+      \t\t\t</div>\r\n\
+      \t\t\t<div id=\"bmiScale\" class=\"pane\">\r\n\
+      \t\t\t\t\r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      <div class=\"scaleChart scaleChartWide\" style=\"clear: both;\">\r\n\
+      \t\t<div class=\"markerContainer\">\r\n\
+      \t\t\t<!-- left: (BMI - 15) / 25, as a percentage -->\r\n\
+      \t\t\t<div id=\"curBmi\" class=\"marker normal\" style=\"left: 27.862617%;\">\r\n\
+      \t\t\t\t\t22\r\n\
+      \t\t\t</div>\r\n\
+      \t\t</div>\r\n\
+      \t\t<div class=\"bar\">\r\n\
+      \t\t\t\t<span class=\"a\">15</span>\r\n\
+      \t\t\t\t<span class=\"b\">18.5</span>\r\n\
+      \t\t\t\t<span class=\"c\">25</span>\r\n\
+      \t\t\t\t<span class=\"d\">30</span>\r\n\
+      \t\t\t\t<span class=\"e\">40</span>\r\n\
+      \t\t</div>\r\n\
+      </div>\r\n\
+      \r\n\
+      \r\n\
+      \t\t\t\t<div style=\"margin: 15px 0 0 25px;\">\r\n\
+      \t\t\t\t\t<span class=\"textLegendHighlightUnder\">under</span> <span class=\"textLegendHighlightNormal\">normal</span> <span class=\"textLegendHighlightOver\">over</span> <span class=\"textLegendHighlightObese\">obese</span>\r\n\
+      \t\t\t\t</div>\r\n\
+      \t\t\t</div>\r\n\
+      \t\t</div>\r\n\
+      \t\r\n\
+      \r\n\
+      \r\n\
+      \r\n                  \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n  \r\n  \r\n    \r\n  \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n  \r\n    \r\n  \r\n  \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n  \r\n  \r\n    \r\n      \r\n    \r\n    \r\n  \r\n\
+      \r\n  \r\n                 \r\n  <div id=\"personalBests\" class=\"content\">\r\n\
+      \t\t\t\t\t\t\t\t\t\r\n    <ul id=\"bestRankNav\">\r\n\
+      \t\t  <li>My best stats</li>\r\n\
+      \t\t\t<li><a id=\"bestAllTime\" class=\"selected\" href=\"/user/22CJ7H/stats/getPersonalBests?period=alltime&amp;updateRate=DAILY\">All-time</a></li>\r\n\
+      \t\t\t<li><a id=\"best30days\" href=\"/user/22CJ7H/stats/getPersonalBests?period=30_days&amp;updateRate=DAILY\">30 days</a></li>\r\n\
+      \t\t\t<li><a id=\"best7days\" href=\"/user/22CJ7H/stats/getPersonalBests?period=7_days&amp;updateRate=DAILY\">7 days</a></li>\r\n\
+      \t\t</ul>\r\n\
+      \r\n    <div id=\"bestStatsContainer\">\r\n      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n  \r\n  \r\n    \r\n  \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n  \r\n  \r\n    \r\n  \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n  \r\n  \r\n    \r\n  \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n  \r\n  \r\n    \r\n  \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n  \r\n  \r\n    \r\n  \r\n\
+      \r\n\
+      \r\n                                     \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n                                       \r\n\
+      \r\n\
+      <ul id=\"bestStats\">\r\n  \r\n    <li> <span class=\"statValue\">25,794 steps</span> on <span class=\"statDate\">May 27, 2010</span> </li>\r\n  \r\n  \r\n      <li> <span class=\"statValue\">3,482 calories burned</span> on <span class=\"statDate\">May 27, 2010</span> </li>\r\n    \r\n    \r\n      <li> <span class=\"statValue\">12.73 miles</span> on <span class=\"statDate\">May 27, 2010</span> </li>\r\n    \r\n    \r\n      <li> <span class=\"statValue\">1,908 active score</span> on <span class=\"statDate\">May 27, 2010</span> </li>\r\n    \r\n    \r\n      <li> <span class=\"statValue\">176 very active min</span> on <span class=\"statDate\">May 27, 2010</span> </li>\r\n    \r\n\
+      </ul>\r\n \r\n\
+      \r\n\
+      \t\t</div>\r\n\
+      \t\t\t\t\t\t\t\t\t   \r\n\
+      \t</div>\r\n\
+      \r\n\
+      \r\n\
+      \r\n                  \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n  \r\n  \r\n    \r\n      \r\n    \r\n    \r\n  \r\n\
+      \r\n  \r\n    \r\n      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n      \r\n    \r\n    \r\n  \r\n\
+      \r\n  \r\n                                       \r\n  \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n  \r\n  \r\n    \r\n  \r\n\
+      \r\n\
+      \r\n\
+      \r\n  \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n  \r\n  \r\n    \r\n  \r\n\
+      \r\n\
+      \r\n\
+      \r\n  \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n  \r\n  \r\n    \r\n  \r\n\
+      \r\n\
+      \r\n\
+      \r\n  \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n  \r\n  \r\n    \r\n  \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n  \n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\n\n\n\n\n\n  \n  \n    \n  \n\n\
+      \r\n  \n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\n\n\n\n\n\n  \n  \n    \n  \n\n\
+      \r\n  \n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\n\n\n\n\n\n  \n  \n    \n  \n\n\
+      \r\n  \n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\n\n\n\n\n\n  \n  \n    \n  \n\n\
+      \r\n\
+      \r\n  \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n  \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n  \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n  \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n  \n\n\n\n\n\n\n\n\n\n\n\n\n\
+      \r\n\
+      \r\n  \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n  \r\n  \r\n     \r\n  \r\n\
+      \r\n\
+      \r\n\
+      \r\n  <form id=\"stats\" class=\"content\" action=\"/user/22CJ7H/stats/getConstrainedStats\" method=\"get\">\r\n    <fieldset id=\"rankingCategories\">\r\n      \r\n      \r\n      \r\n      \r\n      \r\n        <legend><span>Rank by</span></legend>\r\n      \r\n      \r\n      <ul>\r\n        \r\n          <li>\r\n            \r\n            <input type=\"checkbox\" id=\"fitbitConstraint\" name=\"constraints\" value=\"tracker\" checked=\"checked\" >\r\n            <label for=\"fitbitConstraint\" class=\"checked\">Fitbit</label>\r\n          </li>\r\n        \r\n        \r\n        \r\n          <li>\r\n            <input type=\"checkbox\" id=\"genderConstraint\" name=\"constraints\" value=\"gender\">\r\n            <label for=\"genderConstraint\">Gender</label>\r\n          </li>\r\n        \r\n        \r\n        \r\n          <li>\r\n            <input type=\"checkbox\" id=\"ageConstraint\" name=\"constraints\" value=\"age\">\r\n            <label for=\"ageConstraint\">Age</label>\r\n          </li>\r\n        \r\n        \r\n        \r\n          <li>\r\n            <input type=\"checkbox\" id=\"bmiConstraint\" name=\"constraints\" value=\"bmi\">\r\n            <label for=\"bmiConstraint\">BMI</label>\r\n          </li>\r\n        \r\n        \r\n      </ul>\r\n      \r\n      \r\n      <div id=\"rankingActions\">\r\n        <input type=\"hidden\" name=\"values\" value=\"percentile,value\">\r\n        <input type=\"hidden\" name=\"statistics\" value=\"avg_activity_7_days,avg_steps_7_days,avg_mins_very_active_7_days,avg_distance_miles_7_days\">\r\n        <input type=\"hidden\" name=\"aggregates\" value=\"average\">\r\n        <input type=\"hidden\" name=\"displayContext\" value=\"faceted\">\r\n        <input type=\"hidden\" name=\"valueWhenUnavailable\" value=\"--\" />\r\n        <input type=\"hidden\" name=\"defaultConstraints\" value=\"global\" />\r\n        <input type=\"hidden\" name=\"updateRate\" value=\"WEEKLY\" />\r\n        <button type=\"submit\">Go</button>\r\n      </div>\r\n    </fieldset>\r\n\
+      \r\n    <table>\r\n      <caption id=\"networkCaption\">\r\n        My rank among <span id=\"network.name\">members who <strong>use a Fitbit</strong></span>.\r\n      </caption>\r\n      \r\n      <thead>\r\n        <tr>\r\n          <th class=\"avg\">7 day <abbr title=\"average\">avg.</abbr></th>\r\n          <th>Me</th>\r\n          <th>All</th>\r\n          <th>%Rank</th>\r\n        </tr>\r\n      </thead>\r\n      \r\n      <tfoot>\r\n        <tr>\r\n          \r\n          <td colspan=\"4\">stats updated weekly</td>\r\n        </tr>\r\n      </tfoot>\r\n      \r\n      <tbody>\r\n        <tr>\r\n          <th>Steps</th>\r\n          <td id=\"values.avg_steps_7_days.user.value\">4,211</td>\r\n          <td id=\"values.avg_steps_7_days.network.average\">7,234</td>\r\n          <td id=\"values.avg_steps_7_days.user.percentile\">22.2</td>\r\n        </tr>\r\n        <tr>\r\n          <th>Active score</th>\r\n          <td id=\"values.avg_activity_7_days.user.value\">346</td>\r\n          <td id=\"values.avg_activity_7_days.network.average\">335</td>\r\n          <td id=\"values.avg_activity_7_days.user.percentile\">56.0</td>\r\n        </tr>\r\n        <tr>\r\n          <th>Distance (miles)</th>\r\n          <td id=\"values.avg_distance_miles_7_days.user.value\">1.83</td>\r\n          <td id=\"values.avg_distance_miles_7_days.network.average\">3.50</td>\r\n          <td id=\"values.avg_distance_miles_7_days.user.percentile\">17.0</td>\r\n        </tr>\r\n        \r\n          <tr>\r\n            <th>Very active <abbr title=\"minutes\">min.</abbr></th>\r\n            <td id=\"values.avg_mins_very_active_7_days.user.value\">14</td>\r\n            <td id=\"values.avg_mins_very_active_7_days.network.average\">18</td>\r\n            <td id=\"values.avg_mins_very_active_7_days.user.percentile\">56.2</td>\r\n          </tr>\r\n        \r\n      </tbody>\r\n    </table>\r\n  </form>\r\n\
+      \r\n\
+      \r\n\
+      \r\n                    <div class=\"content firstContent\">\r\n                      \n\n\n\n\n\n\n\n\n\n\n\n    \n    \n        \n            \n\n\n\n\n\n\n    \n    \n        \n    \n\n\n\n\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      <div id=\"benchmarkingPremiumModal\" class=\"form modal invisible\" style=\"padding-top: 49px;\">\r\n    <div class=\"hd\">\r\n        <div class=\"header\" style=\"line-height: 49px;\">Benchmarking</div>\r\n        <div class=\"closeButton\" style=\"line-height: 49px;\">\r\n            <a href=\"#\" onmousedown=\"fitbit.app.premium.benchmarking.onClose(); return false;\" onclick=\"return false;\">Close</a>\r\n        </div>\r\n    </div>\r\n    <div class=\"body\" style=\"padding-bottom: 15px; padding-top: 30px;\">\r\n        <div style=\"margin-bottom: 15px; text-align:justify;\">\n            How do I compare to others in activity, sleep, and weight? Find out with\n            premium benchmarking - an interactive tool that lets you explore the\n            entire Fitbit database to see how you stand up against your peers.\n        </div>\n        \n            \n            \n                <div style=\"margin-bottom: 15px; text-align:justify;\">\n                    You are eligible to try a free one day trial of benchmarking. At the end of\n                    the trial you can choose to sign up for a premium membership, but\n                    there is no commitment whatsoever.\n                </div>\n            \n        \n        \n            <div style=\"margin-bottom: 7px;\">\n                A premium membership unlocks many more site features:\n            </div>\n            <div style=\"float: left; clear: both; width: 100%; margin-bottom: 20px;\">\n                <div style=\"float: left; margin-left: 40px;\">\n                    <ul style=\"list-style:disc inside none;\">\n                        <li style=\"list-style:disc inside none; font-size: 12px;\">Fitbit trainer</li>\n                        <li style=\"list-style:disc inside none; font-size: 12px;\">Personalized reports</li>\n                    </ul>\n                </div>\n                <div style=\"float: left; margin-left: 40px;\">\n                    <ul style=\"list-style:disc inside none;\">\n    \n                        <li style=\"list-style:disc inside none; font-size: 12px;\">Unlimited custom trackers</li>\n                        <li style=\"list-style:disc inside none; font-size: 12px;\">Much more!</li>\n                    </ul>\n                </div>\n            </div>\n            <div style=\" margin-top: 4px; font-size:15px;\">\n                <a href=\"/premium/about\">Learn more about premium</a>\n            </div>\n        \r\n        <div class=\"clearfix\" style=\"margin: 25px 0 0 0;\">\r\n        <div id=\"buttonsContainer\">\n            \n                <div id=\"bGetFreeTrial\">\n                    <a  href=\"#\" title=\"Get Free Report. No Credit Card Required.\"\n                        onmousedown=\"fitbit.app.premium.addTrialSubscription('TRIAL_COMMUNITY_BENCHMARKING', '/premium/cb', 'trialBenchmark_dashPage_benchmarkUpsellDialog'); return false;\"\n                       onclick=\"return false;\">\n                        <span>Start Free Trial</span>\n                        <br/>\n                        <span style=\"font-size:8px;\">NO CREDIT CARD REQUIRED</span>\n                    </a>\n                </div>\n            \n            <div id=\"bBuyPremium\">\n                <a href=\"#\" title=\"Buy Premium\"\n                   onmousedown=\"window.location='/order?packName=fitbit_premium&doneUrl=/premium/cb&cancelUrl=/&linkId=premiumPack_dashPage_benchmarkUpsellDialog'; return false;\"\n                        onclick=\"return false;\">Buy Premium</a>\n            </div>\n            <div class=\"lOr\">or</div>\n            <div id=\"bNoThanks\">\n                <a title=\"Cancel\" href=\"#\" onclick=\"fitbit.app.premium.benchmarking.onClose(); return false;\">No thanks</a>\n            </div>\n        </div>\n\
+      \r\n    </div>\r\n    </div>\r\n\
+      </div>\n\n            <div>Are you addicted to data?</div>\n            <a href=\"#\" onmousedown=\"fitbit.app.premium.benchmarking.showDialog();\" onclick=\"return false;\" style=\"display: block; text-decoration: underline;\">Try\n                out premium benchmarking with a free trial</a>\n        \n        \n        \n        \n        \n    \n\n\n\
+      \r\n                    </div>\r\n                </div>\r\n\
+      \r\n                \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n  \r\n    \r\n  \r\n  \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      <div id=\"friends\" class=\"teaser\">\r\n  <h3 class=\"header\">Friends</h3>\r\n  \r\n  <div class=\"content\">\r\n\
+      \r\n    \r\n      \r\n\
+      \r\n      \r\n        <div class=\"blank placeholder clearfix\">\r\n          <div style=\"margin-top: 5px; font-weight: bold;\">Are you more active than your friends?</div>\r\n          <div style=\"margin-top: 7px;\">Invite them to join Fitbit and find out.</div>\r\n          <div style=\"margin-top: 7px; margin-bottom: 7px;\">You will get ranked nightly on categories such as who walks the most steps, etc.</div>\r\n          \r\n          \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \t\r\n\
+      \t\t\r\n\
+      \t\t\r\n\
+      \t\t\t\r\n\
+      \t\t\t\r\n\
+      \t\t\t\r\n\
+      \t\t\r\n\
+      \t\r\n    <a href=\"#\" onclick=\"return false;\" onmousedown=\"fitbit.app.user.friends.showFriendInvitationDialog('Dan', 'dan@mayerdan.com', '', '');\">Invite friends!</a>\r\n\
+      \r\n        </div>\r\n     \r\n      \r\n    \r\n\
+      \r\n    <ul class=\"friendActions\">\r\n      \r\n      <li>\r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \t\r\n\
+      \t\t\r\n\
+      \t\t\r\n\
+      \t\t\t\r\n\
+      \t\t\t\r\n\
+      \t\t\t\r\n\
+      \t\t\r\n\
+      \t\r\n    <a href=\"#\" onclick=\"return false;\" onmousedown=\"fitbit.app.user.friends.showFriendInvitationDialog('Dan', 'dan@mayerdan.com', '', '');\">Invite friends!</a>\r\n\
+      </li>\r\n      \r\n    </ul>\r\n  \r\n  </div>\r\n\
+      \r\n\
+      </div>\r\n\
+      \r\n                \r\n                \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n  \r\n\
+      \r\n  \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n  \r\n\
+      \r\n  <div id=\"myGroups\" class=\"teaser\">\r\n    <h3 class=\"header\">My Groups</h3>\r\n\
+      \r\n    <div class=\"content\">\r\n    \r\n    \r\n    \r\n    \t<p>You do not belong to any groups, yet.</p>\r\n    \r\n\
+      \t  \r\n    </div> \r\n\
+      \r\n  </div> \r\n\
+      \r\n\
+      \r\n            </div>\r\n        </div>\r\n    </div>\r\n    \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      <div id=\"friendInvitationModal\" class=\"modal invisible\" style=\"padding-top: 49px;\">\r\n    <div class=\"hd\">\r\n        <div class=\"header\" style=\"line-height: 49px;\">Invite friends!</div>\r\n        <div class=\"closeButton\" style=\"line-height: 49px;\"><a href=\"#friendInvitationDialogCloseButton\" onmousedown=\"fitbit.app.user.friends.onClose(); return false;\" onclick=\"return false;\">Close</a></div>\r\n    </div>\r\n    <div class=\"body\" style=\"padding-bottom: 15px; padding-top: 15px;\">\r\n        <form id=\"friendInvitation\" style=\"margin-bottom: 5px\" name=\"friendInvitation\" action=\"/friends/friendInvitation\" method=\"post\">\r\n            <div id=\"friendInvitationModalErrors\" class=\"error\"></div>\r\n            <div class=\"formline\">\r\n                <h3>From:</h3>\r\n                <div id=\"from\" class=\"text\" style=\"font-weight: bold; width: 486px; padding: 3px; margin-top: 5px; margin-bottom: 5px; word-wrap: break-word;\"></div>\r\n            </div>\r\n            <div id=\"nameTo\" class=\"invisible\">\r\n                <div class=\"formline\">\r\n                    <h3>To:</h3>\r\n                    <div id=\"displayName\" class=\"text\" style=\"font-weight: bold; width: 486px; padding: 3px; margin-top: 5px; margin-bottom: 5px; word-wrap: break-word;\">Dan</div>\r\n                </div>\r\n            </div>\r\n            <div id=\"emailsTo\" class=\"invisible\" style=\"margin-top: 10px; margin-bottom: 10px\">\r\n                <div class=\"formline\">\r\n                    <h3 style=\"width: 100%;\">To: <span style=\"font-size: smaller; font-weight: normal;\">(Separate emails with commas.)</span><a href=\"#\" onclick=\"showPlaxoABChooser('emails', '/tools/emailChooser'); return false;\" style=\"float: right;\">import from my address book</a></h3>\r\n                    <textarea id=\"emails\" style=\"overflow: auto; width: 486px; padding: 3px;\" name=\"emails\" class=\"text\" rows=\"5\"></textarea> \r\n                </div>\r\n            </div>\r\n            <div class=\"formline\">\r\n                <h3>Message:</h3>\r\n                \r\n                <textarea id=\"message\" style=\"overflow: auto; width: 486px; padding: 3px; margin-top: 5px\" onblur=\"return fitbit.app.user.friends.isMaxLength(this)\" name=\"message\" onkeyup=\"return fitbit.app.user.friends.isMaxLength(this)\" class=\"text\" rows=\"8\">\n\
+      Hi,\n\n\
+      Help me become more fit.\n\n\
+      Become friends with me on Fitbit.com and see who can walk the most steps per day, run the farthest, or be the most active.</textarea>\r\n            </div>\r\n            <input id=\"inviteeId\" name=\"inviteeId\" value=\"\" type=\"hidden\" />\r\n            <input name=\"apiFormat\" value=\"htmljson\" type=\"hidden\" /> \r\n            <input name=\"_eventName\" value=\"send\" type=\"hidden\" />\r\n        <div style=\"display: none;\"><input type=\"hidden\" name=\"_sourcePage\" value=\"oB0A4QOrfxbGrJMFkFsv6XbX0f6OV1Ndj1zeGcz7OKxV2RUoL5W60NfHjCnPkhut\" /><input type=\"hidden\" name=\"__fp\" value=\"dORZHocE5pw=\" /></div></form>\r\n    </div>\r\n\
+      </div>\r\n\
+      \r\n    \r\n\
+      \r\n\
+      \r\n\
+      <div id=\"messageBoxDialog\" class=\"modal invisible smallModal\">\r\n    <div class=\"hd\">\r\n        <div id=\"messageBoxHeader\" class=\"header\">Message</div>\r\n    </div>\r\n    <div class=\"body\">\r\n        <div id=\"messageBoxBody\"></div>\r\n    </div>\r\n\
+      </div>\r\n\
+      \r\n\
+      \r\n    \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      <div id=\"selectNewGoalModal\" class=\"modal invisible\">\r\n    <div class=\"hd\">\r\n        <div class=\"header\">Select Another Goal</div>\r\n        <div class=\"closeButton\"><a href=\"#primaryGoalCloseButton\" onmousedown=\"fitbit.app.user.goal.primary.onClose(); return false;\" onclick=\"return false;\">Close</a></div>\r\n    </div>\r\n    <div class=\"body\">\r\n        <div id=\"fitnessGoals\" class=\"section section1\">\r\n            <h2>Fitness Goals</h2>\r\n            \r\n            \r\n            \r\n                \r\n\
+      \r\n    \r\n    \r\n\
+      \r\n            <div class=\"goal\">\r\n                <h3>Weekly Steps Goal of\r\n                    <span id=\"target.47476\">70000</span>\r\n                    steps\r\n                </h3>\r\n                <div class=\"progressIndicator\">\r\n                    <div class=\"bar\">\r\n                        <div class=\"base\"></div>\r\n                        <div class=\"marker\" id=\"bar.47476\" style=\"width: 0%;\"></div>\r\n                    </div>\r\n                    <div class=\"label\">\r\n                        <span id=\"percentComplete.47476\">\r\n                            0\r\n                        </span>% Complete\r\n                    </div>\r\n                </div>\r\n                <div class=\"actions\">\r\n                    <span><a href=\"#\" onclick=\"return false;\" onmousedown=\"fitbit.app.user.goal.primary.onEdit( 'My goal is to walk or run more than', 'steps every week', 47476, 70000.0, 0, 0 );\">Edit</a></span>\r\n                    <span>\r\n                        \r\n                            &nbsp;Primary\r\n                            \r\n                        \r\n                    </span>\r\n                </div>\r\n            </div>\r\n\
+      \r\n            <div class=\"goal\">\r\n                <h3>\r\n                    Weekly Distance Goal of\r\n                    <span id=\"target.47477\">\r\n                        35\r\n                    </span>\r\n                    miles\r\n                </h3>\r\n                <div class=\"progressIndicator\">\r\n                    <div class=\"bar\">\r\n                        <div class=\"base\"></div>\r\n                        <div class=\"marker\" id=\"bar.47477\" style=\"width: 0%;\"></div>\r\n                    </div>\r\n                    <div class=\"label\"><span id=\"percentComplete.47477\">0</span>% Complete</div>\r\n                </div>\r\n                <div class=\"actions\">\r\n                    <span><a href=\"#\" onclick=\"return false;\" onmousedown=\"fitbit.app.user.goal.primary.onEdit( 'My goal is to walk or run more than', 'miles every week', 47477, 35, 0, 0, false );\">\r\n                            Edit\r\n                        </a></span>\r\n                    <span>\r\n                        \r\n                            \r\n                            \r\n                                <a href=\"#\" onclick=\"return false;\" onmousedown=\"fitbit.app.user.goal.primary.onSelect( 47477 );\">Select</a>\r\n                            \r\n                        \r\n                    </span>\r\n                </div>\r\n            </div>\r\n\
+      \r\n            \r\n              <div id=\"weightGoals\" class=\"section section3\">\r\n                <h2>Weight Goals</h2>\r\n                <div class=\"goal\">\r\n                    <h3>\r\n                        My weight goal is to be <span id=\"target.47493\">129 lbs</span>\r\n                    </h3>\r\n                    <div class=\"progressIndicator\">\r\n                        <div class=\"bar\">\r\n                            <div class=\"base\"></div>\r\n                            <div class=\"marker\" id=\"bar.47493\" style=\"width: 40%;\"></div>\r\n                        </div>\r\n                        <div class=\"label\">\r\n                            <span id=\"percentComplete.47493\">40</span>% Complete\r\n                        </div>\r\n                    </div>\r\n                    <div class=\"actions\">\r\n                        <span><a href=\"#\" onclick=\"return false;\" onmousedown=\"fitbit.app.goal.weight.showGoalDialog( false, fitbit.app.user.goal.primary );\">\r\n                                Edit\r\n                            </a></span>\r\n                        <span>\r\n                            \r\n                                \r\n                                \r\n                                    <a href=\"#\" onclick=\"return false;\" onmousedown=\"fitbit.app.user.goal.primary.onSelect( 47493 );\">Select</a>\r\n                                \r\n                            \r\n                        </span>\r\n                    </div>\r\n                </div>\r\n              </div>\r\n            \r\n       \r\n            <div class=\"form clearfix invisible\">\r\n                <span class=\"cancel\"><a href=\"#pgCancel\" onmousedown=\"fitbit.app.user.goal.primary.onClose(); return false;\" onclick=\"return false;\">Cancel</a></span>\r\n            </div>\r\n            <div style=\"margin-top: 15px;\">\r\n            \n\n\n\n\n\n\n\n\n\n\n\n    \n    \n        \n    \n\n\n\n\n\n    \n    \n    \n        \n            \n\n\n\n\n\n\n    \n    \n        \n    \n\n\n\n\n\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      <div id=\"trainerPremiumModal\" class=\"form modal invisible\" style=\"padding-top: 49px;\">\r\n    <div class=\"hd\">\r\n        <div class=\"header\" style=\"line-height: 49px;\">Fitbit Trainer</div>\r\n        <div class=\"closeButton\" style=\"line-height: 49px;\">\r\n            <a href=\"#\" onmousedown=\"fitbit.app.premium.trainer.onClose(); return false;\" onclick=\"return false;\">Close</a>\r\n        </div>\r\n    </div>\r\n    <div class=\"body\" style=\"padding-bottom: 15px; padding-top: 30px;\">\r\n        <div style=\"margin-bottom: 15px; text-align:justify;\">\n            The Fitbit trainer helps you set and track attainable goals to get more\n            active. It does this by first learning your current activity level and then\n            creating a personalized fitness plan that pushes you to gradually\n            increase your movement over the course of 12 weeks. Like a fitness\n            coach, it adapts the plan to meet your changing needs and help you\n            attain your fitness goals.\n        </div>\n        \n            \n            \n                <div style=\"margin-bottom: 15px; text-align:justify;\">\n                    The trainer comes as part of a premium membership but you are\n                    eligible to try it in a free week-long trial. At the end of the trial you can\n                    choose to sign up for a premium membership, but there is no\n                    commitment whatsoever.\n                </div>\n            \n        \n        \n            <div style=\"margin-bottom: 7px;\">\n                A premium membership unlocks many more site features:\n            </div>\n            <div style=\"float: left; clear: both; width: 100%; margin-bottom: 20px;\">\n                <div style=\"float: left; margin-left: 40px;\">\n                    <ul style=\"list-style:disc inside none;\">\n                        <li style=\"list-style:disc inside none; font-size: 12px;\">Benchmarking</li>\n                        <li style=\"list-style:disc inside none; font-size: 12px;\">Personalized reports</li>\n                    </ul>\n                </div>\n                <div style=\"float: left; margin-left: 40px;\">\n                    <ul style=\"list-style:disc inside none;\">\n    \n                        <li style=\"list-style:disc inside none; font-size: 12px;\">Unlimited custom trackers</li>\n                        <li style=\"list-style:disc inside none; font-size: 12px;\">Much more!</li>\n                    </ul>\n                </div>\n            </div>\n            <div style=\" margin-top: 4px; font-size:15px;\">\n                <a href=\"/premium/about\">Learn more about premium</a>\n            </div>\n        \r\n        <div class=\"clearfix\" style=\"margin: 25px 0 0 0;\">\r\n        <div id=\"buttonsContainer\">\n            \n                <div id=\"bGetFreeTrial\">\n                    <a  href=\"#\" title=\"Get Free Report. No Credit Card Required.\"\n                        onmousedown=\"fitbit.app.premium.addTrialSubscription('TRIAL_ALGORITHMIC_TRAINER', '/trainer/trainerSetup', 'trialTrainer_dashPage_trainerUpsellDialog'); return false;\"\n                       onclick=\"return false;\">\n                        <span>Start Free Trial</span>\n                        <br/>\n                        <span style=\"font-size:8px;\">NO CREDIT CARD REQUIRED</span>\n                    </a>\n                </div>\n            \n            <div id=\"bBuyPremium\">\n                <a href=\"#\" title=\"Buy Premium\"\n                   onmousedown=\"window.location='/order?packName=fitbit_premium&doneUrl=/trainer/trainerSetup&cancelUrl=/&linkId=premiumPack_dashPage_trainerUpsellDialog'; return false;\"\n                        onclick=\"return false;\">Buy Premium</a>\n            </div>\n            <div class=\"lOr\">or</div>\n            <div id=\"bNoThanks\">\n                <a title=\"Cancel\" href=\"#\" onclick=\"fitbit.app.premium.trainer.onClose(); return false;\">No thanks</a>\n            </div>\n        </div>\n\
+      \r\n    </div>\r\n    </div>\r\n\
+      </div>\n\n            \n              \n              \n                <div style=\"float:left;margin-right:10px;font-size:12px;color:#000000;\">Want to challenge yourself to be more active?</div>\n              \n            \n            <a href=\"#\" onmousedown=\"fitbit.app.premium.trainer.showDialog();\" onclick=\"return false;\"\n               style=\"display: block; text-decoration: underline;font-size:12px;\">Start a free week trial of the Fitbit trainer now!</a>\n        \n        \n        \n        \n        \n    \n\n\n\
+      \r\n            </div>\r\n        </div>\r\n\
+      \r\n    </div>\r\n\
+      </div>\r\n\
+      \r\n    \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      <div id=\"weightGoalDialog\" class=\"invisible modal smallModal\">\r\n    <div class=\"hd\">\r\n        <div class=\"header\" style=\"width: 450px;\">Set Weight Goal</div>\r\n        <div class=\"closeButton\"><a href=\"#\" onmousedown=\"fitbit.app.goal.weight.onCancel(); return false;\" onclick=\"return false;\">Close</a></div>\r\n    </div>\r\n    <div class=\"body\">\r\n        <form id=\"weightGoalForm\" name=\"weightGoalForm\" action=\"/goal/edit\" class=\"form\" method=\"post\">\r\n            <div id=\"weightGoalDialogErrors\" class=\"error\"></div>\r\n            <div class=\"formline\" style=\"text-align: left;\">\r\n                I would like to \r\n                <select id=\"weightObjectiveId\" name=\"weightObjectiveId\">\r\n                    <option selected=\"selected\" value=\"1\">lose weight</option><option value=\"2\">gain weight</option><option value=\"0\">maintain my weight</option>\r\n                </select>\r\n            </div>\r\n            <div class=\"formline\" style=\"margin-top: 5px; text-align: left;\">\r\n                <span>My target weight is</span>\r\n\
+      \r\n                <span style=\"position: relative;\"  id=\"usWeightBlock\">\r\n                    <input id=\"goalTargetLbs\" maxlength=\"6\" style=\"width: 50px; padding-left:2px; padding-right:2px;\" name=\"goalTargetLbs\" value=\"129\" class=\"erasable\" type=\"text\" onchange=\"fitbit.app.goal.weight.clearInputBoxes(['goalTargetStone', 'goalTargetStoneLbs', 'goalTargetKg']);\" size=\"1\" />&nbsp;lbs\r\n                </span>\r\n\
+      \r\n                <span style=\"position: relative;\" id=\"ukWeightBlock\" class=\"invisible\">\r\n                    <input id=\"goalTargetStone\" maxlength=\"3\" style=\"width: 25px; padding-left:2px; padding-right:2px;\" name=\"goalTargetStone\" value=\"9\" class=\"erasable\" type=\"text\" onchange=\"fitbit.app.goal.weight.clearInputBoxes(['goalTargetLbs', 'goalTargetKg']);\" size=\"1\" />&nbsp;st\r\n                    <input id=\"goalTargetStoneLbs\" maxlength=\"5\" style=\"width: 40px; padding-left:2px; padding-right:2px;\" name=\"goalTargetStoneLbs\" value=\"3\" class=\"erasable\" type=\"text\" onchange=\"fitbit.app.goal.weight.clearInputBoxes(['goalTargetLbs', 'goalTargetKg']);\" size=\"1\" />&nbsp;lbs\r\n                </span>\r\n\
+      \r\n                <span style=\"position: relative;\" id=\"metricWeightBlock\" class=\"invisible\">\r\n                    <input id=\"goalTargetKg\" maxlength=\"6\" style=\"width: 50px; padding-left:2px; padding-right:2px;\" name=\"goalTargetKg\" value=\"58.5\" class=\"erasable\" type=\"text\" onchange=\"fitbit.app.goal.weight.clearInputBoxes(['goalTargetLbs', 'goalTargetStone', 'goalTargetStoneLbs']);\" size=\"1\" />&nbsp;kg\r\n                </span>\r\n\
+      \r\n                <span class=\"unitSwitcher\">\r\n                    <br/>Use\r\n                    <select id=\"weightSystem\" name=\"weightSystem\" onchange=\"fitbit.app.goal.weight.switchWeightSystem();\">\r\n                        <option selected=\"selected\" value=\"US\">lbs.</option>\r\n                        <option value=\"UK\">stone</option>\r\n                        <option value=\"METRIC\">kg.</option>\r\n                    </select>\r\n                </span>\r\n\
+      \r\n            </div>\r\n            <div class=\"formline invisible\" style=\"display: none;\">\r\n                <select id=\"weightGoalAccessLevelId\" name=\"goalAccessLevelId\">\r\n                    <option selected=\"selected\" value=\"0\">Private</option><option value=\"1\">Public</option><option value=\"2\">Friends</option>\r\n                </select>\r\n            </div>\r\n            \r\n            <input name=\"goalId\" value=\"47493\" type=\"hidden\" /> \r\n        <div style=\"display: none;\"><input type=\"hidden\" name=\"_sourcePage\" value=\"othQTax7gTnGrJMFkFsv6XbX0f6OV1Ndj1zeGcz7OKxV2RUoL5W60NfHjCnPkhut\" /><input type=\"hidden\" name=\"__fp\" value=\"i3GgOQTZuaTZSzk-BywpH6uz6d7GQgXeWokk34e_H-v4dpOCfXDsjnxKbRHu3kSr_CW75C6BPXAtjCOyW6lk3w==\" /></div></form>\r\n    </div>\r\n\
+      \r\n    <div class=\"ft\" style=\"border:none;\">\r\n        <span class=\"button-group\">\r\n            <button class=\"default\" type=\"button\" onclick=\"fitbit.app.goal.weight.handleSubmit(); return false;\">Set</button>\r\n        </span>\r\n    </div>\r\n    <div style=\"margin: 15px;\">\r\n        \n\n\n\n\n\n\n\n\n\n\n\n    \n        \n    \n    \n\n\n\n\n\n    \n    \n    \n        \n            \n\n\n\n\n\n\n    \n    \n        \n    \n\n\n\n\n\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      <div id=\"trainerPremiumModal\" class=\"form modal invisible\" style=\"padding-top: 49px;\">\r\n    <div class=\"hd\">\r\n        <div class=\"header\" style=\"line-height: 49px;\">Fitbit Trainer</div>\r\n        <div class=\"closeButton\" style=\"line-height: 49px;\">\r\n            <a href=\"#\" onmousedown=\"fitbit.app.premium.trainer.onClose(); return false;\" onclick=\"return false;\">Close</a>\r\n        </div>\r\n    </div>\r\n    <div class=\"body\" style=\"padding-bottom: 15px; padding-top: 30px;\">\r\n        <div style=\"margin-bottom: 15px; text-align:justify;\">\n            The Fitbit trainer helps you set and track attainable goals to get more\n            active. It does this by first learning your current activity level and then\n            creating a personalized fitness plan that pushes you to gradually\n            increase your movement over the course of 12 weeks. Like a fitness\n            coach, it adapts the plan to meet your changing needs and help you\n            attain your fitness goals.\n        </div>\n        \n            \n            \n                <div style=\"margin-bottom: 15px; text-align:justify;\">\n                    The trainer comes as part of a premium membership but you are\n                    eligible to try it in a free week-long trial. At the end of the trial you can\n                    choose to sign up for a premium membership, but there is no\n                    commitment whatsoever.\n                </div>\n            \n        \n        \n            <div style=\"margin-bottom: 7px;\">\n                A premium membership unlocks many more site features:\n            </div>\n            <div style=\"float: left; clear: both; width: 100%; margin-bottom: 20px;\">\n                <div style=\"float: left; margin-left: 40px;\">\n                    <ul style=\"list-style:disc inside none;\">\n                        <li style=\"list-style:disc inside none; font-size: 12px;\">Benchmarking</li>\n                        <li style=\"list-style:disc inside none; font-size: 12px;\">Personalized reports</li>\n                    </ul>\n                </div>\n                <div style=\"float: left; margin-left: 40px;\">\n                    <ul style=\"list-style:disc inside none;\">\n    \n                        <li style=\"list-style:disc inside none; font-size: 12px;\">Unlimited custom trackers</li>\n                        <li style=\"list-style:disc inside none; font-size: 12px;\">Much more!</li>\n                    </ul>\n                </div>\n            </div>\n            <div style=\" margin-top: 4px; font-size:15px;\">\n                <a href=\"/premium/about\">Learn more about premium</a>\n            </div>\n        \r\n        <div class=\"clearfix\" style=\"margin: 25px 0 0 0;\">\r\n        <div id=\"buttonsContainer\">\n            \n                <div id=\"bGetFreeTrial\">\n                    <a  href=\"#\" title=\"Get Free Report. No Credit Card Required.\"\n                        onmousedown=\"fitbit.app.premium.addTrialSubscription('TRIAL_ALGORITHMIC_TRAINER', '/trainer/trainerSetup', 'trialTrainer_dashPage_trainerUpsellDialog'); return false;\"\n                       onclick=\"return false;\">\n                        <span>Start Free Trial</span>\n                        <br/>\n                        <span style=\"font-size:8px;\">NO CREDIT CARD REQUIRED</span>\n                    </a>\n                </div>\n            \n            <div id=\"bBuyPremium\">\n                <a href=\"#\" title=\"Buy Premium\"\n                   onmousedown=\"window.location='/order?packName=fitbit_premium&doneUrl=/trainer/trainerSetup&cancelUrl=/&linkId=premiumPack_dashPage_trainerUpsellDialog'; return false;\"\n                        onclick=\"return false;\">Buy Premium</a>\n            </div>\n            <div class=\"lOr\">or</div>\n            <div id=\"bNoThanks\">\n                <a title=\"Cancel\" href=\"#\" onclick=\"fitbit.app.premium.trainer.onClose(); return false;\">No thanks</a>\n            </div>\n        </div>\n\
+      \r\n    </div>\r\n    </div>\r\n\
+      </div>\n\n            \n              \n                <div style=\"float:left;margin-right:10px;font-size:12px;color:#000000;\">Need a hand to get moving more?</div>\n              \n              \n            \n            <a href=\"#\" onmousedown=\"fitbit.app.premium.trainer.showDialog();\" onclick=\"return false;\"\n               style=\"display: block; text-decoration: underline;font-size:12px;\">Start a free week trial of the Fitbit trainer now!</a>\n        \n        \n        \n        \n        \n    \n\n\n\
+      \r\n    </div>\r\n\
+      </div>\r\n\
+      \r\n    \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      <div id=\"goalDialog\" class=\"modal invisible smallModal\">\r\n    <div class=\"hd\">\r\n        <div class=\"header\">Set Goal</div>\r\n        <div class=\"closeButton\"><a href=\"#\" onmousedown=\"fitbit.app.user.goal.onCancel(); return false;\" onclick=\"return false;\">Close</a></div>\r\n    </div>\r\n    <div class=\"body\">\r\n        <form id=\"goalForm\" name=\"goalForm\" action=\"/goal/edit\" class=\"form\" method=\"post\">\r\n            <div id=\"goalDialogErrors\" class=\"error\"></div>\r\n            <div class=\"formline\">\r\n                <span id=\"predicateSpan\"></span>\r\n                <select id=\"goalEvaluationOperatorId\" name=\"goalEvaluationOperatorId\" class=\"field\">\r\n                    <option value=\"0\">more than</option><option value=\"1\">less than</option>\r\n                </select>\r\n            </div>\r\n            <div class=\"formline\">\r\n                <span id=\"prefix\"></span>\r\n                <input id=\"goalTarget\" maxlength=\"6\" style=\"width: 50px; margin-top: 5px;\" name=\"goalTarget\" value=\"129\" class=\"field\" type=\"text\" />\r\n                <span id=\"subject\"></span>\r\n            </div>\r\n            <div class=\"formline invisible\" style=\"display: none;\">\r\n                <select id=\"goalAccessLevelId\" name=\"goalAccessLevelId\">\r\n                    <option selected=\"selected\" value=\"0\">Private</option><option value=\"1\">Public</option><option value=\"2\">Friends</option>\r\n                </select>\r\n            </div>\r\n            <div class=\"formline invisible\" id=\"descriptionContainer\">\r\n                <br />\r\n                <span id=\"descriptionSpan\"></span>\r\n            </div>\r\n            <input id=\"goalId\" name=\"goalId\" value=\"47493\" type=\"hidden\" /> \r\n        <div style=\"display: none;\"><input type=\"hidden\" name=\"_sourcePage\" value=\"OC7763-NLVPGrJMFkFsv6XbX0f6OV1Ndj1zeGcz7OKxV2RUoL5W60NfHjCnPkhut\" /><input type=\"hidden\" name=\"__fp\" value=\"147S5OpntpfZSzk-BywpH2PLYydv5fjWv6NNHK0I9EvtE2syIYzAC0EnBXPLV-hFevPFgJer4hI=\" /></div></form>\r\n    </div>\r\n\
+      </div>\r\n\
+      \r\n\
+      \r\n                \r\n                    \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n\
+      \r\n    \r\n        \r\n    \r\n    \r\n\
+      \r\n\
+      <div id=\"footer\">\r\n    <div id=\"columns\">\r\n        <div class=\"column\">\r\n            <h4>Help</h4>\r\n            <ul>\r\n                \r\n                    <li><a href=\"http://www.fitbit.com/forums\">Forums</a></li>\r\n                \r\n                <li><a href=\"http://www.fitbit.com/faq\">FAQ</a></li>\r\n                <li><a href=\"http://www.fitbit.com/manual\">Product Manual</a></li>\r\n                <li><a href=\"http://www.fitbit.com/returns\">Returns and Warranty</a></li>\r\n                <li><a href=\"http://www.fitbit.com/contact\">Contact</a></li>\r\n            </ul>\r\n        </div>\r\n        <div class=\"column\">\r\n            <h4>Downloads</h4>\r\n            <ul>\r\n                <li><a href=\"http://www.fitbit.com/start\">Windows XP, Vista and 7</a></li>\r\n                <li><a href=\"http://www.fitbit.com/start\">Mac OS X</a></li>\r\n            </ul>\r\n        </div>\r\n        <div class=\"column\">\r\n            <h4>Explore</h4>\r\n            <ul>\r\n                <li><a href=\"http://www.fitbit.com/premium/about\">Premium Membership</a></li>\r\n                <li><a href=\"http://www.fitbit.com/foods/categories\">Calories in Foods</a></li>\r\n                <li><a href=\"http://www.fitbit.com/foods/restaurants\">Foods by Restaurant</a></li>\r\n                <li><a href=\"http://www.fitbit.com/foods/brands\">Foods by Brand</a></li>\r\n                <li><a href=\"http://www.fitbit.com/foods/search\">Search Foods</a></li>\r\n                \r\n                    <li><a href=\"http://www.fitbit.com/foods/private\">My Foods</a></li>\r\n                \r\n                <li><a href=\"http://www.fitbit.com/users/index\">All Users</a></li>\r\n                \r\n            </ul>\r\n        </div>\r\n        <div class=\"column\">\r\n            <h4>Company</h4>\r\n            <ul>\r\n                <li><a href=\"http://blog.fitbit.com\">Fitbit Blog</a></li>\r\n                <li><a href=\"http://www.fitbit.com/company\">About Fitbit</a></li>\r\n                <li><a href=\"http://www.fitbit.com/privacy\">Privacy Policy</a></li>\r\n                <li><a href=\"http://www.fitbit.com/terms\">Terms of Use</a></li>\r\n            </ul>\r\n        </div>\r\n        <div class=\"column last\">\r\n            <h4>Purchase Fitbit</h4>\r\n            <p>Includes Fitbit Tracker, Base Station & Software</p>\r\n            <h5><a href=\"http://www.fitbit.com/product\">Buy Now &raquo;</a></h5>\r\n        </div>\r\n        <img src=\"/images/layout/product.jpg\" alt=\"product\" />\r\n    </div>\r\n    <div id=\"copyright\">&copy; 2010 Fitbit, Inc. All rights reserved.</div>\r\n\
+      </div>\r\n                \r\n            </div>\r\n\
+      \r\n         \r\n            <script type=\"text/javascript\" src=\"/pack?h=ace4c3c76cb4305cbad3160322007103&item=%2Fyui%2F2.7.0%2Fbuild%2Fyahoo-dom-event%2Fyahoo-dom-event.js&item=%2Fyui%2F2.7.0%2Fbuild%2Fconnection%2Fconnection-min.js&item=%2Fyui%2F2.7.0%2Fbuild%2Felement%2Felement-min.js&item=%2Fyui%2F2.7.0%2Fbuild%2Fjson%2Fjson-min.js&item=%2Fyui%2F2.7.0%2Fbuild%2Fcontainer%2Fcontainer-min.js&item=%2Fyui%2F2.7.0%2Fbuild%2Fcalendar%2Fcalendar-min.js&item=%2Fyui%2F2.7.0%2Fbuild%2Fanimation%2Fanimation-min.js&item=%2Fyui%2F2.7.0%2Fbuild%2Fdatasource%2Fdatasource-min.js&item=%2Fyui%2F2.7.0%2Fbuild%2Fautocomplete%2Fautocomplete-min.js&item=%2Fyui%2F2.7.0%2Fbuild%2Fcookie%2Fcookie-min.js&item=%2Fjs%2Fantlr3-all-min.js&item=%2Fjs%2Fswfobject-1.5.js&item=%2Fjs%2Ffitbit.js&item=%2Fjs%2Fapp.js&item=%2Fjs%2Futil.js&item=%2Fjs%2Fpremium.js\"></script>\r\n         \r\n\
+      \t\t\t\t<script type=\"text/javascript\">setTextLimits();</script>\r\n\
+      \r\n                <!--[if IE 6]>\r\n        <script type=\"text/javascript\">document.execCommand(\"BackgroundImageCache\", false, true);</script>\r\n                <![endif]--> \r\n                <!--[if lt IE 9]>\r\n        <script type=\"text/javascript\" src=\"/pack?h=4db94e3559545453a61eca38533ab82c&item=%2Fjs%2Flib%2Fcurvycorners%2Fcurvycorners.src.js\"></script>\r\n                <![endif]-->\r\n        \r\n    <script type=\"text/javascript\" src=\"/pack?h=6c05a49f4c67752e0dc7c79b612cc403&item=%2Fjs%2Ffitbit%2Fapp%2FmessageBox.js&item=%2Fjs%2Ffitbit%2Fapp%2Fforums%2FmessageList.js&item=%2Fjs%2Ffitbit%2Fapp%2Fgoal%2Fuser%2FuserGoals.js&item=%2Fjs%2Ffitbit%2Fapp%2Fgoal%2Fuser%2FprimaryGoal.js&item=%2Fjs%2Ffitbit%2Fapp%2Fgoal%2Fweight%2FweightGoal.js&item=%2Fjs%2Ffitbit%2Fapp%2Fuser%2Ffriends%2FfriendInvitation.js&item=%2Fjs%2Ffitbit%2Fapp%2Fuser%2Fstats%2Frank.js&item=%2Fjs%2Ffitbit%2Fapp%2Fuser%2Fstats%2FweightStats.js&item=%2Fjs%2Ffitbit%2Fapp%2Fuser%2Fstats%2FpersonalBests.js&item=%2Fjs%2Ffitbit%2Fapp%2Fuser%2Ffriends%2FfriendStats.js&item=%2Fjs%2Ffitbit%2Fapp%2Fjournal%2Fjournal.js&item=%2Fjs%2Ffitbit%2Fapp%2Ftrainer%2Ftrainer.js\"></script>\r\n    <script type=\"text/javascript\">\r\n        function onABCommComplete() {\r\n            // OPTIONAL: do something here after the new data has been populated in your text area\r\n        }\r\n    </script>\r\n    <script type=\"text/javascript\">\r\n\
+      \r\n        var smallTabs = new fitbit.app.TabSet(\"smallTabs\", \"active\");\r\n        smallTabs.tabChangeEvent.subscribe(function(type, args) {\r\n            if ( args == \"historical\" ) {\r\n                new fitbit.app.UIState().set( 11 );\r\n            }\r\n            else {\r\n                new fitbit.app.UIState().clear( 11 );\r\n            }\r\n        });\r\n\
+      \r\n\
+      \r\n        var fitnessPlanTabs = new fitbit.app.TabSet(\"fitnessPlanTabs\", \"active\");\r\n        fitnessPlanTabs.tabChangeEvent.subscribe(function(type, args) {\r\n            if ( args == \"fitnessPlanOverviewChart\" ) {\r\n                new fitbit.app.UIState().set( 15 );\r\n\
+      \r\n                var toActivate = Y.Dom.get(\"fitnessPlanOverviewCaption\");\r\n                var toDeactivate = Y.Dom.get(\"fitnessPlanWeekCaption\");\r\n                Y.Dom.addClass(toDeactivate, \"invisible\");\r\n                Y.Dom.removeClass(toActivate, \"invisible\");\r\n\
+      \r\n                toActivate = Y.Dom.get(\"fitnessPlanOverviewDates\");\r\n                toDeactivate = Y.Dom.get(\"currentWeekText\");\r\n                Y.Dom.addClass(toDeactivate, \"invisible\");\r\n                Y.Dom.removeClass(toActivate, \"invisible\");\r\n\
+      \r\n                toDeactivate = Y.Dom.get(\"fitnessPlanWeekNumber\");\r\n                Y.Dom.addClass(toDeactivate, \"invisible\");\r\n            } else {\r\n                new fitbit.app.UIState().clear( 15 );\r\n\
+      \r\n                var toActivate = Y.Dom.get(\"fitnessPlanWeekCaption\");\r\n                var toDeactivate = Y.Dom.get(\"fitnessPlanOverviewCaption\");\r\n                Y.Dom.addClass(toDeactivate, \"invisible\");\r\n                Y.Dom.removeClass(toActivate, \"invisible\");\r\n\
+      \r\n                toActivate = Y.Dom.get(\"currentWeekText\");\r\n                toDeactivate = Y.Dom.get(\"fitnessPlanOverviewDates\");\r\n                Y.Dom.addClass(toDeactivate, \"invisible\");\r\n                Y.Dom.removeClass(toActivate, \"invisible\");\r\n\
+      \r\n                toActivate = Y.Dom.get(\"fitnessPlanWeekNumber\");\r\n                Y.Dom.removeClass(toActivate, \"invisible\");\r\n            }\r\n        });\r\n\
+      \r\n        var intradayCaloriesTabs = new fitbit.app.TabSet(\"intradayCaloriesTabs\", \"active\");\r\n        intradayCaloriesTabs.tabChangeEvent.subscribe(function(type, args) {\r\n            if ( args == \"intradayCaloriesEatenChart\" ) {\r\n                new fitbit.app.UIState().set( 6 );\r\n            }\r\n            else {\r\n                new fitbit.app.UIState().clear( 6 );\r\n            }\r\n        });\r\n\
+      \r\n        var historicalActivitiesTabs = new fitbit.app.TabSet(\"historicalActivitiesTabs\", \"active\");\r\n        historicalActivitiesTabs.tabChangeEvent.subscribe(function(type, args) {\r\n              if ( args == \"activeScoreHistoricalChart\" ) {\r\n                  new fitbit.app.UIState().clearAndSet( 13, 12 );\r\n              }\r\n              else if ( args == \"distanceHistoricalChart\" ) {\r\n                  new fitbit.app.UIState().clearAndSet( 12, 13 );\r\n              }\r\n              else {\r\n                  new fitbit.app.UIState().clearAndSet( [12,13], null );\r\n              }\r\n        });\r\n\
+      \r\n    \r\n        var sleepInfoTabs = new fitbit.app.TabSet(\"sleepInfoTabs\", \"active\");\r\n        sleepInfoTabs.tabChangeEvent.subscribe(function(type, args) {\r\n            if ( args == \"timesAwakenedChart\" ) {\r\n                new fitbit.app.UIState().set( 14 );\r\n            }\r\n            else {\r\n                new fitbit.app.UIState().clear( 14 );\r\n            }\r\n        });\r\n    \r\n\
+      \r\n        \r\n\
+      \r\n        var sceneMeter = new SWFObject(\"/pack?h=9f6fc030d4dd99a18ee72a2502121ab6&item=%2Fflash%2Fgoal_scene%2Fgoal_scene.swf\", \"goal_scene\", \"336\", \"41\", \"8\");\r\n        sceneMeter.addParam(\"quality\", \"high\");\r\n        sceneMeter.addParam(\"wmode\", \"transparent\");\r\n        sceneMeter.addVariable(\"percentage\", \"0\");\r\n        sceneMeter.write(\"scene\");\r\n\
+      \r\n        var dateTo = \"\";\r\n        \r\n            dateTo = \"&dateTo=\" + \"2010-08-01\";\r\n        \r\n\
+      \r\n\
+      \r\n\
+      \r\n        new fitbit.app.AmChart( \"caloriesInOutObject\", \"caloriesInOutChart\", \"line\",\r\n            \"/graph/getGraphData?userId=22CJ7H&type=caloriesInOut\" +\r\n            \"&period=1m&dataVersion=981&version=amchart\" + dateTo + \"&ts=\" + (new Date()).getTime(),\r\n            530, 150, true\r\n        );\r\n\
+      \r\n    \r\n        new fitbit.app.AmChart( \"minutesActiveObject\", \"minutesActiveChart\", \"line\",\r\n            \"/graph/getGraphData?userId=22CJ7H&type=minutesActive\" +\r\n            \"&period=1m&dataVersion=981&version=amchart\" + dateTo + \"&ts=\" + (new Date()).getTime(),\r\n            530, 150, true\r\n        );\r\n    \r\n\
+      \r\n        new fitbit.app.AmChart( \"activeScoreHistoricalObject\", \"activeScoreHistoricalChart\", \"column2d\",\r\n            \"/graph/getGraphData?userId=22CJ7H&type=activeScore\" +\r\n            \"&period=1m&dataVersion=981&version=amchart\" + dateTo + \"&ts=\" + (new Date()).getTime(),\r\n            530, 150, true\r\n        );\r\n\
+      \r\n        new fitbit.app.AmChart( \"stepsTakenHistoricalObject\", \"stepsTakenHistoricalChart\", \"column2d\",\r\n            \"/graph/getGraphData?userId=22CJ7H&type=stepsTaken\" +\r\n            \"&period=1m&dataVersion=981&version=amchart\" + dateTo,\r\n            530, 150, true\r\n        );\r\n\
+      \r\n        new fitbit.app.AmChart( \"distanceHistoricalObject\", \"distanceHistoricalChart\", \"column2d\",\r\n            \"/graph/getGraphData?userId=22CJ7H&type=distanceFromSteps\" +\r\n            \"&period=1m&dataVersion=981&version=amchart\" + dateTo,\r\n            530, 150, true\r\n        );\r\n\
+      \r\n    \r\n        new fitbit.app.AmChart( \"timeAsleepObject\", \"timeAsleepChart\", \"column2d\",\r\n            \"/graph/getGraphData?userId=22CJ7H&type=timeAsleep\" +\r\n            \"&period=1m&dataVersion=981&version=amchart\" + dateTo,\r\n            530, 150, true\r\n        );\r\n\
+      \r\n        new fitbit.app.AmChart( \"timesAwakenedObject\", \"timesAwakenedChart\", \"column2d\",\r\n            \"/graph/getGraphData?userId=22CJ7H&type=timesWokenUp\" +\r\n            \"&period=1m&dataVersion=981&version=amchart\" + dateTo,\r\n            530, 150, true\r\n        );\r\n    \r\n\
+      \r\n        new fitbit.app.AmChart( \"weightObject\", \"weightChart\", \"line\",\r\n            \"/graph/getGraphData?userId=22CJ7H&type=weight\" +\r\n            \"&period=1m&dataVersion=981&version=amchart\" + dateTo,\r\n            530, 150, true\r\n        );\r\n\
+      \r\n    \r\n        new fitbit.app.AmChart( \"intradayCaloriesBurnedObject\", \"intradayCaloriesBurnedChart\", \"column2d\",\r\n            \"/graph/getGraphData?userId=22CJ7H&type=intradayCaloriesBurned\" +\r\n            \"&period=1d&dataVersion=981&version=amchart\" + dateTo + \"&ts=\" + (new Date()).getTime(),\r\n            530, 150, true\r\n        );\r\n\
+      \r\n        new fitbit.app.AmChart( \"intradayCaloriesEatenObject\", \"intradayCaloriesEatenChart\", \"column2d\",\r\n            \"/graph/getGraphData?userId=22CJ7H&type=intradayCaloriesEaten\" +\r\n            \"&period=1d&dataVersion=981&version=amchart\" + dateTo + \"&ts=\" + (new Date()).getTime(),\r\n            530, 150, true\r\n        );\r\n\
+      \r\n        new fitbit.app.AmChart( \"intradayActiveScoreChartObject\", \"intradayActiveScoreChart\", \"column2d\",\r\n            \"/graph/getGraphData?userId=22CJ7H&type=intradayActiveScore\" +\r\n            \"&period=1d&dataVersion=981&version=amchart\" + dateTo + \"&ts=\" + (new Date()).getTime(),\r\n            530, 150, true\r\n        );\r\n\
+      \r\n        new fitbit.app.AmChart( \"intradayStepsObject\", \"intradayStepsChart\", \"column2d\",\r\n            \"/graph/getGraphData?userId=22CJ7H&type=intradaySteps\" +\r\n            \"&period=1d&dataVersion=981&version=amchart\" + dateTo,\r\n            530, 150, true\r\n        );\r\n\
+      \r\n        new fitbit.app.AmChart( \"activityPieObject\", \"activityPieChart\", \"pie\",\r\n            \"/graph/getGraphData?userId=22CJ7H&type=activitiesBreakdown\" +\r\n            \"&period=1d&dataVersion=981&version=amchart\" + dateTo,\r\n            240, 200, true\r\n        );\r\n\
+      \r\n        var tabs = new fitbit.app.TabSet(\"intradayTabs\", \"active\");\r\n        tabs.tabChangeEvent.subscribe(function(type, args) {\r\n            if ( args == \"intradayActiveScoreChart\" ) {\r\n                new fitbit.app.UIState().set( 10 );\r\n            }\r\n            else {\r\n                new fitbit.app.UIState().clear( 10 );\r\n            }\r\n        });\r\n\
+      \r\n        // Uncomment this when activityBreakdownChartSelector is enabled\r\n        //new fitbit.app.TabSet(\"activityBreakdownChartArea\", \"active\");\r\n    \r\n\
+      \r\n        if ( Y.Dom.get(\"sleepPatternChart\") ) {\r\n            new fitbit.app.AmChart(\"sleepPatternObject\", \"sleepPatternChart\", \"column2d\",\r\n                \"/graph/getGraphData?userId=22CJ7H&type=intradaySleep\" +\r\n                \"&period=1d&dataVersion=981&version=amchart\" + dateTo,\r\n                370, 110, true\r\n            );\r\n        }\r\n\
+      \r\n        function swapVisible(el1Name, el2Name) {\r\n            Y.Dom.addClass(Y.Dom.get(el1Name), \"invisible\");\r\n            Y.Dom.removeClass(Y.Dom.get(el2Name), \"invisible\");\r\n        }\r\n    </script>\r\n    <script type=\"text/javascript\" src=\"http://www.plaxo.com/css/m/js/util.js\"></script>\r\n    <script type=\"text/javascript\" src=\"http://www.plaxo.com/css/m/js/basic.js\"></script>\r\n    <script type=\"text/javascript\" src=\"http://www.plaxo.com/css/m/js/abc_launcher.js\"></script>    \r\n\
+      \r\n        \r\n\
+      \r\n\
+      \r\n\
+      <script type=\"text/javascript\">\r\n\
+      /*\r\n\
+      Inserts GA using DOM insertion of <script> tag and \"script onload\" method to\r\n\
+      initialize the pageTracker object. Prevents GA insertion from blocking I/O!\r\n\
+      \r\n\
+      As suggested in Steve Souder's talk. See:\r\n\
+      http://google-code-updates.blogspot.com/2009/03/steve-souders-lifes-too-short-write.html\r\n\
+      */\r\n\
+      \r\n\
+      /* acct is GA account number, i.e. \"UA-5555555-1\" */\r\n\
+      function gaSSDSLoad (acct) {\r\n  var gaJsHost = ((\"https:\" == document.location.protocol) ? \"https://ssl.\" : \"http://www.\"),\r\n      pageTracker,\r\n      s;\r\n  s = document.createElement('script');\r\n  s.src = gaJsHost + 'google-analytics.com/ga.js';\r\n  s.type = 'text/javascript';\r\n  s.onloadDone = false;\r\n  function init () {\r\n    pageTracker = _gat._getTracker(acct);\r\n\
+      \r\n    pageTracker._setCustomVar(1, \"visitorType\", \"trackerUser\", 1);\r\n    \r\n        pageTracker._setCustomVar(2, \"gender\", \"male\", 1); \r\n        pageTracker._setCustomVar(3, \"age\", \"25-34\", 1);\r\n        pageTracker._setCustomVar(4, \"premium\", \"false\", 1);\r\n    \r\n\
+      \r\n    pageTracker._trackPageview();\r\n  }\r\n  s.onload = function () {\r\n    s.onloadDone = true;\r\n    init();\r\n  };\r\n  s.onreadystatechange = function() {\r\n    if (('loaded' === s.readyState || 'complete' === s.readyState) && !s.onloadDone) {\r\n      s.onloadDone = true;\r\n      init();\r\n    }\r\n  };\r\n  document.getElementsByTagName('head')[0].appendChild(s);\r\n\
+      }\r\n\
+      \r\n\
+      /* and run it */\r\n\
+      gaSSDSLoad(\"UA-2595270-1\");\r\n\
+      </script>\r\n    </body>\r\n\
+      </html>\r\n"
+    http_version: "1.1"
