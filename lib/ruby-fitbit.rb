@@ -1,6 +1,7 @@
 require 'rubygems'
 require 'mechanize'
 require 'nokogiri'
+require 'json'
 
 class RubyFitbit
 
@@ -35,6 +36,34 @@ class RubyFitbit
 
       @logged_in = true
     end
+  end
+
+  def submit_food_log
+    login
+
+    page = @agent.get 'http://www.fitbit.com/foods/log'
+      
+    form = page.forms[1]
+
+    form.action="/foods/log/foodLog?apiFormat=htmljson&log=on&date=2010-10-02"
+    form.foodId = "82602"
+    form.foodselectinput = "Coffee"
+    form.unitId = "226"
+    form.quantityselectinput = "8 oz"
+    form.quantityConsumed = "8 oz"
+    form.mealTypeId = '7'
+    
+    result = @agent.submit(form, form.buttons.first)
+  end
+
+  def get_food_items(food="Coffe")
+    login
+    
+    result = @agent.get "http://www.fitbit.com/solr/food/select?q=#{food}&wt=foodjson&qt=food"
+
+    foods = JSON.parse(result.body).first[1]["foods"]
+
+    foods
   end
 
   def get_data(date = Time.now)

@@ -5,6 +5,10 @@ require 'hirb'
 if(ARGV[0]!=nil && ARGV[1]!=nil)
   fitbit = RubyFitbit.new(ARGV[0],ARGV[1])
 
+  #testing some in progress API methods
+  #fitbit.submit_food_log
+  #fitbit.get_food_items
+
   begin
     date = Time.parse(ARGV[3])
   rescue
