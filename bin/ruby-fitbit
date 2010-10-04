@@ -6,8 +6,9 @@ if(ARGV[0]!=nil && ARGV[1]!=nil)
   fitbit = RubyFitbit.new(ARGV[0],ARGV[1])
 
   #testing some in progress API methods
-  #fitbit.submit_food_log
+  #fitbit.submit_food_log({:food => 'coffee', :unit => '8 oz'})
   #fitbit.get_food_items
+  exit 1
 
   begin
     date = Time.parse(ARGV[3])

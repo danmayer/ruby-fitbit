@@ -38,22 +38,55 @@ class RubyFitbit
     end
   end
 
-  def submit_food_log
+  def submit_food_log(options = {})
     login
 
+    date = options.fetch(:date) {Time.now}
+    date = get_fitbit_date_format(date)
+    meal_type = options.fetch(:meal_type){'7'}
+    food_id = options[:food_id]
+    food = options[:food]
+    raise "food_id or food required to submit food log" unless food_id || food
+    unless food_id
+      food_recommendation = get_food_items(food)
+      if food_recommendation.length > 0
+        food_recommendation = food_recommendation.first
+        food = food_recommendation['name']
+        food_id = food_recommendation['id']
+      end
+    end
+
+    unit_id = options[:unit_id]
+    unit = options[:unit]
+    raise "unit_id or unit required to submit food log" unless unit_id || unit
+    unless unit_id
+      unit_id = get_unit_id_for_unit(unit)
+    end
+
     page = @agent.get 'http://www.fitbit.com/foods/log'
-      
+
     form = page.forms[1]
 
-    form.action="/foods/log/foodLog?apiFormat=htmljson&log=on&date=2010-10-02"
-    form.foodId = "82602"
-    form.foodselectinput = "Coffee"
-    form.unitId = "226"
-    form.quantityselectinput = "8 oz"
-    form.quantityConsumed = "8 oz"
-    form.mealTypeId = '7'
+    form.action="/foods/log/foodLog?apiFormat=htmljson&log=on&date=#{date}"
+    form.foodId = food_id
+    form.foodselectinput = food
+    form.unitId = unit_id
+    form.quantityselectinput = unit
+    form.quantityConsumed = unit
+    form.mealTypeId = meal_type
     
     result = @agent.submit(form, form.buttons.first)
+  end
+
+  def get_unit_id_for_unit(unit)
+    unit_id   = nil
+    unit_type = unit.match(/\d+ (.*)/)[1]
+    unit_id   = case unit_type
+                when 'oz' then '226'
+                when 'lb' then '180'
+                else nil
+                end
+    unit_id
   end
 
   def get_food_items(food="Coffe")
