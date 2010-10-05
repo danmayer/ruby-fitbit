@@ -84,6 +84,23 @@ class RubyFitbit
     unit_id   = case unit_type
                 when 'oz' then '226'
                 when 'lb' then '180'
+                when 'gram' then '147'
+                when 'kilogram' then '389'
+                when 'roll' then '290'
+                when 'serving' then '304'
+                when 'link' then '188'
+                when 'piece' then '251'
+                when 'fl oz' then '128'
+                when 'ml' then '209'
+                when 'tsp' then '364'
+                when 'tbsp' then '349'
+                when 'cup' then '91'
+                when 'pint' then '256'
+                when 'slice' then '311'
+                when 'liter' then '189'
+                when 'quart' then '279'
+                when 'entree' then '117'
+                when 'portion' then '270'
                 else nil
                 end
     unit_id
