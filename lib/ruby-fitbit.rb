@@ -5,8 +5,6 @@ require 'json'
 
 class RubyFitbit
 
-  attr_reader :calories, :steps, :miles_walked, :sedentary_active, :lightly_active, :fairly_active, :very_active
-
   #TODO change tests so reader isn't needed
   attr_reader :logged_in
 
@@ -16,10 +14,8 @@ class RubyFitbit
     @agent = WWW::Mechanize.new #{|a| a.log = Logger.new(STDERR) } #turn on if debugging
     @logged_in = false 
     @cached_data = {}
-    get_data
   end
 
-  #todo only login once
   def login
     unless @logged_in
       page = @agent.get 'https://www.fitbit.com/login'
@@ -108,11 +104,8 @@ class RubyFitbit
 
   def get_food_items(food="Coffe")
     login
-    
     result = @agent.get "http://www.fitbit.com/solr/food/select?q=#{food}&wt=foodjson&qt=food"
-
     foods = JSON.parse(result.body).first[1]["foods"]
-
     foods
   end
 
@@ -124,21 +117,21 @@ class RubyFitbit
 
     page = @agent.get "https://www.fitbit.com/#{date}"
 
-    @calories = page.search("//div[@class='data']").search("span").children[0].text
-    @steps = page.search("//div[@class='data']").search("span").children[2].text.strip
-    @miles_walked = page.search("//div[@class='data']").search("span").children[3].text.strip
-    @sedentary_active = page.search("//div[@class='sedentary caption']/div[@class='number']").text.strip
-    @lightly_active = page.search("//div[@class='lightly caption']/div[@class='number']").text.strip
-    @fairly_active = page.search("//div[@class='caption fairly']/div[@class='number']").text.strip
-    @very_active = page.search("//div[@class='caption very']/div[@class='number']").text.strip
+    calories = page.search("//div[@class='data']").search("span").children[0].text
+    steps = page.search("//div[@class='data']").search("span").children[2].text.strip
+    miles_walked = page.search("//div[@class='data']").search("span").children[3].text.strip
+    sedentary_active = page.search("//div[@class='sedentary caption']/div[@class='number']").text.strip
+    lightly_active = page.search("//div[@class='lightly caption']/div[@class='number']").text.strip
+    fairly_active = page.search("//div[@class='caption fairly']/div[@class='number']").text.strip
+    very_active = page.search("//div[@class='caption very']/div[@class='number']").text.strip
     data = {}
-    data['calories'] = @calories.to_i
-    data['steps'] = @steps.to_i
-    data['miles_walked'] = @miles_walked.to_f
-    data['sedentary_active'] = @sedentary_active
-    data['lightly_active'] = @lightly_active
-    data['fairly_active'] = @fairly_active
-    data['very_active'] = @very_active
+    data['calories'] = calories.to_i
+    data['steps'] = steps.to_i
+    data['miles_walked'] = miles_walked.to_f
+    data['sedentary_active'] = sedentary_active
+    data['lightly_active'] = lightly_active
+    data['fairly_active'] = fairly_active
+    data['very_active'] = very_active
     @cached_data[date] = data
     data
   end

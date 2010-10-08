@@ -22,16 +22,16 @@ if(ARGV[0]!=nil && ARGV[1]!=nil)
     end_date = Time.now
   end
   
-  fitbit.get_data(date)
+  data = fitbit.get_data(date)
   puts "Fitbit Data for #{date}"
-  puts "Calories Burned #{fitbit.calories}"
-  puts "Steps Taken #{fitbit.steps}"
-  puts "Milkes Walked #{fitbit.miles_walked}"
+  puts "Calories Burned #{data['calories']}"
+  puts "Steps Taken #{data['steps']}"
+  puts "Milkes Walked #{data['miles_walked']}"
   puts "Activity Levels Durations:"
-  puts "Sedentary #{fitbit.sedentary_active}"
-  puts "Lightly #{fitbit.lightly_active}"
-  puts "Fairly # => #{fitbit.fairly_active}"
-  puts "Very #{fitbit.very_active}"
+  puts "Sedentary #{data['sedentary_active']}"
+  puts "Lightly #{data['lightly_active']}"
+  puts "Fairly # => #{data['fairly_active']}"
+  puts "Very #{data['very_active']}"
 end
 
 if ARGV[2]!=nil

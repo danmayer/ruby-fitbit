@@ -72,23 +72,32 @@ END
       @logged_in = val
     end
     fitbit.set_logged_in(true)
+    data = fitbit.get_data
     
-    assert_equal "1928", fitbit.calories, "wrong calories"
-    assert_equal "7821", fitbit.steps, "wrong steps"
-    assert_equal "3.38", fitbit.miles_walked, "wrong miles"
-    assert_equal "16hrs 58min", fitbit.sedentary_active, "wrong sedentary"
-    assert_equal "1hr 42min", fitbit.lightly_active, "wrong lightly"
-    assert_equal "1hr 51min", fitbit.fairly_active, "wrong fairly"
-    assert_equal "17min", fitbit.very_active, "wrong very"
+    assert_equal 1928, data['calories'], "wrong calories"
+    assert_equal 7821, data['steps'], "wrong steps"
+    assert_equal 3.38, data['miles_walked'], "wrong miles"
+    assert_equal "16hrs 58min", data['sedentary_active'], "wrong sedentary"
+    assert_equal "1hr 42min", data['lightly_active'], "wrong lightly"
+    assert_equal "1hr 51min", data['fairly_active'], "wrong fairly"
+    assert_equal "17min", data['very_active'], "wrong very"
   end
 
   should "use VCR successfully" do
     fitbit = nil
+    data = nil
     VCR.use_cassette('fitbit_get_data', :record => :new_episodes) do
       fitbit = RubyFitbit.new("fake@fake.com","fake")
+      data = fitbit.get_data(Time.parse("2010/08/03"))
     end
-   
-    assert_equal "0",fitbit.steps
+
+    assert_equal 2084, data['calories'], "wrong calories"
+    assert_equal 10018, data['steps'], "wrong steps"
+    assert_equal 4.61, data['miles_walked'], "wrong miles"
+    assert_equal "18hrs 26min", data['sedentary_active'], "wrong sedentary"
+    assert_equal "1hr 17min", data['lightly_active'], "wrong lightly"
+    assert_equal "1hr 29min", data['fairly_active'], "wrong fairly"
+    assert_equal "42min", data['very_active'], "wrong very"
   end
 
 end

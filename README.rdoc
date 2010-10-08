@@ -73,12 +73,12 @@ Currently the gem uses screen scraping to get the data, but it will switch over 
 
 == TODOs
 
-* get food intake tracked etc
-* add ability for gem to write data to fitbit, such as log and food entries
-* build everything needed for a nice fitbit mobile app to use this API.
+* get food data intake tracked etc
+* add ability for gem to write data to fitbit
 * better cmd line output
 * add data caching, currently it refetches every time. especially dumb when it does it twice for aggragate and avg data
 * Support Avgs over all data_point
+* create ruby-fitbit exceptions
 
 == Note on Patches/Pull Requests
  
