@@ -5,11 +5,11 @@
 
 Gem::Specification.new do |s|
   s.name = %q{ruby-fitbit}
-  s.version = "0.2.3"
+  s.version = "0.3.1"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Dan Mayer"]
-  s.date = %q{2010-07-24}
+  s.date = %q{2010-10-14}
   s.default_executable = %q{ruby-fitbit}
   s.description = %q{This is a Ruby API for Fitbit.com, currently scraping, but soon will use the officail API (when released)}
   s.email = %q{Danmayer@gmail.com}
@@ -26,6 +26,7 @@ Gem::Specification.new do |s|
      "Rakefile",
      "VERSION",
      "bin/ruby-fitbit",
+     "fixtures/vcr_cassettes/fitbit_get_data.yml",
      "lib/ruby-fitbit.rb",
      "ruby-fitbit.gemspec",
      "test/helper.rb",

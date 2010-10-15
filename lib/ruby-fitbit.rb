@@ -77,28 +77,29 @@ class RubyFitbit
   def get_unit_id_for_unit(unit)
     unit_id   = nil
     unit_type = unit.match(/\d+ (.*)/)[1]
-    unit_id   = case unit_type
-                when 'oz' then '226'
-                when 'lb' then '180'
-                when 'gram' then '147'
-                when 'kilogram' then '389'
-                when 'roll' then '290'
-                when 'serving' then '304'
-                when 'link' then '188'
-                when 'piece' then '251'
-                when 'fl oz' then '128'
-                when 'ml' then '209'
-                when 'tsp' then '364'
-                when 'tbsp' then '349'
-                when 'cup' then '91'
-                when 'pint' then '256'
-                when 'slice' then '311'
-                when 'liter' then '189'
-                when 'quart' then '279'
-                when 'entree' then '117'
-                when 'portion' then '270'
-                else nil
-                end
+
+    type_map = {'oz' => '226',
+                'lb' => '180',
+                'gram' => '147',
+                'kilogram' => '389',
+                'roll' => '290',
+                'serving' => '304',
+                'link' => '188',
+                'piece' => '251',
+                'fl oz' => '128',
+                'ml' => '209',
+                'tsp' => '364',
+                'tbsp' => '349',
+                'cup' => '91',
+                'pint' => '256',
+                'slice' => '311',
+                'liter' => '189',
+                'quart' => '279',
+                'entree' => '117',
+                'portion' => '270'
+    }
+
+    unit_id   = type_map[unit_type]
     unit_id
   end
 
@@ -107,6 +108,17 @@ class RubyFitbit
     result = @agent.get "http://www.fitbit.com/solr/food/select?q=#{food}&wt=foodjson&qt=food"
     foods = JSON.parse(result.body).first[1]["foods"]
     foods
+  end
+
+  def get_eaten_calories(date = Time.now)
+    login
+
+    date = get_fitbit_date_format(date).gsub('-','/')
+    page = @agent.get "https://www.fitbit.com/foods/log/#{date}"
+    calories_data = page.search("//div[@id='dailyTotals']").first
+    calories_xml = calories_data.to_xml
+    calories_text = calories_data.text
+    {:calories_xml => calories_xml, :calories_text => calories_text}
   end
 
   def get_data(date = Time.now)
