@@ -5,11 +5,11 @@
 
 Gem::Specification.new do |s|
   s.name = %q{ruby-fitbit}
-  s.version = "0.3.1"
+  s.version = "0.4.0"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Dan Mayer"]
-  s.date = %q{2010-10-14}
+  s.date = %q{2010-12-15}
   s.default_executable = %q{ruby-fitbit}
   s.description = %q{This is a Ruby API for Fitbit.com, currently scraping, but soon will use the officail API (when released)}
   s.email = %q{Danmayer@gmail.com}
@@ -52,18 +52,18 @@ Gem::Specification.new do |s|
       s.add_development_dependency(%q<shoulda>, [">= 0"])
       s.add_runtime_dependency(%q<nokogiri>, [">= 1.3.0"])
       s.add_development_dependency(%q<hirb>, [">= 0.2.10"])
-      s.add_runtime_dependency(%q<mechanize>, [">= 0.9.3"])
+      s.add_runtime_dependency(%q<mechanize>, [">= 1.0.0"])
     else
       s.add_dependency(%q<shoulda>, [">= 0"])
       s.add_dependency(%q<nokogiri>, [">= 1.3.0"])
       s.add_dependency(%q<hirb>, [">= 0.2.10"])
-      s.add_dependency(%q<mechanize>, [">= 0.9.3"])
+      s.add_dependency(%q<mechanize>, [">= 1.0.0"])
     end
   else
     s.add_dependency(%q<shoulda>, [">= 0"])
     s.add_dependency(%q<nokogiri>, [">= 1.3.0"])
     s.add_dependency(%q<hirb>, [">= 0.2.10"])
-    s.add_dependency(%q<mechanize>, [">= 0.9.3"])
+    s.add_dependency(%q<mechanize>, [">= 1.0.0"])
   end
 end
 
