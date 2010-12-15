@@ -13,7 +13,7 @@ begin
     gem.add_development_dependency "shoulda", ">= 0"
     gem.add_dependency "nokogiri", ">= 1.3.0"
     gem.add_development_dependency "hirb", ">= 0.2.10"
-    gem.add_dependency "mechanize", ">= 0.9.3"
+    gem.add_dependency "mechanize", ">= 1.0.0"
     # gem is a Gem::Specification... see http://www.rubygems.org/read/chapter/20 for additional settings
   end
   Jeweler::GemcutterTasks.new

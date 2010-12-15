@@ -11,7 +11,7 @@ class RubyFitbit
   def initialize(email, pass)
     @email = email
     @pass = pass
-    @agent = WWW::Mechanize.new #{|a| a.log = Logger.new(STDERR) } #turn on if debugging
+    @agent = Mechanize.new #{|a| a.log = Logger.new(STDERR) } #turn on if debugging
     @logged_in = false 
     @cached_data = {}
   end
@@ -70,7 +70,7 @@ class RubyFitbit
     form.quantityselectinput = unit
     form.quantityConsumed = unit
     form.mealTypeId = meal_type
-    
+    require 'ruby-debug'; debugger
     result = @agent.submit(form, form.buttons.first)
   end
 
@@ -216,7 +216,7 @@ class RubyFitbit
       :period => "1d",
       :dateTo => date}
 
-    params = WWW::Mechanize::Util.build_query_string(params)
+    params = Mechanize::Util.build_query_string(params)
     uri = "http://www.fitbit.com/graph/getGraphData?#{params}"
 
     page = @agent.get uri
