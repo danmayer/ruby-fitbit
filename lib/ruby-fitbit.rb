@@ -70,7 +70,6 @@ class RubyFitbit
     form.quantityselectinput = unit
     form.quantityConsumed = unit
     form.mealTypeId = meal_type
-    require 'ruby-debug'; debugger
     result = @agent.submit(form, form.buttons.first)
   end
 
