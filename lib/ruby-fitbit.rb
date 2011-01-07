@@ -72,7 +72,30 @@ class RubyFitbit
     form.mealTypeId = meal_type
     result = @agent.submit(form, form.buttons.first)
   end
-
+  
+  def submit_weight_log(options = {})
+    login
+    
+    weight_units = {:lbs => "US", :stone => "UK", :kg => "METRIC"}
+    
+    date = options.fetch(:date) {Time.now}
+    date = get_fitbit_date_format(date)
+    
+    unit = options[:unit]
+    unit_id = weight_units[unit.to_sym]
+    raise "#{unit} isn't one of Fitbit's units. Try #{weight_units.keys.join(", ")} instead." unless unit_id
+    
+    page = @agent.get 'http://www.fitbit.com/weight'
+    
+    form = page.forms[1]
+    form.action="/measure/measurements?apiFormat=json&log=on&date=#{date}"
+    form.send(options[:unit].to_sym, options[:weight])
+    form.weightState = unit_id
+    form.bodyFat = options[:percentage_fat]
+    
+    result = @agent.submit(form, form.buttons.first)
+  end
+  
   def get_unit_id_for_unit(unit)
     unit_id   = nil
     unit_type = unit.match(/\d+ (.*)/)[1]
