@@ -7,7 +7,8 @@ if(ARGV[0]!=nil && ARGV[1]!=nil)
   fitbit = RubyFitbit.new(ARGV[0],ARGV[1])
 
   #testing some in progress API methods
-  fitbit.submit_food_log({:food => 'wrap', :unit => '1 serving'})
+  #fitbit.submit_food_log({:food => 'wrap', :unit => '1 serving'})
+  #puts fitbit.submit_weight_log({:unit => 'lbs', :weight => '131'})
   #fitbit.get_food_items
   #puts fitbit.get_eaten_calories[:calories_xml]
   #exit 1
@@ -45,6 +46,8 @@ if ARGV[2]!=nil
   when 'activity' 
     puts "calorie data for data #{date}"
     data = fitbit.get_activity_score_data(date)
+  when 'weight'
+    puts "logging weight"
   when 'summary'
     #do nothing just print the summary above
   else
