@@ -150,22 +150,29 @@ class RubyFitbit
     return @cached_data[date] if @cached_data[date]
 
     page = @agent.get "https://www.fitbit.com/#{date}"
-
-    calories = page.search("//div[@class='data']").search("span").children[0].text
-    steps = page.search("//div[@class='data']").search("span").children[2].text.strip
-    miles_walked = page.search("//div[@class='data']").search("span").children[3].text.strip
-    sedentary_active = page.search("//div[@class='sedentary caption']/div[@class='number']").text.strip
-    lightly_active = page.search("//div[@class='lightly caption']/div[@class='number']").text.strip
-    fairly_active = page.search("//div[@class='caption fairly']/div[@class='number']").text.strip
-    very_active = page.search("//div[@class='caption very']/div[@class='number']").text.strip
+    
     data = {}
-    data['calories'] = calories.to_i
-    data['steps'] = steps.to_i
-    data['miles_walked'] = miles_walked.to_f
-    data['sedentary_active'] = sedentary_active
-    data['lightly_active'] = lightly_active
-    data['fairly_active'] = fairly_active
-    data['very_active'] = very_active
+    data['calories'] = 0
+    data['steps'] = 0
+    data['miles_walked'] = 0.0
+
+    page.search("//div[@class='data']").each do |datadiv|
+      if datadiv.text.match(/calories burned$/)
+        data['calories'] = datadiv.search("span").first.text.to_i
+      elsif datadiv.text.match(/calories eaten/)
+        data['calories_eaten'] = datadiv.search("span").first.text.to_i
+      elsif datadiv.text.match(/steps taken/)
+        data['steps'] = datadiv.search("span").first.text.to_i
+      elsif datadiv.text.match(/miles traveled/)
+        data['miles_walked'] = datadiv.search("span").first.text.to_f
+      end
+    end
+
+    data['sedentary_active'] = get_minutes_from_time(page.search("//div[@class='sedentary caption']/div[@class='number']").text.strip)
+    data['lightly_active'] = get_minutes_from_time(page.search("//div[@class='lightly caption']/div[@class='number']").text.strip)
+    data['fairly_active'] = get_minutes_from_time(page.search("//div[@class='caption fairly']/div[@class='number']").text.strip)
+    data['very_active'] = get_minutes_from_time(page.search("//div[@class='caption very']/div[@class='number']").text.strip)
+
     @cached_data[date] = data
     data
   end
@@ -190,11 +197,10 @@ class RubyFitbit
     data['calories'] = 0
     data['steps'] = 0
     data['miles_walked'] = 0
-    # TODO these aren't numbers but times need to convert all to minutes and then back
-    #data['sedentary_active'] = 0
-    #data['lightly_active'] = 0
-    #data['fairly_active'] = 0
-    #data['very_active'] = 0
+    data['sedentary_active'] = 0
+    data['lightly_active'] = 0
+    data['fairly_active'] = 0
+    data['very_active'] = 0
     days = 0
     
     days_data = get_aggregated_data(start_date, end_date) 
@@ -257,6 +263,16 @@ class RubyFitbit
   def get_fitbit_date_format(date)
     #fitbit date format expects like so: 2010-06-24
     date = date.strftime("%Y-%m-%d")
+  end
+
+  def get_minutes_from_time(str)
+    if m = str.to_s.strip.match(/^((\d+)hrs?)? ?((\d+)min)?$/)
+      hrs = m[1].to_i * 60
+      mins = m[3].to_i
+      return (hrs + mins)
+    end
+
+    return 0
   end
 
 end
