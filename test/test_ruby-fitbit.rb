@@ -77,10 +77,16 @@ END
     assert_equal 1928, data['calories'], "wrong calories"
     assert_equal 7821, data['steps'], "wrong steps"
     assert_equal 3.38, data['miles_walked'], "wrong miles"
-    assert_equal 1018, data['sedentary_active'], "wrong sedentary"
-    assert_equal 102, data['lightly_active'], "wrong lightly"
-    assert_equal 111, data['fairly_active'], "wrong fairly"
-    assert_equal 17, data['very_active'], "wrong very"
+
+
+    assert_equal "16hrs 58min", data['sedentary_active'], "wrong sedentary" 	
+    assert_equal "1hr 42min", data['lightly_active'], "wrong lightly" 	
+    assert_equal "1hr 51min", data['fairly_active'], "wrong fairly"	
+    assert_equal "17min", data['very_active'], "wrong very"
+    assert_equal 1018, data['sedentary_active_in_minutes'], "wrong sedentary"
+    assert_equal 102, data['lightly_active_in_minutes'], "wrong lightly"
+    assert_equal 111, data['fairly_active_in_minutes'], "wrong fairly"
+    assert_equal 17, data['very_active_in_minutes'], "wrong very"
   end
 
   should "use VCR successfully" do
@@ -94,10 +100,14 @@ END
     assert_equal 2084, data['calories'], "wrong calories"
     assert_equal 10018, data['steps'], "wrong steps"
     assert_equal 4.61, data['miles_walked'], "wrong miles"
-    assert_equal 1106, data['sedentary_active'], "wrong sedentary"
-    assert_equal 77, data['lightly_active'], "wrong lightly"
-    assert_equal 89, data['fairly_active'], "wrong fairly"
-    assert_equal 42, data['very_active'], "wrong very"
+    assert_equal "18hrs 26min", data['sedentary_active'], "wrong sedentary"
+    assert_equal "1hr 17min", data['lightly_active'], "wrong lightly"
+    assert_equal "1hr 29min", data['fairly_active'], "wrong fairly"	
+    assert_equal "42min", data['very_active'], "wrong very"
+    assert_equal 1106, data['sedentary_active_in_minutes'], "wrong sedentary"
+    assert_equal 77, data['lightly_active_in_minutes'], "wrong lightly"
+    assert_equal 89, data['fairly_active_in_minutes'], "wrong fairly"
+    assert_equal 42, data['very_active_in_minutes'], "wrong very"
   end
 
   should "convert times properly" do

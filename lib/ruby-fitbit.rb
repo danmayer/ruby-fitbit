@@ -168,10 +168,14 @@ class RubyFitbit
       end
     end
 
-    data['sedentary_active'] = get_minutes_from_time(page.search("//div[@class='sedentary caption']/div[@class='number']").text.strip)
-    data['lightly_active'] = get_minutes_from_time(page.search("//div[@class='lightly caption']/div[@class='number']").text.strip)
-    data['fairly_active'] = get_minutes_from_time(page.search("//div[@class='caption fairly']/div[@class='number']").text.strip)
-    data['very_active'] = get_minutes_from_time(page.search("//div[@class='caption very']/div[@class='number']").text.strip)
+    data['sedentary_active'] = page.search("//div[@class='sedentary caption']/div[@class='number']").text.strip
+    data['lightly_active'] = page.search("//div[@class='lightly caption']/div[@class='number']").text.strip
+    data['fairly_active'] = page.search("//div[@class='caption fairly']/div[@class='number']").text.strip
+    data['very_active'] = page.search("//div[@class='caption very']/div[@class='number']").text.strip
+    data['sedentary_active_in_minutes'] = get_minutes_from_time(data['sedentary_active'])
+    data['lightly_active_in_minutes'] = get_minutes_from_time(data['lightly_active'])
+    data['fairly_active_in_minutes'] = get_minutes_from_time(data['fairly_active'])
+    data['very_active_in_minutes'] = get_minutes_from_time(data['very_active'])
 
     @cached_data[date] = data
     data
@@ -197,10 +201,10 @@ class RubyFitbit
     data['calories'] = 0
     data['steps'] = 0
     data['miles_walked'] = 0
-    data['sedentary_active'] = 0
-    data['lightly_active'] = 0
-    data['fairly_active'] = 0
-    data['very_active'] = 0
+    data['sedentary_active_in_minutes'] = 0
+    data['lightly_active_in_minutes'] = 0
+    data['fairly_active_in_minutes'] = 0
+    data['very_active_in_minutes'] = 0
     days = 0
     
     days_data = get_aggregated_data(start_date, end_date) 
