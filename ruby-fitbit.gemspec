@@ -5,11 +5,11 @@
 
 Gem::Specification.new do |s|
   s.name = %q{ruby-fitbit}
-  s.version = "0.4.1"
+  s.version = "0.5.0"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Dan Mayer"]
-  s.date = %q{2011-01-02}
+  s.date = %q{2011-02-13}
   s.default_executable = %q{ruby-fitbit}
   s.description = %q{This is a Ruby API for Fitbit.com, currently scraping, but soon will use the officail API (when released)}
   s.email = %q{Danmayer@gmail.com}
