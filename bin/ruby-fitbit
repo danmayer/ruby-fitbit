@@ -1,10 +1,25 @@
 #! /usr/bin/env ruby	
 require File.join(File.dirname(__FILE__), '..', 'lib', 'ruby-fitbit')
-require 'hirb'	
+require 'hirb'
+require 'trollop'
+require 'yaml'	
 
-puts "ruby: 'ruby ruby-fitbit user@email.com pass'"
-if(ARGV[0]!=nil && ARGV[1]!=nil)
-  fitbit = RubyFitbit.new(ARGV[0],ARGV[1])
+opts = Trollop::options do
+  opt :passfile, "Use password file"
+  opt :username, "Username", :type => :string
+  opt :password, "Password", :type => :string
+end
+
+if(opts[:passfile])
+  raw_config = IO.read(File.expand_path("~/.fitbitrc"))
+  APP_CONFIG = YAML.load(raw_config)["config"]
+  @password = APP_CONFIG[:password]
+else
+  @password = opts[:password]
+end
+
+if(opts[:username]!=nil && @password!=nil)
+  fitbit = RubyFitbit.new(opts[:username],@password)
 
   #testing some in progress API methods
   #fitbit.submit_food_log({:food => 'wrap', :unit => '1 serving'})
@@ -35,6 +50,9 @@ if(ARGV[0]!=nil && ARGV[1]!=nil)
   puts "Lightly #{data['lightly_active']}"
   puts "Fairly # => #{data['fairly_active']}"
   puts "Very #{data['very_active']}"
+else
+  puts "Usage: 'ruby-fitbit user@email.com [password|-passfile]'"
+  puts "(hint: better to put your password in ~/.fitbitrc)"
 end
 
 if ARGV[2]!=nil
